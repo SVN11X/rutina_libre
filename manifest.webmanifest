@@ -1,0 +1,14 @@
+{
+  "name": "Rutina Libre",
+  "short_name": "Rutina",
+  "description": "Ejercicios con fotos paso a paso y rutinas personalizadas para descargar en PDF.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e6e8e3",
+  "theme_color": "#16212c",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
