@@ -1,0 +1,1866 @@
+{
+  "version": 1,
+  "reviewed": "2026-10-06",
+  "notes": "Contenido educativo: las dosis son ejemplos conservadores y requieren adaptación. Referencias de contexto no equivalen a validación clínica de cada ficha.",
+  "exercises": [
+    {
+      "id": "rl-caminata",
+      "name": "Comfortable walking",
+      "nameEs": "Caminata a ritmo cómodo",
+      "category": "cardio",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Elige una ruta plana y calzado cómodo.",
+        "Camina erguido, con mirada al frente y brazos relajados.",
+        "Mantén un ritmo que permita conversar; comienza con un tramo corto.",
+        "Reduce el paso al finalizar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Actividad aeróbica de bajo impacto para empezar a moverte y acumular minutos activos.",
+      "aliases": [
+        "caminar",
+        "andar",
+        "paseo",
+        "marcha",
+        "bajo impacto"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · caminar para la salud",
+          "url": "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos a ritmo cómodo",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminata-rapida",
+      "name": "Brisk walking",
+      "nameEs": "Caminata rápida",
+      "category": "cardio",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Empieza con unos minutos de caminata suave.",
+        "Aumenta el paso manteniendo una zancada natural, sin correr.",
+        "Usa el habla para regular la intensidad: deberías poder conversar.",
+        "Vuelve al paso suave para terminar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Un paso más vivo que el paseo: puedes conversar, pero cantar resulta difícil.",
+      "aliases": [
+        "caminar rapido",
+        "caminar ligero",
+        "power walking",
+        "cardio suave"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · reconocer la caminata rápida",
+          "url": "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "10",
+        "unit": "minutos, ajustados a tu capacidad",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminata-cuestas",
+      "name": "Uphill walking",
+      "nameEs": "Caminata en pendiente",
+      "category": "cardio",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Busca una pendiente suave y una superficie segura.",
+        "Camina con pasos algo más cortos y postura estable.",
+        "Ajusta el paso para seguir conversando.",
+        "Baja con control y alterna con tramos planos."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "La pendiente eleva la exigencia sin convertir la caminata en un sprint.",
+      "aliases": [
+        "cuestas",
+        "subida",
+        "cerro",
+        "pendiente"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · orientación general sobre caminata",
+          "url": "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos en pendiente suave",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminadora-caminar",
+      "name": "Treadmill walking",
+      "nameEs": "Caminata en caminadora",
+      "category": "cardio",
+      "equipment": "treadmill",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Conoce los controles y coloca el clip de seguridad según el fabricante.",
+        "Comienza con la cinta detenida y arráncala a velocidad baja.",
+        "Camina centrado, mirando al frente; usa las barras solo para estabilizarte.",
+        "Baja la velocidad y espera a que la cinta se detenga para salir."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "treadmill",
+      "summary": "Caminata en cinta con velocidad regulable. Usa la intensidad percibida, no una velocidad fija para todos.",
+      "aliases": [
+        "caminadora",
+        "cinta",
+        "treadmill",
+        "caminar en maquina"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS South Tees · uso de caminadora",
+          "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos a paso cómodo",
+        "rest": ""
+      },
+      "safety": "Lee el manual de la máquina y usa su parada de emergencia. No saltes sobre una cinta en movimiento.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminadora-inclinada",
+      "name": "Incline treadmill walking",
+      "nameEs": "Caminata con inclinación en caminadora",
+      "category": "cardio",
+      "equipment": "treadmill",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Calienta caminando con poca o ninguna inclinación.",
+        "Sube ligeramente la pendiente sin aumentar a la vez la velocidad.",
+        "Acorta la zancada y mantén el tronco estable, sin colgarte de las barras.",
+        "Vuelve a poca inclinación y baja la velocidad antes de terminar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "treadmill",
+      "summary": "Añade pendiente de forma gradual manteniendo una marcha estable.",
+      "aliases": [
+        "cinta inclinada",
+        "caminadora pendiente",
+        "treadmill incline"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS South Tees · orientación de caminadora",
+          "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos, con inclinación cómoda",
+        "rest": ""
+      },
+      "safety": "La pendiente y velocidad deben adaptarse a tu capacidad; usa el clip de seguridad.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminadora-trote",
+      "name": "Treadmill jogging",
+      "nameEs": "Trote en caminadora",
+      "category": "cardio",
+      "equipment": "treadmill",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Camina unos minutos para calentar.",
+        "Aumenta gradualmente hasta un trote que puedas controlar.",
+        "Mantén la mirada al frente y evita saltar a los bordes de la cinta.",
+        "Alterna con caminata si lo necesitas y detén la máquina antes de bajar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "treadmill",
+      "summary": "Carrera suave en cinta para personas que ya toleran caminar y trotar.",
+      "aliases": [
+        "correr cinta",
+        "trotar caminadora",
+        "correr en maquina"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · progresión caminar y correr",
+          "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/",
+          "kind": "contexto"
+        },
+        {
+          "title": "NHS South Tees · caminadora",
+          "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos alternando trote y caminata",
+        "rest": ""
+      },
+      "safety": "No se indican sprints máximos en una caminadora común. Usa el clip de seguridad.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminadora-intervalos",
+      "name": "Treadmill walking intervals",
+      "nameEs": "Intervalos de caminata en caminadora",
+      "category": "cardio",
+      "equipment": "treadmill",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Haz unos minutos de caminata suave.",
+        "Alterna un tramo cómodo con otro de paso más vivo.",
+        "Cambia la velocidad gradualmente y mantén siempre el control.",
+        "Termina con unos minutos de paso suave."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "treadmill",
+      "summary": "Alterna un paso cómodo y otro más vivo, sin necesidad de correr.",
+      "aliases": [
+        "intervalos cinta",
+        "caminadora intervalos",
+        "cambios de ritmo"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · intensidad de caminata",
+          "url": "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+          "kind": "contexto"
+        },
+        {
+          "title": "NHS South Tees · caminadora",
+          "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 4,
+        "seriesLabel": "series",
+        "amount": "1 minuto vivo + 2",
+        "unit": "minutos suaves",
+        "rest": ""
+      },
+      "safety": "El tramo vivo debe seguir siendo caminata, no un sprint.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-trote",
+      "name": "Easy jogging",
+      "nameEs": "Trote suave al aire libre",
+      "category": "cardio",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Comienza con caminata para calentar.",
+        "Trota con pasos cómodos, mirada al frente y brazos relajados.",
+        "Mantén un esfuerzo que permita frases cortas y alterna caminata si hace falta.",
+        "Termina caminando."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Carrera de ritmo cómodo para desarrollar resistencia aeróbica.",
+      "aliases": [
+        "trotar",
+        "jogging",
+        "carrera suave",
+        "running",
+        "correr"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · empezar a correr de forma gradual",
+          "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos de trote cómodo",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-caminar-correr",
+      "name": "Walk run intervals",
+      "nameEs": "Alternancia de caminata y carrera",
+      "category": "cardio",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Calienta con 5 minutos de caminata.",
+        "Alterna 60 segundos de carrera cómoda y 90 segundos de caminata.",
+        "Evita acelerar al máximo: el objetivo es adaptarte a correr.",
+        "Termina caminando y deja recuperación entre sesiones de carrera."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Combina tramos de carrera suave con caminata para empezar a correr de forma gradual.",
+      "aliases": [
+        "couch to 5k",
+        "correr principiante",
+        "caminar trotar",
+        "intervalos correr"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · plan Couch to 5K",
+          "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 4,
+        "seriesLabel": "series",
+        "amount": "60 s trote + 90",
+        "unit": "segundos de caminata",
+        "rest": ""
+      },
+      "safety": "Ejemplo abreviado para empezar. Consulta el plan original para su progresión completa.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-aceleraciones",
+      "name": "Progressive accelerations",
+      "nameEs": "Aceleraciones progresivas",
+      "category": "speed",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Calienta con caminata, trote y ejercicios de técnica.",
+        "Desde una salida cómoda, aumenta gradualmente la velocidad.",
+        "Corre en una recta despejada; no busques el máximo en la primera repetición.",
+        "Reduce el ritmo de forma progresiva y recupera caminando."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Aumenta la velocidad poco a poco en una recta corta. No es una carrera continua.",
+      "aliases": [
+        "aceleracion",
+        "velocidad",
+        "salida",
+        "arrancar",
+        "correr rapido",
+        "progresivos"
+      ],
+      "sourceLinks": [
+        {
+          "title": "World Athletics · entrenamiento de 100 m",
+          "url": "https://worldathletics.org/disciplines/sprint/100-metres",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 3,
+        "seriesLabel": "series",
+        "amount": "20 a 30",
+        "unit": "metros progresivos",
+        "rest": "2 a 3 minutos"
+      },
+      "safety": "Para personas adaptadas a correr. Necesitas espacio para frenar y recuperar; no hagas aceleraciones con dolor.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-sprint",
+      "name": "Short straight sprint",
+      "nameEs": "Sprint corto en recta",
+      "category": "speed",
+      "equipment": "body only",
+      "level": "expert",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Realiza un calentamiento completo y varias progresiones suaves.",
+        "Escoge una recta seca, plana y despejada, con espacio para frenar.",
+        "Corre rápido conservando la técnica y sin forzar una zancada exagerada.",
+        "Frena gradualmente; recupera antes de repetir y termina si pierdes calidad."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Carrera corta de alta intensidad para entrenar velocidad, con recuperación amplia entre esfuerzos.",
+      "aliases": [
+        "sprint",
+        "sprints",
+        "piques",
+        "velocidad maxima",
+        "carrera rapida",
+        "correr muy rapido"
+      ],
+      "sourceLinks": [
+        {
+          "title": "World Athletics · principios de sprint",
+          "url": "https://worldathletics.org/disciplines/sprint/100-metres",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 3,
+        "seriesLabel": "series",
+        "amount": "20 a 30",
+        "unit": "metros rápidos",
+        "rest": "3 minutos o más"
+      },
+      "safety": "Ejemplo de volumen, no plan para principiantes. Aprende la técnica con supervisión y separa las sesiones intensas con recuperación.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-strides",
+      "name": "Running strides",
+      "nameEs": "Progresiones de carrera (strides)",
+      "category": "speed",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Calienta antes de comenzar.",
+        "En una recta, parte suave y aumenta el ritmo de forma progresiva.",
+        "Mantén hombros relajados y pisada controlada.",
+        "Desacelera con espacio suficiente y camina para recuperar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Acelera de forma suave y termina sin frenar de golpe; prioriza fluidez sobre velocidad máxima.",
+      "aliases": [
+        "strides",
+        "rectas",
+        "progresiones",
+        "progresivos carrera"
+      ],
+      "sourceLinks": [
+        {
+          "title": "World Athletics · contexto de técnica y velocidad",
+          "url": "https://worldathletics.org/disciplines/sprint/100-metres",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 3,
+        "seriesLabel": "series",
+        "amount": "40",
+        "unit": "metros progresivos",
+        "rest": "2 minutos"
+      },
+      "safety": "No conviertas las progresiones en sprints máximos si todavía no estás adaptado.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-skipping-alto",
+      "name": "High knee drill",
+      "nameEs": "Skipping alto",
+      "category": "speed",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Empieza erguido, con pies separados al ancho de la cadera.",
+        "Eleva una rodilla y acompaña con el brazo contrario.",
+        "Alterna apoyos ligeros sin arquear el tronco.",
+        "Practica lento y después aumenta la cadencia manteniendo el control."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Ejercicio de coordinación de carrera con elevación alternada de rodillas.",
+      "aliases": [
+        "rodillas arriba",
+        "rodillas altas",
+        "high knees",
+        "skipping",
+        "tecnica de carrera"
+      ],
+      "sourceLinks": [
+        {
+          "title": "World Athletics · high knee drill",
+          "url": "https://worldathletics.org/personal-best/performance/jereem-richards-games-drills-develop-speed",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 2,
+        "seriesLabel": "series",
+        "amount": "10 a 20",
+        "unit": "metros",
+        "rest": "Camina de regreso"
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-skipping-bajo",
+      "name": "Low knee drill",
+      "nameEs": "Skipping bajo",
+      "category": "speed",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Mantén una postura erguida.",
+        "Alterna rodillas sin llevarlas a la altura del pecho.",
+        "Acompaña cada apoyo con el brazo contrario.",
+        "Busca ritmo y control antes de aumentar la rapidez."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "run",
+      "summary": "Coordina apoyos y brazos con una elevación menor de las rodillas que en el skipping alto.",
+      "aliases": [
+        "skipping bajo",
+        "low knees",
+        "coordinacion carrera"
+      ],
+      "sourceLinks": [
+        {
+          "title": "World Athletics · low knee drill",
+          "url": "https://worldathletics.org/personal-best/performance/jereem-richards-games-drills-develop-speed",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 2,
+        "seriesLabel": "series",
+        "amount": "10 a 20",
+        "unit": "metros",
+        "rest": "Camina de regreso"
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-ankling",
+      "name": "Ankling drill",
+      "nameEs": "Ankling: apoyos cortos de tobillo",
+      "category": "speed",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Empieza con desplazamientos muy cortos y lentos.",
+        "Apoya el antepié y deja que el talón se acerque suavemente al suelo.",
+        "Alterna pies con tronco estable.",
+        "Aumenta la cadencia solo cuando controles la secuencia."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Ejercicio de técnica con pasos cortos y atención al apoyo del pie.",
+      "aliases": [
+        "ankling",
+        "tobillos",
+        "apoyos cortos",
+        "tecnica carrera"
+      ],
+      "sourceLinks": [
+        {
+          "title": "World Athletics · ankling drill",
+          "url": "https://worldathletics.org/personal-best/performance/jereem-richards-games-drills-develop-speed",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 2,
+        "seriesLabel": "series",
+        "amount": "10",
+        "unit": "metros",
+        "rest": "Camina de regreso"
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-desplazamiento-lateral",
+      "name": "Lateral shuffle",
+      "nameEs": "Desplazamiento lateral controlado",
+      "category": "agility",
+      "equipment": "body only",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Adopta una posición cómoda con cadera y rodillas ligeramente flexionadas.",
+        "Da pasos laterales cortos sin cruzar las piernas.",
+        "Mantén el tronco estable y mira al frente.",
+        "Cambia de dirección despacio y aumenta el ritmo de forma gradual."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "lunge",
+      "summary": "Practica cambios de dirección laterales con pasos cortos, sin cruzar los pies.",
+      "aliases": [
+        "lateral",
+        "agilidad",
+        "shuffle",
+        "desplazamientos",
+        "cambio direccion"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · técnica de pasos laterales",
+          "url": "https://www.nhs.uk/live-well/exercise/balance-exercises/",
+          "kind": "contexto"
+        },
+        {
+          "title": "World Athletics · coordinación y agilidad",
+          "url": "https://worldathletics.org/personal-best/performance/jereem-richards-games-drills-develop-speed",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 2,
+        "seriesLabel": "series",
+        "amount": "5",
+        "unit": "metros por lado",
+        "rest": "45 a 60 segundos"
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-pasos-laterales",
+      "name": "Sideways walking",
+      "nameEs": "Pasos laterales de equilibrio",
+      "category": "balance",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "glutes",
+        "abdominals"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Colócate cerca de una pared o apoyo estable.",
+        "Da un paso lateral pequeño.",
+        "Acerca el otro pie sin dejar caer la cadera.",
+        "Avanza lentamente a un lado y vuelve al otro."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "balance",
+      "summary": "Desplazamiento suave para practicar control del cuerpo y coordinación.",
+      "aliases": [
+        "paso lateral",
+        "caminar lado",
+        "equilibrio lateral"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · sideways walking",
+          "url": "https://www.nhs.uk/live-well/exercise/balance-exercises/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "pasos por lado",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-equilibrio-un-pie",
+      "name": "One leg stand",
+      "nameEs": "Equilibrio sobre un pie",
+      "category": "balance",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "glutes",
+        "abdominals"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Colócate frente a una pared y apoya ligeramente los dedos.",
+        "Eleva un pie y mantén la pelvis nivelada.",
+        "Respira sin bloquear la rodilla de apoyo.",
+        "Baja el pie con control y cambia de lado."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "balance",
+      "summary": "Practica estabilidad de pie con un apoyo cercano.",
+      "aliases": [
+        "un pie",
+        "equilibrio",
+        "balance",
+        "estabilidad"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · one-leg stand",
+          "url": "https://www.nhs.uk/live-well/exercise/balance-exercises/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 3,
+        "seriesLabel": "series",
+        "amount": "5 a 10",
+        "unit": "segundos por lado",
+        "rest": "15 segundos"
+      },
+      "safety": "Mantén siempre un apoyo accesible; no cierres los ojos si puedes perder el equilibrio.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-marcha-talon-punta",
+      "name": "Heel to toe walk",
+      "nameEs": "Marcha talón-punta",
+      "category": "balance",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Ponte cerca de una pared.",
+        "Mira al frente y coloca un talón delante de los dedos del otro pie.",
+        "Da pasos pequeños, manteniendo el equilibrio.",
+        "Usa la pared si la necesitas."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Camina en línea colocando el talón cerca de los dedos del otro pie.",
+      "aliases": [
+        "tandem",
+        "talon punta",
+        "marcha equilibrio"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · heel-to-toe walk",
+          "url": "https://www.nhs.uk/live-well/exercise/balance-exercises/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5",
+        "unit": "pasos controlados",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-step-up",
+      "name": "Low step up",
+      "nameEs": "Subida a escalón bajo",
+      "category": "strength",
+      "equipment": "step",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Usa un escalón bajo y un apoyo cercano.",
+        "Apoya todo el pie de una pierna en el escalón.",
+        "Sube con control y acerca el otro pie.",
+        "Baja despacio y alterna el pie que inicia."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "lunge",
+      "summary": "Sube y baja un escalón estable para trabajar piernas y control del apoyo.",
+      "aliases": [
+        "escalon",
+        "step up",
+        "subir escalera",
+        "step"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · step-up",
+          "url": "https://www.nhs.uk/live-well/exercise/balance-exercises/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 2,
+        "seriesLabel": "series",
+        "amount": "5",
+        "unit": "repeticiones por pierna",
+        "rest": "45 segundos"
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-sentarse-levantarse",
+      "name": "Sit to stand",
+      "nameEs": "Sentarse y levantarse de una silla",
+      "category": "strength",
+      "equipment": "chair",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Coloca una silla estable contra la pared.",
+        "Siéntate con los pies separados y apoyados.",
+        "Inclina ligeramente el tronco y levántate sin impulso.",
+        "Vuelve a sentarte lentamente, usando los brazos como apoyo si lo necesitas."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "squat",
+      "summary": "Practica el patrón de sentadilla con una silla firme como referencia.",
+      "aliases": [
+        "silla",
+        "sentarse",
+        "levantarse",
+        "sentadilla silla"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · fuerza con silla",
+          "url": "https://www.nhs.uk/live-well/exercise/strength-exercises/",
+          "kind": "contexto"
+        },
+        {
+          "title": "NHS · video sit to stand",
+          "url": "https://www.nhs.uk/live-well/exercise/strength-and-flex-exercise-plan-how-to-videos/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 2,
+        "seriesLabel": "series",
+        "amount": "5",
+        "unit": "repeticiones lentas",
+        "rest": "45 segundos"
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-bicicleta-estatica",
+      "name": "Stationary bike",
+      "nameEs": "Bicicleta estática",
+      "category": "cardio",
+      "equipment": "stationary bike",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "hamstrings"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Ajusta el asiento para no estirar por completo la rodilla al pedalear.",
+        "Empieza con resistencia baja.",
+        "Pedalea con un ritmo cómodo y hombros relajados.",
+        "Baja el esfuerzo al finalizar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "cycle",
+      "summary": "Pedaleo sin desplazamiento para desarrollar resistencia aeróbica.",
+      "aliases": [
+        "bici estatica",
+        "bicicleta",
+        "pedalear",
+        "spinning",
+        "cycling"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS South Tees · bicicleta de ejercicio",
+          "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos a ritmo cómodo",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": true,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-eliptica",
+      "name": "Elliptical trainer",
+      "nameEs": "Elíptica a ritmo cómodo",
+      "category": "cardio",
+      "equipment": "elliptical",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Súbete con los pedales detenidos y usa las asas para estabilizarte.",
+        "Empieza con resistencia baja y movimiento lento.",
+        "Mantén el tronco erguido, sin inclinarte sobre las asas.",
+        "Reduce la velocidad y espera a detenerte antes de bajar."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Movimiento cíclico de piernas en una máquina con pedales.",
+      "aliases": [
+        "eliptica",
+        "elliptical",
+        "cardio maquina"
+      ],
+      "sourceLinks": [
+        {
+          "title": "ACE · contexto de ejercicio aeróbico",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 10",
+        "unit": "minutos a ritmo cómodo",
+        "rest": ""
+      },
+      "safety": "Consulta el manual de tu modelo; las asas y pedales varían entre máquinas.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-remo-ergometro",
+      "name": "Rowing ergometer",
+      "nameEs": "Remo en ergómetro",
+      "category": "cardio",
+      "equipment": "rowing machine",
+      "level": "intermediate",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "middle back",
+        "lats"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Asegura los pies y toma el mango con muñecas rectas.",
+        "Inicia el impulso con las piernas, luego inclina levemente el tronco y acerca el mango.",
+        "Regresa extendiendo los brazos, después el tronco y por último flexiona las rodillas.",
+        "Mantén la zona lumbar estable y practica a ritmo suave."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "row",
+      "summary": "Movimiento cíclico que combina impulso de piernas y tirón de brazos.",
+      "aliases": [
+        "remo maquina",
+        "ergometro",
+        "rowing",
+        "cardio remo"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS South Tees · máquina de remo",
+          "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5",
+        "unit": "minutos para practicar la secuencia",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-movilidad-tobillo",
+      "name": "Supported ankle mobility",
+      "nameEs": "Movilidad de tobillo con apoyo",
+      "category": "mobility",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "glutes",
+        "abdominals"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Apoya los dedos en una pared para mantener el equilibrio.",
+        "Adelanta una pierna y apoya el pie completo.",
+        "Lleva lentamente la rodilla hacia delante sin despegar el talón.",
+        "Regresa y repite dentro de un rango cómodo."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "mobility",
+      "summary": "Mueve el tobillo de forma controlada antes de caminar o entrenar.",
+      "aliases": [
+        "movilidad tobillo",
+        "rodilla pared",
+        "dorsiflexion",
+        "calentamiento tobillo"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · contexto de flexibilidad de pantorrilla",
+          "url": "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "5 a 8",
+        "unit": "repeticiones por lado",
+        "rest": ""
+      },
+      "safety": "No fuerces el rango ni uses rebotes.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-movilidad-cuello",
+      "name": "Gentle neck rotation",
+      "nameEs": "Rotación suave de cuello",
+      "category": "mobility",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "glutes",
+        "abdominals"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Siéntate erguido y relaja los hombros.",
+        "Mira lentamente hacia un lado sin elevar el hombro.",
+        "Vuelve al centro y repite al otro lado."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "mobility",
+      "summary": "Gira la cabeza lentamente dentro de un rango cómodo.",
+      "aliases": [
+        "girar cuello",
+        "rotacion cuello",
+        "movilidad cervical"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · neck rotation",
+          "url": "https://www.nhs.uk/live-well/exercise/flexibility-exercises/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "3",
+        "unit": "rotaciones por lado",
+        "rest": ""
+      },
+      "safety": "No hagas círculos amplios ni fuerces con las manos. Detente si aparece dolor o mareo.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-calentamiento-marcha",
+      "name": "Warm up march",
+      "nameEs": "Marcha para calentar",
+      "category": "warmup",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Marcha en el sitio o en una zona despejada.",
+        "Eleva las rodillas solo hasta una altura cómoda.",
+        "Acompaña con brazos relajados.",
+        "Sube el ritmo progresivamente sin llegar a un esfuerzo intenso."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Entrada gradual al ejercicio mediante marcha suave y movimiento de brazos.",
+      "aliases": [
+        "calentar",
+        "calentamiento",
+        "marchar",
+        "entrada calor",
+        "warm up"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · videos de calentamiento",
+          "url": "https://www.nhs.uk/live-well/exercise/strength-and-flex-exercise-plan-how-to-videos/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "3 a 5",
+        "unit": "minutos suaves",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    },
+    {
+      "id": "rl-vuelta-calma",
+      "name": "Cool down walk",
+      "nameEs": "Caminata de vuelta a la calma",
+      "category": "recovery",
+      "equipment": "body only",
+      "level": "beginner",
+      "force": null,
+      "mechanic": null,
+      "primary": [
+        "quadriceps",
+        "glutes",
+        "calves"
+      ],
+      "secondary": [],
+      "steps": [],
+      "stepsEs": [
+        "Pasa de correr o caminar rápido a un paso suave.",
+        "Deja que la respiración se recupere sin parar de golpe.",
+        "Finaliza a un ritmo cómodo e hidrátate según lo necesites."
+      ],
+      "images": [],
+      "source": "editorial",
+      "family": "walk",
+      "summary": "Reduce gradualmente la intensidad después de una sesión.",
+      "aliases": [
+        "vuelta calma",
+        "enfriamiento",
+        "cooldown",
+        "recuperacion",
+        "terminar"
+      ],
+      "sourceLinks": [
+        {
+          "title": "NHS · inicio y cierre de sesiones de carrera",
+          "url": "https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/",
+          "kind": "contexto"
+        }
+      ],
+      "prescription": {
+        "series": 1,
+        "seriesLabel": "vez",
+        "amount": "3 a 5",
+        "unit": "minutos suaves",
+        "rest": ""
+      },
+      "safety": "Progresa poco a poco y detente ante dolor, mareo o malestar.",
+      "featured": false,
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+    }
+  ],
+  "updates": [
+    {
+      "id": "Bodyweight_Squat",
+      "nameEs": "Sentadilla con peso corporal",
+      "family": "squat",
+      "summary": "Flexiona caderas y rodillas para bajar el cuerpo y vuelve a levantarte.",
+      "stepsEs": [
+        "Separa los pies a una distancia cómoda.",
+        "Lleva la cadera hacia atrás y flexiona las rodillas siguiendo la dirección de los pies.",
+        "Baja solo hasta donde mantengas el equilibrio y el control.",
+        "Empuja el suelo para volver a la posición inicial."
+      ],
+      "aliases": [
+        "sentadilla",
+        "agacharse",
+        "bajar cadera",
+        "squat"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084663",
+          "kind": "contexto"
+        }
+      ],
+      "featured": true
+    },
+    {
+      "id": "Pushups",
+      "nameEs": "Flexiones de brazos",
+      "family": "pushup",
+      "summary": "Empuja el suelo flexionando y extendiendo los brazos con el cuerpo alineado.",
+      "stepsEs": [
+        "Apoya las manos algo más separadas que los hombros.",
+        "Mantén tronco y piernas alineados.",
+        "Flexiona los codos para bajar el pecho con control.",
+        "Empuja para volver; utiliza una pared o apoyo elevado si es demasiado difícil."
+      ],
+      "aliases": [
+        "flexion",
+        "lagartija",
+        "push up",
+        "manos suelo",
+        "boca abajo",
+        "subir bajar pecho"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Plank",
+      "nameEs": "Plancha de antebrazos",
+      "family": "plank",
+      "summary": "Sostén el tronco estable sobre antebrazos y puntas de los pies.",
+      "stepsEs": [
+        "Coloca los codos bajo los hombros.",
+        "Extiende las piernas manteniendo alineados hombros, cadera y tobillos.",
+        "Activa el abdomen y respira durante la postura.",
+        "Termina la serie antes de que la cadera se hunda o se eleve."
+      ],
+      "aliases": [
+        "plancha",
+        "plank",
+        "antebrazos",
+        "mantener quieto",
+        "abdomen suelo"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Butt_Lift_Bridge",
+      "nameEs": "Puente de glúteos",
+      "family": "bridge",
+      "summary": "Eleva la pelvis desde el suelo apoyándote en los pies y la parte alta de la espalda.",
+      "stepsEs": [
+        "Acuéstate boca arriba y flexiona las rodillas.",
+        "Apoya los pies a una distancia cómoda de los glúteos.",
+        "Eleva la pelvis sin arquear en exceso la zona lumbar.",
+        "Baja con control."
+      ],
+      "aliases": [
+        "puente",
+        "glute bridge",
+        "boca arriba",
+        "elevar cadera",
+        "pelvis"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Dumbbell_Lunges",
+      "nameEs": "Zancadas con mancuernas",
+      "family": "lunge",
+      "summary": "Da un paso y flexiona las rodillas con una mancuerna en cada mano.",
+      "stepsEs": [
+        "Sostén las mancuernas a los lados.",
+        "Da un paso cómodo hacia delante.",
+        "Baja el cuerpo flexionando las rodillas y mantén el tronco estable.",
+        "Empuja con el pie delantero y vuelve. Alterna piernas."
+      ],
+      "aliases": [
+        "zancada",
+        "estocada",
+        "lunge",
+        "pierna adelante"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/lunge/vid-20084662",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Bodyweight_Walking_Lunge",
+      "nameEs": "Zancadas caminando",
+      "family": "lunge",
+      "summary": "Avanza alternando pasos con flexión de rodillas.",
+      "stepsEs": [
+        "Da un paso amplio pero controlado.",
+        "Flexiona ambas rodillas manteniendo el equilibrio.",
+        "Empuja con la pierna delantera para avanzar.",
+        "Alterna lados sin golpear la rodilla posterior contra el suelo."
+      ],
+      "aliases": [
+        "zancada",
+        "estocada",
+        "lunge",
+        "pasos largos"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/lunge/vid-20084662",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Dumbbell_Bicep_Curl",
+      "nameEs": "Curl de bíceps con mancuernas",
+      "family": "curl",
+      "summary": "Flexiona el codo para acercar la mancuerna hacia el hombro.",
+      "stepsEs": [
+        "Sostén las mancuernas con brazos a los lados.",
+        "Mantén los codos junto al tronco.",
+        "Flexiona los codos sin balancear el cuerpo.",
+        "Baja el peso lentamente."
+      ],
+      "aliases": [
+        "curl",
+        "biceps",
+        "doblar codo",
+        "pesas hombro"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Dumbbell_Shoulder_Press",
+      "nameEs": "Press de hombros con mancuernas",
+      "family": "press",
+      "summary": "Eleva mancuernas desde los hombros por encima de la cabeza.",
+      "stepsEs": [
+        "Coloca las mancuernas junto a los hombros.",
+        "Mantén abdomen activo y muñecas estables.",
+        "Empuja hacia arriba sin arquear la espalda.",
+        "Baja lentamente hasta la posición inicial."
+      ],
+      "aliases": [
+        "press",
+        "hombros",
+        "sobre cabeza",
+        "empujar arriba"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Pullups",
+      "nameEs": "Dominadas",
+      "family": "pullup",
+      "summary": "Eleva el cuerpo desde una barra fija mediante un tirón de brazos y espalda.",
+      "stepsEs": [
+        "Usa una barra firme y un agarre cómodo.",
+        "Activa hombros y abdomen antes de tirar.",
+        "Eleva el cuerpo sin balancearte.",
+        "Desciende con control; usa asistencia si aún no puedes hacer el movimiento."
+      ],
+      "aliases": [
+        "dominada",
+        "barra fija",
+        "colgado",
+        "pull up",
+        "subir cuerpo"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ],
+      "equipment": "pullup bar"
+    },
+    {
+      "id": "Barbell_Deadlift",
+      "nameEs": "Peso muerto con barra",
+      "family": "deadlift",
+      "summary": "Levanta una barra desde el suelo combinando extensión de cadera y rodillas.",
+      "stepsEs": [
+        "Coloca la barra cerca de las espinillas.",
+        "Lleva la cadera atrás, flexiona rodillas y toma la barra.",
+        "Mantén espalda estable y la barra cerca del cuerpo al levantarte.",
+        "Devuelve la barra al suelo con control, sin tirones."
+      ],
+      "aliases": [
+        "peso muerto",
+        "deadlift",
+        "barra suelo",
+        "bisagra cadera"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Romanian_Deadlift",
+      "nameEs": "Peso muerto rumano",
+      "family": "deadlift",
+      "summary": "Baja una barra moviendo la cadera hacia atrás, con rodillas ligeramente flexionadas.",
+      "stepsEs": [
+        "Sostén la barra de pie.",
+        "Lleva la cadera hacia atrás manteniendo la barra cerca de las piernas.",
+        "Baja hasta el rango que puedas controlar con espalda estable.",
+        "Extiende la cadera para volver."
+      ],
+      "aliases": [
+        "rumano",
+        "bisagra",
+        "isquiotibiales"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "One-Arm_Dumbbell_Row",
+      "nameEs": "Remo a una mano con mancuerna",
+      "family": "row",
+      "summary": "Tira de una mancuerna hacia el costado manteniendo estable el tronco.",
+      "stepsEs": [
+        "Apoya una mano sobre una banca estable.",
+        "Sostén la mancuerna y mantén la espalda estable.",
+        "Lleva el codo hacia atrás sin girar el tronco.",
+        "Baja lentamente."
+      ],
+      "aliases": [
+        "remo",
+        "row",
+        "tirar",
+        "codo atras",
+        "mancuerna espalda"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Rope_Jumping",
+      "nameEs": "Salto de cuerda",
+      "family": "jump",
+      "summary": "Salta suavemente mientras haces pasar la cuerda bajo los pies.",
+      "stepsEs": [
+        "Ajusta una cuerda a tu estatura y despeja el espacio.",
+        "Gira principalmente con las muñecas.",
+        "Haz saltos bajos y aterriza suavemente.",
+        "Empieza con intervalos breves y descansa si pierdes coordinación."
+      ],
+      "aliases": [
+        "cuerda",
+        "saltar",
+        "comba",
+        "rope"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ],
+      "equipment": "jump rope"
+    },
+    {
+      "id": "Mountain_Climbers",
+      "nameEs": "Escaladores",
+      "family": "mountain",
+      "summary": "Alterna las rodillas hacia el pecho desde una plancha de manos.",
+      "stepsEs": [
+        "Apoya las manos bajo los hombros.",
+        "Mantén el tronco estable en posición de plancha.",
+        "Acerca una rodilla hacia el pecho y vuelve.",
+        "Alterna piernas sin rebotar la cadera."
+      ],
+      "aliases": [
+        "escaladores",
+        "mountain climbers",
+        "rodillas pecho",
+        "plancha manos"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ]
+    },
+    {
+      "id": "Cat_Stretch",
+      "nameEs": "Movilidad de gato",
+      "family": "mobility",
+      "summary": "Alterna suavemente la flexión y la extensión de la columna a cuatro apoyos.",
+      "stepsEs": [
+        "Coloca manos bajo hombros y rodillas bajo caderas.",
+        "Redondea suavemente la espalda.",
+        "Vuelve a un arco suave sin forzar el cuello.",
+        "Alterna despacio y respira."
+      ],
+      "aliases": [
+        "gato",
+        "cat cow",
+        "cuatro patas",
+        "movilidad espalda"
+      ],
+      "editorial": true,
+      "instructionCredit": "Síntesis en español de Rutina Libre; consulta también la técnica y las demostraciones originales.",
+      "sourceLinks": [
+        {
+          "title": "Referencia de técnica o contexto",
+          "url": "https://www.acefitness.org/resources/everyone/exercise-library/",
+          "kind": "contexto"
+        }
+      ],
+      "category": "mobility"
+    }
+  ]
+}

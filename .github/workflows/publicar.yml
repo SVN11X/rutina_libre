@@ -35,6 +35,12 @@ jobs:
         continue-on-error: true
         run: node scripts/build-data.mjs
 
+      - name: Regenerar esquemas originales
+        run: node scripts/build-illustrations.mjs
+
+      - name: Verificar catálogo, detector y rutinas
+        run: node --test tests/app.test.mjs
+
       - name: Configurar Pages
         uses: actions/configure-pages@v5
 

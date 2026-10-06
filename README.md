@@ -1,102 +1,102 @@
-# Rutina Libre
+# Rutina Libre · edición mejorada
 
-Sitio web gratuito para buscar ejercicios, aprender a hacerlos con fotos paso a paso y armar una rutina semanal que se puede descargar en PDF. Funciona completo en GitHub Pages, sin servidor, sin base de datos y sin cuentas de usuario.
+Catálogo estático para GitHub Pages con ejercicios de fuerza, cardio, caminata, caminadora, velocidad, agilidad, equilibrio y movilidad. El visitante usa la página directamente: no instala programas, no crea una cuenta y no necesita claves de API.
 
-## Qué hace
+## Cambios incluidos
 
-**Catálogo de ejercicios.** Más de 870 ejercicios con buscador en español. Entiende palabras como sentadilla, press de banca, dominadas o pecho mancuernas aunque los nombres originales estén en inglés. Se puede filtrar por nivel, equipo, músculo y tipo de ejercicio, y cada opción muestra cuántos resultados da. Los filtros quedan en la dirección de la página, así que una búsqueda se puede compartir con un enlace.
+- **1.747 fichas**, con enlaces a su registro original. **680** incluyen pasos en español. El catálogo original se conserva.
+- **46 fichas con enlaces de video**; **seis** tienen MP4 H.264, GIF y miniatura dentro del repositorio. Estos seis recursos se revisaron visualmente para comprobar que muestran el ejercicio asociado. Los demás videos conservan el enlace de su proveedor. El formato HEVC se ofrece como enlace externo para evitar reproductores que fallen.
+- **28 fichas nuevas en español**: caminata cómoda y rápida, pendientes, caminadora con distintas modalidades, trote, alternancia caminar/correr, sprint, aceleraciones, progresiones, skipping, ankling, desplazamientos laterales, equilibrio, bicicleta estática, elíptica, remo, movilidad, calentamiento y vuelta a la calma.
+- **15 fichas habituales mejoradas** con explicaciones en español: sentadilla, flexiones, plancha, puente de glúteos, zancadas, curls, press, dominadas, peso muerto, remo, cuerda y otras.
+- **Detector por descripción y dibujo**, procesado en el navegador. No llama a un servicio de IA ni consume una cuota.
+- Interfaz adaptable a móvil, filtros rápidos por actividad, filtro específico de caminadora, recuperación de la búsqueda, guardados, avisos útiles ante errores y fuentes visibles.
+- Rutinas nuevas de **resistencia aeróbica** y **velocidad**, además de los objetivos anteriores. Se distingue tiempo, distancia, repeticiones y recuperación. Una caminata no se transforma en HIIT al elegir un objetivo de grasa.
+- PDF con jsPDF incluido; el generador no necesita un CDN para funcionar.
 
-**Ficha de cada ejercicio.** Las dos fotos del ejercicio se alternan para mostrar el movimiento completo. Cuando existe, también se muestra una animación GIF o un video. La ficha sugiere cuántas series, repeticiones y descanso hacer según el objetivo y el nivel de la persona. Las instrucciones en inglés se pueden traducir al español con el traductor que trae el propio navegador.
+## Publicar los archivos
 
-**Generador de rutina.** Hace seis preguntas (objetivo, experiencia, días, tiempo, equipo y zonas a priorizar) y arma la semana completa. Después se puede cambiar cualquier ejercicio por otro parecido, moverlo, quitarlo o agregar nuevos. Todo se guarda en el navegador.
+1. Extrae el ZIP y abre la carpeta `rutina_libre`.
+2. Sube **su contenido**, reemplazando los archivos existentes en la rama `main` de `SVN11X/rutina_libre`. Evita subir la carpeta como un nivel adicional.
+3. Conserva `.github/workflows/publicar.yml`, `.nojekyll` y las carpetas `assets`, `css`, `data`, `js`, `scripts` y `tests`.
+4. Con **Settings → Pages → Source → GitHub Actions**, el flujo de publicación ejecuta las comprobaciones y publica el sitio. Si usas **Deploy from a branch**, los datos y medios ya incluidos permiten publicar directamente desde `main` y la raíz.
+5. La dirección habitual del repositorio es `https://svn11x.github.io/rutina_libre/`.
 
-**PDF.** La rutina se descarga con fotos, instrucciones breves y casillas para marcar el avance de cuatro semanas.
+No necesitas configurar Hugging Face, RapidAPI, claves, facturación, un backend ni una base de datos. La entrega contiene el proyecto para subir; no modifica automáticamente tu repositorio remoto.
 
-## De dónde salen los datos
+## Identificar ejercicios
 
-Todo viene de fuentes abiertas y gratuitas que no piden clave.
+Abre **Identificar** y describe la postura, el movimiento y el equipo. Por ejemplo: “estoy boca arriba, con las rodillas dobladas, y levanto la cadera”. La búsqueda pondera nombres, sinónimos, descripciones e instrucciones mediante BM25 y pistas del movimiento. Presenta fichas reales del catálogo, no inventa una explicación para una coincidencia desconocida.
 
-| Fuente | Qué aporta | Licencia |
-|---|---|---|
-| [Free Exercise DB](https://github.com/yuhonas/free-exercise-db) | Base principal. 870 ejercicios con dos fotos cada uno | Dominio público |
-| [wger](https://wger.de) | Nombres y descripciones en español, videos y ejercicios extra | Creative Commons, con autoría |
-| [ExerciseDB V1](https://oss.exercisedb.dev) | Animaciones GIF | API gratuita, revisa sus términos |
+También puedes dibujar una figura de palitos con ratón o pantalla táctil. El clasificador compara nubes de puntos normalizadas mediante vecinos más cercanos con **15 familias de posturas**. Tolera diferencias de tamaño, posición y reflejo horizontal. Es un modelo sencillo basado en prototipos esquemáticos locales, no un modelo de visión entrenado con millones de fotografías.
 
-El repositorio ya incluye `data/exercises.json` con la base principal, así que el sitio funciona desde el primer momento. Cada vez que se publica, y además todos los lunes, GitHub Actions ejecuta `scripts/build-data.mjs`, que descarga las tres fuentes, las une y agrega los textos en español, los videos y los GIF. Si wger o ExerciseDB no responden, el sitio se publica igual con los datos que ya tenía.
+**Límites del detector:** la postura estática puede corresponder a varios ejercicios. No distingue todas las variantes, no mide velocidad, no cuenta repeticiones y no evalúa técnica ni condiciones de salud. Combina descripción y dibujo para reducir la ambigüedad y confirma la coincidencia leyendo las fichas. El dibujo funciona mejor con cabeza, tronco y extremidades en varios trazos; no es un reconocedor general de fotografías.
 
-Las fotos y animaciones no se copian al repositorio. Se muestran directo desde los servidores de cada fuente, así el repositorio pesa poco.
+## Fuentes y calidad del contenido
 
-## Publicar en GitHub Pages
+| Fuente | Uso |
+|---|---|
+| [Free Exercise DB](https://github.com/yuhonas/free-exercise-db) | Base original, instrucciones, clasificación y fotos enlazadas. Unlicense declarada por el proyecto. |
+| [wger](https://wger.de) y [documentación de API](https://wger.readthedocs.io/en/latest/api/api.html) | Textos comunitarios en español, imágenes y videos. Se conserva la licencia y autoría de cada recurso, también cuando se une con una ficha de otra fuente. |
+| [NHS: caminar](https://www.nhs.uk/live-well/exercise/walking-for-health/) y [Couch to 5K](https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/) | Referencias para actividad aeróbica y progresión de carrera. |
+| [NHS: equilibrio](https://www.nhs.uk/live-well/exercise/balance-exercises/) y [flexibilidad](https://www.nhs.uk/live-well/exercise/flexibility-exercises/) | Referencias de postura, control y movilidad. |
+| [NHS South Tees](https://www.southtees.nhs.uk/resources/combined-cardiovascular/) | Contexto de caminadora, bicicleta y remo. |
+| [World Athletics](https://worldathletics.org/personal-best/performance/jereem-richards-games-drills-develop-speed) | Técnica de carrera, coordinación y velocidad. |
+| [Mayo Clinic](https://www.mayoclinic.org/health/strength-training/MY00033) y [ACE](https://www.acefitness.org/resources/everyone/exercise-library/) | Guías y demostraciones de fuerza enlazadas. |
 
-1. Crea un repositorio nuevo en GitHub, por ejemplo `rutina-libre`.
-2. Sube todos los archivos de esta carpeta a la rama `main`. Incluye la carpeta oculta `.github` y el archivo `.nojekyll`.
-3. En el repositorio entra a **Settings**, luego a **Pages**.
-4. En **Source** elige **GitHub Actions**.
-5. Entra a la pestaña **Actions** y espera que termine el flujo **Publicar sitio**. La primera vez puedes lanzarlo a mano con **Run workflow**.
-6. El sitio queda en `https://TU-USUARIO.github.io/rutina-libre/`.
+Los recursos comunitarios no tienen una validación clínica individual. Las fichas nuevas son síntesis educativas originales en español. Se distingue entre **registro original** y **guía de técnica o contexto**: una referencia general no implica que su autor haya prescrito exactamente la dosis mostrada.
 
-Si prefieres no usar Actions, en el paso 4 elige **Deploy from a branch**, rama `main` y carpeta `/ (root)`. El sitio funciona igual, pero solo con la base principal. Para sumar wger y ExerciseDB tendrías que ejecutar el script en tu computador y subir el archivo resultante.
+Las dosis son ejemplos orientativos de la app y requieren adaptación. Las fichas de sprint indican calentamiento, espacio para frenar y recuperación amplia; el generador no prescribe sprints máximos a principiantes. Los esquemas son referencias de postura, no demostraciones biomecánicas. Las fotos alternadas se etiquetan como referencias; no se presentan como un video del movimiento completo.
 
-## Probar en tu computador
+Los MP4/GIF y sus miniaturas derivados de wger mantienen **CC BY-SA 4.0**, autor **Goulart**, enlace de origen y descripción de los cambios. El registro completo está en `data/media.json` y la atribución también se muestra en la ficha. Los seis GIF usan fragmentos seleccionados para mostrar el ejercicio y evitar los segundos iniciales de preparación de la cámara.
 
-Necesitas Node.js 18 o superior, solo para el script de datos. La página en sí no necesita instalar nada.
+La antigua integración con `oss.exercisedb.dev` se retiró: devolvía HTTP 403 en esta revisión y no alimentaba el catálogo. El sitio no depende de esa API para obtener animaciones.
+
+## Gratuidad y privacidad
+
+La búsqueda, el detector, los guardados, las rutinas y el PDF no tienen cuotas de uso de la app. Se ejecutan en el navegador. GitHub Pages y los proveedores externos mantienen sus propias políticas, disponibilidad y límites; no se promete disponibilidad ilimitada de un tercero.
+
+El texto y los trazos del detector no se envían a servidores. La rutina, preferencias y guardados se almacenan localmente. Las imágenes externas y los enlaces que abras generan peticiones normales a sus proveedores. No se usa analítica ni se requieren cuentas.
+
+## Actualización de datos
+
+El proyecto ya incluye los datos enriquecidos y los medios. La actualización es opcional para el visitante. Para mantener el catálogo, usa Node.js 22 o superior:
 
 ```bash
-# Actualizar los datos (opcional)
 node scripts/build-data.mjs
-
-# Levantar un servidor local
-python3 -m http.server 8000
-# o bien
-npx serve .
+node --test tests/app.test.mjs
 ```
 
-Luego abre `http://localhost:8000`. Abrir el archivo `index.html` con doble clic no funciona, porque el navegador bloquea la carga de datos desde archivos locales.
-
-El script acepta estas opciones:
+El script combina Free Exercise DB, wger y `data/editorial.json`. Solo une coincidencias exactas o equivalencias explícitas para evitar asociar videos de variantes diferentes. Ante un fallo remoto, conserva la base y el respaldo `data/source-wger.json`, los MP4/GIF incluidos, la autoría y los enlaces. Desactivar la actualización de wger no elimina su respaldo:
 
 ```bash
-USE_WGER=0 node scripts/build-data.mjs         # sin wger
-USE_EXERCISEDB=0 node scripts/build-data.mjs   # sin ExerciseDB
+USE_WGER=0 node scripts/build-data.mjs
 ```
 
-## Estructura
+`FEDB_URL`, `WGER_BASE`, `FEDB_INPUT_FILE` y `WGER_INPUT_FILE` son opciones de mantenimiento y prueba. Las dos últimas aceptan archivos fuente locales. Las opciones antiguas de ExerciseDB ya no se utilizan.
 
+Los esquemas originales se regeneran con `node scripts/build-illustrations.mjs`. `scripts/prepare-media.py` permite al mantenedor convertir más videos de wger a MP4 y GIF; necesita Python y ffmpeg en ese equipo. **Los visitantes no necesitan ninguno de esos programas.** Revisa visualmente cada recurso generado y su licencia antes de publicarlo.
+
+## Comprobaciones realizadas
+
+- Nueve pruebas automáticas de contenido, búsqueda, tolerancia a errores, equipo, reconocimiento de una postura diferente a los prototipos, entradas desconocidas, dosis, rutinas y conservación de autoría.
+- Veinte comprobaciones en Chromium: catálogo, filtros, fuentes, guardados, reproducción de MP4, GIF, descripción, dibujo, PDF y uso sin red.
+- Interfaz móvil a 390 px sin desbordamiento horizontal; filtros utilizables con teclado.
+- Cero incidencias detectadas por axe en las cuatro vistas de escritorio revisadas (WCAG A/AA): catálogo, detector, caminadora y fuentes. Esto es una comprobación automática, no una certificación de accesibilidad.
+
+El informe de entrega resume las condiciones de prueba y las limitaciones. Algunos medios remotos pueden fallar; la ficha ofrece enlaces y alternativas, y no oculta el problema.
+
+## Prueba local y uso sin conexión
+
+Para revisar el sitio en un equipo de desarrollo:
+
+```bash
+python3 -m http.server 8000
 ```
-index.html              página única
-css/styles.css          estilos, modo oscuro e impresión
-js/app.js               navegación entre vistas
-js/catalog.js           buscador, filtros y tarjetas
-js/detail.js            ficha del ejercicio
-js/routine.js           formulario y editor de la rutina
-js/generator.js         reglas para armar la rutina
-js/reps.js              series, repeticiones y descanso sugeridos
-js/pdf.js               exportación a PDF
-js/data.js              carga de datos y búsqueda
-js/i18n.js              textos en español y diccionario de búsqueda
-js/translate.js         traducción en el navegador
-js/store.js             guardado local
-sw.js                   uso sin conexión
-scripts/build-data.mjs  descarga y unión de las fuentes
-data/exercises.json     datos generados
-```
 
-## Decisiones de experiencia de uso
+Abre `http://localhost:8000`. No abras `index.html` con doble clic: la carga de JSON requiere un servidor HTTP. El visitante de GitHub Pages accede directamente sin instalar nada.
 
-La navegación pasa a una barra inferior en el celular para tenerla al alcance del pulgar. Los filtros se abren como un panel desde abajo y el botón muestra cuántos resultados vas a ver. Al volver de una ficha, el catálogo recupera la búsqueda y la posición donde estabas. Cada acción importante, como quitar un ejercicio o borrar la rutina, se puede deshacer desde el aviso que aparece abajo.
+En HTTPS, el service worker conserva la interfaz, catálogo, detector y esquemas tras la primera visita. Las fotos y GIF consultados pueden quedar guardados. Los videos no siempre se conservan completos, especialmente cuando el navegador solicita fragmentos; pueden necesitar conexión. Cambia `VERSION` en `sw.js` cuando publiques una nueva edición.
 
-Todo se puede usar con teclado y lector de pantalla. Los controles tienen al menos 44 píxeles de alto para tocarlos con el dedo. El color de nivel sigue a los discos de pesas olímpicos (verde para principiante, azul para intermedio, rojo para avanzado) y siempre va acompañado del nombre, para no depender solo del color. Si la persona pidió menos animación en su sistema, las fotos no se alternan solas. El sitio respeta el modo oscuro del sistema.
+## Licencias
 
-Después de la primera visita funciona sin conexión. Si cambias archivos del sitio, sube el número `VERSION` en `sw.js` para que los navegadores tomen la versión nueva.
-
-## Detalles a tener en cuenta
-
-Las series y repeticiones son una guía general basada en los rangos más usados en entrenamiento. No reemplazan la indicación de un profesional.
-
-La traducción automática funciona en Chrome y Edge recientes. En otros navegadores aparece un enlace a Google Translate.
-
-La unión entre fuentes se hace comparando nombres en inglés. Algunos ejercicios pueden aparecer dos veces con nombres un poco distintos cuando cada fuente los llama de otra forma.
-
-## Licencia
-
-El código usa licencia MIT. Los datos, fotos, animaciones y videos mantienen la licencia de su fuente original.
+El código y los esquemas originales conservan MIT. Los datos y recursos externos mantienen las licencias de sus fuentes. Las licencias de los medios incluidos y jsPDF se detallan en `THIRD_PARTY.md` y en sus registros de atribución.

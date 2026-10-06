@@ -1,0 +1,43 @@
+{
+  "checks": [
+    "Catálogo local con 24 fichas iniciales",
+    "Búsqueda de caminata prioriza ejercicios aeróbicos",
+    "Velocidad excluye ejercicios de fuerza con nombres parecidos",
+    "Búsqueda tolera un error de escritura",
+    "Ficha de caminadora con pasos, esquema y fuentes",
+    "Guardados conserva la selección",
+    "Video local H.264 reproduce en Chromium",
+    "GIF local carga al elegir su pestaña",
+    "Detector por descripción identifica un puente",
+    "Detector no inventa resultados ante texto ajeno a ejercicios",
+    "Detector por dibujo devuelve una familia de postura",
+    "Detector explica entrada insuficiente",
+    "Generación de rutina aeróbica",
+    "PDF se genera con librería incluida y sin CDN",
+    "Fuentes y licencias visibles",
+    "Catálogo móvil sin desbordamiento horizontal",
+    "Filtros móviles se abren y cierran con teclado",
+    "Detector móvil sin desbordamiento",
+    "Detector funciona sin red tras guardar el sitio",
+    "Sin errores JavaScript en las vistas probadas"
+  ],
+  "errors": [],
+  "accessibility": [
+    {
+      "view": "/#/",
+      "violations": []
+    },
+    {
+      "view": "/#/identificar",
+      "violations": []
+    },
+    {
+      "view": "/#/ejercicio/rl-caminadora-caminar",
+      "violations": []
+    },
+    {
+      "view": "/#/acerca",
+      "violations": []
+    }
+  ]
+}
