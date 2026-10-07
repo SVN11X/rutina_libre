@@ -2,6 +2,7 @@
 // Actualización reproducible: un fallo remoto conserva los recursos publicados.
 import { readFile, writeFile, mkdir, rename } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
+import { migrateEquipment } from '../js/equipment.js';
 const ROOT = new URL("../", import.meta.url);
 const IMG =
   "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/";
@@ -120,13 +121,9 @@ function equipment(list) {
   const found = (list || [])
     .map((e) => equipmentRules.find(([re]) => re.test(norm(e.name || e)))?.[1])
     .filter(Boolean);
-  return (
-    found.find((e) => e !== "bench") ||
-    found[0] ||
-    (!list?.length || list.some((e) => /none|body/i.test(e.name || e))
-      ? "body only"
-      : "other")
-  );
+  if (list?.some((e) => /none|body/i.test(e.name || e)) && !found.length) found.push('body only');
+  if (list?.length && found.length < list.length && !list.every(e=>/none|body/i.test(e.name || e))) found.push('unknown');
+  return [...new Set(found)];
 }
 function attribution(obj, kind, exercise) {
   const lic = licenses[obj.license?.id || obj.license];
@@ -169,7 +166,8 @@ export function normalizeWger(records) {
           .filter(Boolean),
         primary: mapMuscles(x.muscles),
         secondary: mapMuscles(x.muscles_secondary),
-        equipment: equipment(x.equipment),
+        equipment: equipment(x.equipment).find(e=>e!=='bench') || equipment(x.equipment)[0] || null,
+        requiredEquipment: equipment(x.equipment),
         category: /cardio/i.test(x.category?.name)
           ? "cardio"
           : /stretch/i.test(name)
@@ -181,10 +179,12 @@ export function normalizeWger(records) {
         images: images.map((i) => i.image),
         videos: videos.map((v) => v.video),
         videoInfo: videos.map((v) => ({
+          ...attribution(v, "Video original", x.id),
           url: v.video,
+          mediaUrl: v.video,
+          licenseUrl: attribution(v, "Video original", x.id).url,
           codec: v.codec,
           size: v.size,
-          ...attribution(v, "Video original", x.id),
         })),
         source: "wger",
         sourceLinks: [
@@ -240,12 +240,17 @@ export function mergeWger(items, incoming) {
       hit.stepsEs = w.stepsEs;
       hit.instructionCredit = w.instructionCredit;
     }
+    if (w.requiredEquipment?.length) {
+      hit.requiredEquipment = [...new Set([...(hit.requiredEquipment || [hit.equipment].filter(Boolean)), ...w.requiredEquipment])];
+      if(hit.requiredEquipment.length>1)hit.requiredEquipment=hit.requiredEquipment.filter(k=>k!=='body only');
+    }
     if (w.videos.length) {
-      hit.videos = w.videos;
-      hit.videoInfo = w.videoInfo;
+      hit.videos = [...new Set([...(hit.videos || []),...w.videos])];
+      hit.videoInfo = [...(hit.videoInfo || []),...w.videoInfo];
     }
     if (!hit.images.length) hit.images = w.images;
-    hit.wgerId = w.wgerId;
+    hit.wgerIds = [...new Set([...(hit.wgerIds || []),hit.wgerId,w.wgerId].filter(Boolean))];
+    hit.wgerId ||= w.wgerId;
     hit.sourceLinks = [...(hit.sourceLinks || []), ...w.sourceLinks];
     hit.attributions = [...(hit.attributions || []), ...w.attributions];
     hit.aliases = [...(hit.aliases || []), ...w.aliases];
@@ -253,10 +258,20 @@ export function mergeWger(items, incoming) {
   }
   return matched;
 }
+// Repair the v2 snapshot too: the attribution spread used to overwrite `url`.
+export function repairVideoInfo(ex) {
+  ex.videoInfo = (ex.videoInfo || []).map((info,i) => {
+    const mediaUrl = info.mediaUrl || (/creativecommons/.test(info.url || '') ? (ex.videos || []).filter(u=>!u.startsWith('assets/'))[i] : info.url) || ex.videos?.[i];
+    const licenseUrl = info.licenseUrl || (/creativecommons/.test(info.url || '') ? info.url : '');
+    return {...info,url:mediaUrl,mediaUrl,licenseUrl};
+  });
+  return ex;
+}
 async function main() {
   const previous = await readJSON("data/exercises.json", { exercises: [] });
   let items;
   try {
+    if (process.env.OFFLINE === '1') throw new Error('Actualización local');
     const raw = process.env.FEDB_INPUT_FILE
       ? JSON.parse(await readFile(process.env.FEDB_INPUT_FILE, "utf8"))
       : await getJSON(FEDB);
@@ -269,7 +284,7 @@ async function main() {
       level: x.level ?? null,
       force: x.force ?? null,
       mechanic: x.mechanic ?? null,
-      equipment: x.equipment || "body only",
+      equipment: x.equipment ?? null,
       primary: x.primaryMuscles || [],
       secondary: x.secondaryMuscles || [],
       steps: x.instructions || [],
@@ -294,7 +309,7 @@ async function main() {
     ];
   let wg = await readJSON("data/source-wger.json", []),
     wgerStatus = wg.length ? "respaldo incluido" : "no disponible";
-  if (process.env.USE_WGER !== "0")
+  if (process.env.USE_WGER !== "0" && process.env.OFFLINE !== '1')
     try {
       let records;
       if (process.env.WGER_INPUT_FILE)
@@ -326,6 +341,8 @@ async function main() {
       );
     }
   if (!wg.length) wg = previous.exercises.filter((x) => x.source === "wger");
+  wg.forEach(repairVideoInfo);
+  await writeFile(new URL('data/source-wger.json',ROOT),JSON.stringify(wg));
   const matched = mergeWger(items, wg);
   const editorial = await readJSON("data/editorial.json", {
     exercises: [],
@@ -341,17 +358,51 @@ async function main() {
     else log("Ficha editorial pendiente: no existe", patch.id);
   }
   items.push(...editorial.exercises);
+  // Keep IDs from older published catalogues, including manually saved records.
+  const ids = new Set(items.map(x=>x.id));
+  items.push(...previous.exercises.filter(x=>!ids.has(x.id)));
+  const corrections = await readJSON('data/corrections.json',{updates:[]});
+  for (const patch of corrections.updates) {
+    const ex = items.find(x=>x.id===patch.id);
+    if (ex) Object.assign(ex,patch,{sourceLinks:[...(ex.sourceLinks || []),...(patch.sourceLinks || [])]});
+  }
   const media = await readJSON("data/media.json", []);
+  const mediaReview=await readJSON('data/media-review.json',{overrides:[]});
+  const overrides=new Map(mediaReview.overrides.map(r=>[r.video,r]));
+  const managed=new Set(media.flatMap(m=>[m.video,m.gif,m.poster]).filter(Boolean));
+  const sourceOverrides=new Map(media.filter(m=>overrides.has(m.video)).map(m=>[m.original,overrides.get(m.video)]));
+  for(const x of items){
+    x.videos=(x.videos||[]).filter(u=>!managed.has(u));
+    x.videoInfo=(x.videoInfo||[]).filter(v=>!managed.has(v.url)).map(v=>({...v,...(sourceOverrides.has(v.mediaUrl||v.url)?{variantRestricted:true,variantNote:sourceOverrides.get(v.mediaUrl||v.url).note}:{})}));
+    x.images=(x.images||[]).filter(u=>!managed.has(u));
+    if(managed.has(x.gif))delete x.gif;
+    if(managed.has(x.poster))delete x.poster;
+    x.attributions=(x.attributions||[]).filter(a=>!a.kind?.startsWith('MP4'));
+  }
   for (const m of media)
-    for (const x of items.filter((x) => x.wgerId === m.wgerId)) {
-      x.videos = [m.video, ...(x.videos || [])];
-      x.gif = m.gif;
+    for (const x of items.filter((x) => overrides.has(m.video)?x.id===overrides.get(m.video).exerciseId:(x.videos || []).includes(m.original))) {
+      x.videos = [m.video, ...(x.videos || []).filter(u=>u!==m.video)];
+      if(overrides.has(m.video))x.sourceLinks.push({title:'wger · grabación de la variante en Smith',url:m.attribution.source,kind:'video'});
+      if (m.gif) x.gif = m.gif;
+      x.poster ||= m.poster;
       x.images = [m.poster, ...x.images];
-      x.attributions = [...(x.attributions || []).filter(a=>a.kind !== 'MP4, GIF y miniatura derivados'), m.attribution];
+      x.videoInfo = [...(x.videoInfo || []).filter(v=>v.url!==m.video),{url:m.video,mediaUrl:m.video,licenseUrl:m.attribution.url,codec:'h264',width:m.probe?.streams?.[0]?.width,height:m.probe?.streams?.[0]?.height,original:m.original,author:m.attribution.author,name:m.attribution.name,variantNote:overrides.get(m.video)?.note,verifiedFrames:m.frameCheck?.distinctFrames || null}];
+      x.attributions = [...(x.attributions || []).filter(a=>a.mediaUrl!==m.video && !(a.kind.startsWith('MP4') && a.original===m.original)), {...m.attribution,mediaUrl:m.video,original:m.original}];
     }
+  const extraMedia=await readJSON('data/extra-media.json',[]);
+  for(const m of extraMedia) {
+    const x=items.find(x=>x.id===m.exerciseId);if(!x)continue;
+    x.videos=[m.video,...(x.videos||[])];x.gif=m.gif;x.poster=m.poster;
+    x.images=[m.poster,...(x.images||[])];
+    x.videoInfo=[{url:m.video,mediaUrl:m.video,licenseUrl:m.attribution.url,codec:'h264',width:m.probe.streams[0].width,height:m.probe.streams[0].height,original:m.original,verifiedFrames:m.frameCheck.distinctFrames},...(x.videoInfo||[]).filter(v=>v.url!==m.video)];
+    x.sourceLinks.push({title:m.title,url:m.attribution.source,kind:'video'});
+    x.attributions=[...(x.attributions||[]),m.attribution];
+  }
   for (const x of items) {
+    repairVideoInfo(x);
+    migrateEquipment(x);
     if (x.source === "editorial") {
-      x.images = [`assets/illustrations/${x.family}.svg`];
+      x.images = [...(x.images||[]).filter(u=>!u.startsWith('assets/illustrations/')),`assets/illustrations/${x.family}.svg`];
       x.illustration = true;
     }
     x.sourceLinks = [
@@ -364,6 +415,9 @@ async function main() {
     x.aliases = [...new Set(x.aliases || [])];
     x.images = [...new Set(x.images || [])];
     x.videos = [...new Set(x.videos || [])];
+    // Offline rebuilds re-merge the snapshot. Keep every distinct credit/record,
+    // while removing exact repeats so metadata does not grow on each release.
+    x.videoInfo = [...new Map((x.videoInfo || []).map(info=>[JSON.stringify(info),info])).values()];
     x.attributions = [
       ...new Map(
         (x.attributions || []).map((a) => [JSON.stringify(a), a]),
@@ -386,9 +440,15 @@ async function main() {
     videos: items.filter((x) => x.videos?.length).length,
     gifs: items.filter((x) => x.gif).length,
     linked: items.filter((x) => x.sourceLinks?.length).length,
+    localVideo: items.filter(x=>x.videos?.some(v=>v.startsWith('assets/media/'))).length,
+    noLevel: items.filter(x=>!x.level).length,
+    noPrimary: items.filter(x=>!x.primary?.length).length,
+    noInstructions: items.filter(x=>!x.steps?.length && !x.stepsEs?.length).length,
+    noVisual: items.filter(x=>!x.images?.length && !x.gif && !x.videos?.length).length,
+    equipmentUnconfirmed: items.filter(x=>!x.equipmentKnown).length,
   };
   const payload = {
-    version: 2,
+    version: 3,
     generated: new Date().toISOString(),
     editorialReviewed: editorial.reviewed,
     coverage,

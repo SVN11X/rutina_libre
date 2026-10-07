@@ -1,0 +1,264 @@
+{
+  "version": 1,
+  "reviewed": "2026-10-07",
+  "notes": "Correcciones basadas en los registros originales incluidos; no se rellenan músculos o niveles no informados. Nombres traducidos por correspondencia literal; revisar las fuentes antes de practicar.",
+  "updates": [
+    {
+      "id": "Mountain_Climbers",
+      "category": "cardio",
+      "nameEs": "Escaladores",
+      "instructionCredit": "Traducción de los pasos originales de Free Exercise DB; las series son orientaciones de la app.",
+      "stepsEs": [
+        "Comienza en posición de flexión, apoyando las manos y las puntas de los pies. Flexiona la rodilla y la cadera de una pierna hasta llevar la rodilla aproximadamente debajo de la cadera.",
+        "Alterna la posición de las piernas: extiende la pierna flexionada y acerca la otra rodilla, alternando durante 20 a 30 segundos. Mantén el control del tronco."
+      ],
+      "categoryCorrection": "La fuente describe alternancia de piernas durante 20–30 segundos, no una dosis de saltos."
+    },
+    {
+      "id": "Superman",
+      "category": "strength",
+      "force": null,
+      "laterality": "bilateral",
+      "categoryCorrection": "La fuente describe elevación bilateral repetida con una breve contracción; no es un estiramiento por lado."
+    },
+    {
+      "id": "wger-2677",
+      "nameEs": "Prensa de piernas unilateral",
+      "equipment": "machine",
+      "requiredEquipment": [
+        "machine"
+      ],
+      "stepsEs": [
+        "Ejercicio de fuerza en el que empujas un peso alejándolo del cuerpo con una pierna a la vez en una máquina de prensa de piernas.",
+        "Permite trabajar cada pierna de forma individual para identificar y corregir diferencias de fuerza entre ambas piernas."
+      ],
+      "instructionCredit": "Traducción de Rutina Libre del texto original de qoxivi en wger, CC BY-SA 4.0. Conserva el original para comparar."
+    },
+    {
+      "id": "Barbell_Squat",
+      "nameEs": "Sentadilla con barra"
+    },
+    {
+      "id": "Barbell_Deadlift",
+      "nameEs": "Peso muerto con barra"
+    },
+    {
+      "id": "Dumbbell_Bench_Press",
+      "nameEs": "Press de banca con mancuernas"
+    },
+    {
+      "id": "Incline_Dumbbell_Press",
+      "nameEs": "Press inclinado con mancuernas"
+    },
+    {
+      "id": "Barbell_Bench_Press_-_Medium_Grip",
+      "nameEs": "Press de banca con barra, agarre medio"
+    },
+    {
+      "id": "One-Arm_Dumbbell_Row",
+      "nameEs": "Remo con mancuerna a una mano"
+    },
+    {
+      "id": "Inverted_Row",
+      "nameEs": "Remo invertido en barra horizontal"
+    },
+    {
+      "id": "Bench_Dips",
+      "nameEs": "Fondos en banca"
+    },
+    {
+      "id": "Dead_Bug",
+      "nameEs": "Bicho muerto (dead bug)"
+    },
+    {
+      "id": "Goblet_Squat",
+      "nameEs": "Sentadilla goblet"
+    },
+    {
+      "id": "Dumbbell_Shoulder_Press",
+      "nameEs": "Press de hombros con mancuernas"
+    },
+    {
+      "id": "Romanian_Deadlift",
+      "nameEs": "Peso muerto rumano"
+    },
+    {
+      "id": "Barbell_Lunge",
+      "nameEs": "Zancada con barra"
+    },
+    {
+      "id": "Dumbbell_Flyes",
+      "nameEs": "Aperturas con mancuernas"
+    },
+    {
+      "id": "Side_Lateral_Raise",
+      "nameEs": "Elevaciones laterales"
+    },
+    {
+      "id": "Triceps_Pushdown",
+      "nameEs": "Extensión de tríceps en polea"
+    },
+    {
+      "id": "Leg_Extensions",
+      "nameEs": "Extensiones de piernas en máquina"
+    },
+    {
+      "id": "Lying_Leg_Curls",
+      "nameEs": "Curl femoral tumbado"
+    },
+    {
+      "id": "Standing_Calf_Raises",
+      "nameEs": "Elevación de talones de pie"
+    },
+    {
+      "id": "Cat_Stretch",
+      "nameEs": "Estiramiento del gato"
+    },
+    {
+      "id": "Seated_Cable_Rows",
+      "nameEs": "Remo sentado en polea baja",
+      "family": "row",
+      "posture": "seated",
+      "movementPattern": "horizontal-pull",
+      "aliases": [
+        "remo Gironda",
+        "sentado tiro mango hacia abdomen",
+        "seated cable row"
+      ],
+      "dataReview": "Equipo, postura y tirón hacia el abdomen explícitos en el registro Free Exercise DB; nivel conservado de esa fuente."
+    },
+    {
+      "id": "Dumbbell_Bench_Press",
+      "stepsEs": [
+        "Túmbate en una banca plana con una mancuerna en cada mano apoyada sobre los muslos y las palmas enfrentadas.",
+        "Ayúdate con los muslos para subir las mancuernas, una a una, y sostenerlas a la anchura de los hombros.",
+        "Gira las muñecas para orientar las palmas hacia delante. Coloca las mancuernas a los lados del pecho, con brazo y antebrazo formando un ángulo de 90 grados. Mantén el control de las mancuernas.",
+        "Al exhalar, empuja las mancuernas hacia arriba usando el pecho. Extiende los brazos arriba, contrae el pecho y mantén un segundo antes de bajar lentamente. El original propone bajar aproximadamente el doble de despacio que al subir.",
+        "Repite el movimiento según tu programa."
+      ],
+      "instructionCredit": "Traducción al español de Rutina Libre del registro original de Free Exercise DB (Unlicense). Se conserva el original para comparación; las dosis mostradas son orientaciones separadas de la app."
+    },
+    {
+      "id": "Incline_Dumbbell_Press",
+      "stepsEs": [
+        "Túmbate en una banca inclinada con una mancuerna en cada mano sobre los muslos y las palmas enfrentadas.",
+        "Ayúdate con los muslos para subir las mancuernas, una a una, hasta la anchura de los hombros.",
+        "Gira las muñecas para orientar las palmas hacia delante. Esta es la posición inicial.",
+        "Controla las mancuernas en todo momento. Exhala y empújalas hacia arriba usando el pecho.",
+        "Extiende los brazos arriba, mantén un segundo y baja lentamente. El original propone bajar aproximadamente el doble de despacio que al subir.",
+        "Repite el movimiento según tu programa.",
+        "Al terminar, devuelve las mancuernas a los muslos y después al suelo, como indica la fuente."
+      ],
+      "instructionCredit": "Traducción al español de Rutina Libre del registro original de Free Exercise DB (Unlicense). Se conserva el original para comparación; las dosis mostradas son orientaciones separadas de la app."
+    },
+    {
+      "id": "Inverted_Row",
+      "stepsEs": [
+        "Coloca una barra en un rack aproximadamente a la altura de la cintura. Como alternativa, la fuente permite una máquina Smith.",
+        "Agarra la barra con las manos más separadas que los hombros y colócate debajo. Mantén el cuerpo recto, los talones en el suelo y los brazos extendidos.",
+        "Flexiona los codos para acercar el pecho a la barra y retrae los omóplatos durante el movimiento.",
+        "Haz una pausa arriba y vuelve a la posición inicial.",
+        "Repite el movimiento según tu programa."
+      ],
+      "instructionCredit": "Traducción al español de Rutina Libre del registro original de Free Exercise DB (Unlicense). Se conserva el original para comparación; las dosis mostradas son orientaciones separadas de la app."
+    },
+    {
+      "id": "Superman",
+      "stepsEs": [
+        "Túmbate recto, boca abajo, sobre el suelo o una colchoneta, con los brazos extendidos por delante.",
+        "Eleva simultáneamente brazos, piernas y pecho del suelo y mantén la contracción dos segundos. El original indica exhalar durante este movimiento.",
+        "Baja lentamente brazos, piernas y pecho a la posición inicial mientras inhalas.",
+        "Repite el movimiento según tu programa."
+      ],
+      "instructionCredit": "Traducción al español de Rutina Libre del registro original de Free Exercise DB (Unlicense). Se conserva el original para comparación; las dosis mostradas son orientaciones separadas de la app."
+    },
+    {
+      "id": "Smith_Machine_Bench_Press",
+      "nameEs": "Press de banca en máquina Smith"
+    },
+    {
+      "id": "Smith_Machine_Incline_Bench_Press",
+      "nameEs": "Press inclinado en máquina Smith"
+    },
+    {
+      "id": "wger-194",
+      "requiredEquipment": [
+        "parallel bars"
+      ],
+      "equipment": "parallel bars",
+      "equipmentEvidence": [
+        "Barras paralelas visibles en el video original de wger; implementación confirmada para esta demostración"
+      ]
+    },
+    {
+      "id": "wger-477",
+      "equipment": "machine",
+      "requiredEquipment": [
+        "machine"
+      ],
+      "equipmentEvidence": [
+        "La denominación original especifica dominadas en máquina; no se trata como peso corporal sin equipo"
+      ]
+    },
+    {
+      "id": "Ankle_Circles",
+      "category": "mobility",
+      "laterality": "unilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Arm_Circles",
+      "category": "mobility",
+      "laterality": "bilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Dynamic_Back_Stretch",
+      "category": "mobility",
+      "laterality": "bilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Dynamic_Chest_Stretch",
+      "category": "mobility",
+      "laterality": "bilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Elbow_Circles",
+      "category": "mobility",
+      "laterality": "bilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Hip_Circles_prone",
+      "category": "mobility",
+      "laterality": "unilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Knee_Circles",
+      "category": "mobility",
+      "laterality": "unilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Shoulder_Circles",
+      "category": "mobility",
+      "laterality": "bilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Standing_Hip_Circles",
+      "category": "mobility",
+      "laterality": "unilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    },
+    {
+      "id": "Wrist_Circles",
+      "category": "mobility",
+      "laterality": "bilateral",
+      "categoryCorrection": "Los pasos originales describen círculos o movimientos repetidos, no una postura sostenida."
+    }
+  ]
+}

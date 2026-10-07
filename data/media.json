@@ -1,12 +1,300 @@
 [
   {
+    "wgerId": 12,
+    "video": "assets/media/wger-12.mp4",
+    "poster": "assets/media/wger-12.jpg",
+    "original": "https://wger.de/media/exercise-video/12/5148c579-5df2-4618-9a7b-a2e29ac4dd7d.MOV",
+    "sha256Original": "9ea2e87291d7445c801f058a13f4c2c62a14c34869577a1ae1601824778e0f66",
+    "sha256Video": "a043798f0929934072da1d7b41eb6def8f60ac29697cddee91f14a393a9552e9",
+    "checked": "2026-10-07T00:32:15.975647+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/12/view/",
+      "original": "https://wger.de/media/exercise-video/12/5148c579-5df2-4618-9a7b-a2e29ac4dd7d.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1246",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "20.861667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "501"
+        }
+      ],
+      "format": {
+        "duration": "20.875000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 42,
+      "distinctFrames": 42,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1605274,
+    "gif": "assets/media/wger-12.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 46,
+    "video": "assets/media/wger-46-v2.mp4",
+    "poster": "assets/media/wger-46-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/46/d45df7af-586b-42d0-bc56-d1e028812f12.MOV",
+    "sha256Original": "4246d6c1973de9cd0b56b0ff03ac75e759a5f27d68235be6748848de3d2e1d15",
+    "sha256Video": "3c9e5d705210e7eb3b9d67b3fa151ed33763ad2945ee475b0bb8a835c03fa245",
+    "checked": "2026-10-07T00:32:04.412298+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/46/view/",
+      "original": "https://wger.de/media/exercise-video/46/d45df7af-586b-42d0-bc56-d1e028812f12.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.02 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "485",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "8.085011"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "194"
+        }
+      ],
+      "format": {
+        "duration": "8.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 16,
+      "distinctFrames": 16,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 523776
+  },
+  {
+    "wgerId": 46,
+    "video": "assets/media/wger-46.mp4",
+    "poster": "assets/media/wger-46.jpg",
+    "original": "https://wger.de/media/exercise-video/46/200d9889-322f-476a-a47b-f15a1a97934a.MOV",
+    "sha256Original": "7cac6ec434a8a1ddf235f03ba11b09235f42409e27acc29af8109505f4ffd258",
+    "sha256Video": "8a00ec2cf651e94cb3990dc3aad9bb80aa28a62d45dedcb1061de8bcb9716926",
+    "checked": "2026-10-07T00:32:09.196422+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/46/view/",
+      "original": "https://wger.de/media/exercise-video/46/200d9889-322f-476a-a47b-f15a1a97934a.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.25 s. GIF de 6.00 s desde 3.25 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "779",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "12.986667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "312"
+        }
+      ],
+      "format": {
+        "duration": "13.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 26,
+      "distinctFrames": 26,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 840152,
+    "gif": "assets/media/wger-46.gif",
+    "gifStartSeconds": 3.25
+  },
+  {
+    "wgerId": 73,
+    "video": "assets/media/wger-73-v2.mp4",
+    "poster": "assets/media/wger-73-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/73/255b3509-e454-48a6-bf66-c7ca482be21a.MOV",
+    "sha256Original": "d731f05f7eed78571d9f622fe99223b4139de190d029c1c82b48d13d9454017b",
+    "sha256Video": "76c503da8e3ccc92722d23af7ac6690caf92346628b8db1f3628402763aa2316",
+    "checked": "2026-10-07T00:32:16.352607+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/73/view/",
+      "original": "https://wger.de/media/exercise-video/73/255b3509-e454-48a6-bf66-c7ca482be21a.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 352,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "614"
+        }
+      ],
+      "format": {
+        "duration": "20.781859"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 352,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "497"
+        }
+      ],
+      "format": {
+        "duration": "20.708333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 41,
+      "distinctFrames": 41,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1443543
+  },
+  {
+    "wgerId": 73,
+    "video": "assets/media/wger-73-v3.mp4",
+    "poster": "assets/media/wger-73-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/73/cfb72002-898f-443a-a124-a0bce8a2e6ad.MP4",
+    "sha256Original": "6e5b984f2fca4685d8a84cacf95c8ae7364c978b58dc4ad71c308faaa1470358",
+    "sha256Video": "d23dac121a612ca5d396b849187223c2db403828f415aaff71966b76a09513ff",
+    "checked": "2026-10-07T00:32:18.360991+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/73/view/",
+      "original": "https://wger.de/media/exercise-video/73/cfb72002-898f-443a-a124-a0bce8a2e6ad.MP4",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "629"
+        }
+      ],
+      "format": {
+        "duration": "21.037279"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "503"
+        }
+      ],
+      "format": {
+        "duration": "20.958333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 42,
+      "distinctFrames": 42,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1748167
+  },
+  {
     "wgerId": 73,
     "video": "assets/media/wger-73.mp4",
-    "gif": "assets/media/wger-73.gif",
     "poster": "assets/media/wger-73.jpg",
     "original": "https://wger.de/media/exercise-video/73/2bdb390c-312c-4497-a722-5eed2c823e5a.MOV",
     "sha256Original": "f7ef457d364ed24fc1dff86a4c40f9801f42213300e9904b442d96430b869ecc",
-    "checked": "2026-10-06T01:16:00.082473+00:00",
+    "sha256Video": "d3219ca1d96b673c4fdb3a6d5717763244052e328a79bbc912b5afb103acb39f",
+    "checked": "2026-10-07T00:32:01.199726+00:00",
     "attribution": {
       "kind": "MP4, GIF y miniatura derivados",
       "author": "Goulart",
@@ -14,19 +302,221 @@
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://wger.de/en/exercise/73/view/",
       "original": "https://wger.de/media/exercise-video/73/2bdb390c-312c-4497-a722-5eed2c823e5a.MOV",
-      "changes": "MP4 H.264 sin audio y resolución reducida. GIF de 6 segundos desde el segundo 3.96; miniatura del fragmento seleccionado."
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.96 s. GIF de 6.00 s desde 3.96 s."
     },
-    "gifStartSeconds": 3.96,
-    "visualReview": "2026-10-06"
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 352,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "473"
+        }
+      ],
+      "format": {
+        "duration": "15.928889"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 640,
+          "height": 352,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "380"
+        }
+      ],
+      "format": {
+        "duration": "15.833333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 32,
+      "distinctFrames": 32,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1157966,
+    "gif": "assets/media/wger-73.gif",
+    "gifStartSeconds": 3.96
+  },
+  {
+    "wgerId": 75,
+    "video": "assets/media/wger-75-v2.mp4",
+    "poster": "assets/media/wger-75-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/75/a8263fe5-3015-41e3-9781-2d255adcea63.MOV",
+    "sha256Original": "688a23e1c073a94e33b58166d9bb0cc2ae673215cbeba4b6b726da581ed0e61d",
+    "sha256Video": "c78fcf287b1d2e267421803bef98f208f4bb06a192730c22398d625c625e07ca",
+    "checked": "2026-10-07T00:32:31.302856+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/75/view/",
+      "original": "https://wger.de/media/exercise-video/75/a8263fe5-3015-41e3-9781-2d255adcea63.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "901"
+        }
+      ],
+      "format": {
+        "duration": "30.093061"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "721"
+        }
+      ],
+      "format": {
+        "duration": "30.041667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 60,
+      "distinctFrames": 60,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2775502
+  },
+  {
+    "wgerId": 75,
+    "video": "assets/media/wger-75-v3.mp4",
+    "poster": "assets/media/wger-75-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/75/9d803f97-0a48-4483-8f1c-ee5b19d6021e.MOV",
+    "sha256Original": "a9e4c8099caf3a4e9a3f4871390780e9443f433cd29b1c9082bd4fa2fbb1bd45",
+    "sha256Video": "6e9e727827845ee7025b2f0c45b45a41afcedd464c97d6f8ed00879a6cd8c085",
+    "checked": "2026-10-07T00:32:31.165249+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/75/view/",
+      "original": "https://wger.de/media/exercise-video/75/9d803f97-0a48-4483-8f1c-ee5b19d6021e.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "846"
+        }
+      ],
+      "format": {
+        "duration": "28.258685"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "677"
+        }
+      ],
+      "format": {
+        "duration": "28.208333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 56,
+      "distinctFrames": 56,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2820949
+  },
+  {
+    "wgerId": 75,
+    "video": "assets/media/wger-75-v4.mp4",
+    "poster": "assets/media/wger-75-v4.jpg",
+    "original": "https://wger.de/media/exercise-video/75/c9cbd391-1e22-4014-8794-04630c80665f.MOV",
+    "sha256Original": "d740856c3927ad1b89217c9b4d57df5202ff2dc0603991bd95d7823b5e63dde3",
+    "sha256Video": "a971bca316dfde82d802679ea7ba09803e3bb6ae54c34cff1aebae07721bfd6b",
+    "checked": "2026-10-07T00:32:26.715790+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/75/view/",
+      "original": "https://wger.de/media/exercise-video/75/c9cbd391-1e22-4014-8794-04630c80665f.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.81 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "337"
+        }
+      ],
+      "format": {
+        "duration": "11.284898"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "270"
+        }
+      ],
+      "format": {
+        "duration": "11.250000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 23,
+      "distinctFrames": 23,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1168506
   },
   {
     "wgerId": 75,
     "video": "assets/media/wger-75.mp4",
-    "gif": "assets/media/wger-75.gif",
     "poster": "assets/media/wger-75.jpg",
     "original": "https://wger.de/media/exercise-video/75/080c799b-8afd-4130-8d72-9cef0cd79f54.MOV",
     "sha256Original": "d96fa783d10b476965e926a2c88f4b6d69da5f9e91cd7656fbafadb001981afa",
-    "checked": "2026-10-06T01:16:01.920357+00:00",
+    "sha256Video": "003ccb9001b0cda06beae8bd93a1666477f5f0609b9609d12df57d629180e731",
+    "checked": "2026-10-07T00:32:18.213693+00:00",
     "attribution": {
       "kind": "MP4, GIF y miniatura derivados",
       "author": "Goulart",
@@ -34,19 +524,580 @@
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://wger.de/en/exercise/75/view/",
       "original": "https://wger.de/media/exercise-video/75/080c799b-8afd-4130-8d72-9cef0cd79f54.MOV",
-      "changes": "MP4 H.264 sin audio y resolución reducida. GIF de 6 segundos desde el segundo 3.52; miniatura del fragmento seleccionado."
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.52 s. GIF de 6.00 s desde 3.52 s."
     },
-    "gifStartSeconds": 3.52,
-    "visualReview": "2026-10-06"
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "423"
+        }
+      ],
+      "format": {
+        "duration": "14.164172"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "338"
+        }
+      ],
+      "format": {
+        "duration": "14.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 28,
+      "distinctFrames": 28,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1179138,
+    "gif": "assets/media/wger-75.gif",
+    "gifStartSeconds": 3.52
+  },
+  {
+    "wgerId": 82,
+    "video": "assets/media/wger-82-v2.mp4",
+    "poster": "assets/media/wger-82-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/82/ebf1e6d2-df48-44b8-a791-97f77e801bf3.MOV",
+    "sha256Original": "ea9eaa3cf78c26b42118ee4a3995a4672470fca8d0bcc1f3d956157b1845c859",
+    "sha256Video": "8116f4dbaaa876c04ef52ef48b73cf2ae4d4fef89bbf991730846ed945b64fef",
+    "checked": "2026-10-07T00:32:44.193584+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/82/view/",
+      "original": "https://wger.de/media/exercise-video/82/ebf1e6d2-df48-44b8-a791-97f77e801bf3.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 1.74 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "418",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "6.968333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "167"
+        }
+      ],
+      "format": {
+        "duration": "6.958333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 14,
+      "distinctFrames": 14,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 719653
+  },
+  {
+    "wgerId": 82,
+    "video": "assets/media/wger-82-v3.mp4",
+    "poster": "assets/media/wger-82-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/82/437d79db-ac8f-49e2-8780-0365f94ee01c.MOV",
+    "sha256Original": "5a8047f8f30a2e355b64f5b9461894f1cbce8e71a40538a193db1d9ce0914c3f",
+    "sha256Video": "a5eb4ebfa7336c9f5c5b5c144c8139903de95e7123ef09867b1ba9e161d31243",
+    "checked": "2026-10-07T00:32:43.990339+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/82/view/",
+      "original": "https://wger.de/media/exercise-video/82/437d79db-ac8f-49e2-8780-0365f94ee01c.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 1.59 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "382",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "6.368333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "153"
+        }
+      ],
+      "format": {
+        "duration": "6.375000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 13,
+      "distinctFrames": 13,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 590505
+  },
+  {
+    "wgerId": 82,
+    "video": "assets/media/wger-82-v4.mp4",
+    "poster": "assets/media/wger-82-v4.jpg",
+    "original": "https://wger.de/media/exercise-video/82/7cfe6d04-5e59-4d0b-937b-b8f4ee10602d.MOV",
+    "sha256Original": "7f82e4da97d034b36e1105216cf76b0b8bf044ae8218695a8b63dcbb89495a35",
+    "sha256Video": "1d97286b823b3bb5a8c9c655472b42417673d5432c2bdcd869bbe603223d20fa",
+    "checked": "2026-10-07T00:32:46.349361+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/82/view/",
+      "original": "https://wger.de/media/exercise-video/82/7cfe6d04-5e59-4d0b-937b-b8f4ee10602d.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.45 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "588",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "9.801678"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "235"
+        }
+      ],
+      "format": {
+        "duration": "9.791667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 20,
+      "distinctFrames": 20,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1155407
+  },
+  {
+    "wgerId": 82,
+    "video": "assets/media/wger-82.mp4",
+    "poster": "assets/media/wger-82.jpg",
+    "original": "https://wger.de/media/exercise-video/82/28b53647-27e7-47cf-8852-2ee666c8b628.MOV",
+    "sha256Original": "e0a0b55272b6ba9ccf30238802d65c1baf5d6526dbf23dbd940354bf42b73f05",
+    "sha256Video": "30efd0edad9f0c4593cf6cab21bd0505011bd101393ca61dd1631c1e44abdac7",
+    "checked": "2026-10-07T00:32:30.000857+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/82/view/",
+      "original": "https://wger.de/media/exercise-video/82/28b53647-27e7-47cf-8852-2ee666c8b628.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 1.90 s. GIF de 5.69 s desde 1.90 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "456",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "7.603333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "182"
+        }
+      ],
+      "format": {
+        "duration": "7.583333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 15,
+      "distinctFrames": 15,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 713733,
+    "gif": "assets/media/wger-82.gif",
+    "gifStartSeconds": 1.9
+  },
+  {
+    "wgerId": 91,
+    "video": "assets/media/wger-91.mp4",
+    "poster": "assets/media/wger-91.jpg",
+    "original": "https://wger.de/media/exercise-video/91/483f4bff-e108-41f1-8e7b-0caf24952552.MOV",
+    "sha256Original": "2b75ac783df5a9557e280385f6b1181227c613f4ee1a5427a8a3477736b14a49",
+    "sha256Video": "05e8c0eca05c341158baebefc99c63de85cc7445db4c619ce5a65259e23661aa",
+    "checked": "2026-10-07T00:32:46.039587+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/91/view/",
+      "original": "https://wger.de/media/exercise-video/91/483f4bff-e108-41f1-8e7b-0caf24952552.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.08 s. GIF de 6.00 s desde 3.08 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "370",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "12.336667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "296"
+        }
+      ],
+      "format": {
+        "duration": "12.333333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 25,
+      "distinctFrames": 25,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1140096,
+    "gif": "assets/media/wger-91.gif",
+    "gifStartSeconds": 3.08
+  },
+  {
+    "wgerId": 92,
+    "video": "assets/media/wger-92.mp4",
+    "poster": "assets/media/wger-92.jpg",
+    "original": "https://wger.de/media/exercise-video/92/8bfb917c-3d0d-49b9-8073-5d7e01c1b894.MOV",
+    "sha256Original": "4e5e4bbbf24385e8bbed16b7fb2905243041646f56031c3c3515073d6b9ace75",
+    "sha256Video": "f3a0f9a273de809fe127816d1f3782c1b699ec3b2cdce5366b6ceb8e512316ec",
+    "checked": "2026-10-07T00:33:04.920604+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/92/view/",
+      "original": "https://wger.de/media/exercise-video/92/8bfb917c-3d0d-49b9-8073-5d7e01c1b894.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.74 s. GIF de 6.00 s desde 2.74 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "656",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "10.936667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "263"
+        }
+      ],
+      "format": {
+        "duration": "10.958333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 22,
+      "distinctFrames": 22,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 704501,
+    "gif": "assets/media/wger-92.gif",
+    "gifStartSeconds": 2.74
+  },
+  {
+    "wgerId": 95,
+    "video": "assets/media/wger-95.mp4",
+    "poster": "assets/media/wger-95.jpg",
+    "original": "https://wger.de/media/exercise-video/95/ab770931-47d3-44fd-aef0-ac7a64c3b794.MOV",
+    "sha256Original": "4a7f995405ea08af81ede59bc07ed05458596b420a7ca596a154f9e27a24c2cb",
+    "sha256Video": "1e4e7279a555e77f2a9329519550ccb64e85891fc4ea2f1e64fccd42ba2ff5de",
+    "checked": "2026-10-07T00:33:05.311202+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/95/view/",
+      "original": "https://wger.de/media/exercise-video/95/ab770931-47d3-44fd-aef0-ac7a64c3b794.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.61 s. GIF de 6.00 s desde 2.61 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "627",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "10.453333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "251"
+        }
+      ],
+      "format": {
+        "duration": "10.458333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 21,
+      "distinctFrames": 21,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 814331,
+    "gif": "assets/media/wger-95.gif",
+    "gifStartSeconds": 2.61
+  },
+  {
+    "wgerId": 194,
+    "video": "assets/media/wger-194-v2.mp4",
+    "poster": "assets/media/wger-194-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/194/7a6987aa-138d-41e4-8842-5c3e3d970bd9.MOV",
+    "sha256Original": "70d306b3c036ffd7d0d2373d9c781442d996e710b490a1560381cb85b53917b3",
+    "sha256Video": "f26327d3ba19dd1eddc17b970aa4e85e34de3ec46c6a94ba755330b18ea86aba",
+    "checked": "2026-10-07T00:33:00.998177+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/194/view/",
+      "original": "https://wger.de/media/exercise-video/194/7a6987aa-138d-41e4-8842-5c3e3d970bd9.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "489"
+        }
+      ],
+      "format": {
+        "duration": "16.370068"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "392"
+        }
+      ],
+      "format": {
+        "duration": "16.333333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 33,
+      "distinctFrames": 33,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2196252
+  },
+  {
+    "wgerId": 194,
+    "video": "assets/media/wger-194-v3.mp4",
+    "poster": "assets/media/wger-194-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/194/dd9a663f-d8ba-4621-823b-13788ccb66bc.MOV",
+    "sha256Original": "faeefaad3f10f5dfeb95648e4e7bb494b64e0b2efb7085f3793fac00883d5d55",
+    "sha256Video": "385ed014ee8d5f3b2adf3e4322d12793f870327b4956077f11bda6443172111a",
+    "checked": "2026-10-07T00:33:14.315516+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/194/view/",
+      "original": "https://wger.de/media/exercise-video/194/dd9a663f-d8ba-4621-823b-13788ccb66bc.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.53 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "303"
+        }
+      ],
+      "format": {
+        "duration": "10.170340"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "243"
+        }
+      ],
+      "format": {
+        "duration": "10.125000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 20,
+      "distinctFrames": 20,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1117075
   },
   {
     "wgerId": 194,
     "video": "assets/media/wger-194.mp4",
-    "gif": "assets/media/wger-194.gif",
     "poster": "assets/media/wger-194.jpg",
     "original": "https://wger.de/media/exercise-video/194/d039ec90-474d-47a9-a3ad-bf0b00828c82.MP4",
     "sha256Original": "050ca4eddec7fcad452ed29d50bd891a8e897806e62b46a970fc3ada02a4cf50",
-    "checked": "2026-10-06T01:16:02.221833+00:00",
+    "sha256Video": "c990ac2cb16dc81592886a7947b394e62748afd7698918e440fd13c4a7e58912",
+    "checked": "2026-10-07T00:33:01.392024+00:00",
     "attribution": {
       "kind": "MP4, GIF y miniatura derivados",
       "author": "Goulart",
@@ -54,19 +1105,409 @@
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://wger.de/en/exercise/194/view/",
       "original": "https://wger.de/media/exercise-video/194/d039ec90-474d-47a9-a3ad-bf0b00828c82.MP4",
-      "changes": "MP4 H.264 sin audio y resolución reducida. GIF de 6 segundos desde el segundo 3.16; miniatura del fragmento seleccionado."
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.17 s. GIF de 6.00 s desde 3.17 s."
     },
-    "gifStartSeconds": 3.16,
-    "visualReview": "2026-10-06"
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "379"
+        }
+      ],
+      "format": {
+        "duration": "12.747755"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "304"
+        }
+      ],
+      "format": {
+        "duration": "12.666667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 25,
+      "distinctFrames": 25,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1547877,
+    "gif": "assets/media/wger-194.gif",
+    "gifStartSeconds": 3.17
+  },
+  {
+    "wgerId": 205,
+    "video": "assets/media/wger-205-v2.mp4",
+    "poster": "assets/media/wger-205-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/205/4cd5dc48-897f-4e0c-8c5a-639a4098ceb1.MOV",
+    "sha256Original": "f4f18cbfc7a7b5754507d42580ccbac89794cfb2b54d4e8b0f1ec2449dc8f5cb",
+    "sha256Video": "2c1bf73840082a95610df360cf9fcf17e65d7565616d7f44122eb13256972160",
+    "checked": "2026-10-07T00:33:26.164739+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/205/view/",
+      "original": "https://wger.de/media/exercise-video/205/4cd5dc48-897f-4e0c-8c5a-639a4098ceb1.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1076",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "17.940000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "431"
+        }
+      ],
+      "format": {
+        "duration": "17.958333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 36,
+      "distinctFrames": 36,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1411679
+  },
+  {
+    "wgerId": 205,
+    "video": "assets/media/wger-205.mp4",
+    "poster": "assets/media/wger-205.jpg",
+    "original": "https://wger.de/media/exercise-video/205/c167ac34-ddbc-4e1b-8edf-1192e9d00e22.MOV",
+    "sha256Original": "6fc1b2969a40253e8f27eebee8d150efaec8dbe8bc668a348ad8562feee013a5",
+    "sha256Video": "853fcfcaf75db167acdea81ab239c24f50a7c98c80f8ced7aff44a26f182c426",
+    "checked": "2026-10-07T00:33:26.491871+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/205/view/",
+      "original": "https://wger.de/media/exercise-video/205/c167ac34-ddbc-4e1b-8edf-1192e9d00e22.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1025",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "17.090000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "410"
+        }
+      ],
+      "format": {
+        "duration": "17.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 34,
+      "distinctFrames": 34,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1370699,
+    "gif": "assets/media/wger-205.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 206,
+    "video": "assets/media/wger-206.mp4",
+    "poster": "assets/media/wger-206.jpg",
+    "original": "https://wger.de/media/exercise-video/206/47a65c45-6fd1-4181-b71a-3a6c882e516b.MOV",
+    "sha256Original": "3d83e21334e0119fc831609c7581af02ec30642f1ebedf514d951ca25fd4d154",
+    "sha256Video": "7dbca0e1a09bf756ea541ae6c3708c652bae0314799976e714b6820945ab0509",
+    "checked": "2026-10-07T00:33:23.283001+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/206/view/",
+      "original": "https://wger.de/media/exercise-video/206/47a65c45-6fd1-4181-b71a-3a6c882e516b.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.57 s. GIF de 6.00 s desde 3.57 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "858",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "14.308333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "343"
+        }
+      ],
+      "format": {
+        "duration": "14.291667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 29,
+      "distinctFrames": 29,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1098115,
+    "gif": "assets/media/wger-206.gif",
+    "gifStartSeconds": 3.57
+  },
+  {
+    "wgerId": 211,
+    "video": "assets/media/wger-211.mp4",
+    "poster": "assets/media/wger-211.jpg",
+    "original": "https://wger.de/media/exercise-video/211/85f6eb25-a76c-409e-9af9-497794ac0dfb.MOV",
+    "sha256Original": "3ca3071ca6e4d19e6aac1197b22977932d527c7661a2cacb0652b6d976bc80ff",
+    "sha256Video": "b6ccb1a313fcd68e5160f6038ac38fd57de319c4fa6ca4ac8890c15b2ca2e0bc",
+    "checked": "2026-10-07T00:33:35.261636+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/211/view/",
+      "original": "https://wger.de/media/exercise-video/211/85f6eb25-a76c-409e-9af9-497794ac0dfb.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "958"
+        }
+      ],
+      "format": {
+        "duration": "32.020317"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "767"
+        }
+      ],
+      "format": {
+        "duration": "31.958333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 64,
+      "distinctFrames": 64,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 3111470,
+    "gif": "assets/media/wger-211.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 222,
+    "video": "assets/media/wger-222-v2.mp4",
+    "poster": "assets/media/wger-222-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/222/eea93fcc-6a3c-4783-8f70-0234c791a001.MOV",
+    "sha256Original": "88092b7fb9e905e706267d0c86a44c946ca261875640302e1b6956f12f262864",
+    "sha256Video": "57505791fa08fd3ed5b0d4357736a5d8ade8bf735aa7351e997c63f8702a67e3",
+    "checked": "2026-10-07T00:33:42.237148+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/222/view/",
+      "original": "https://wger.de/media/exercise-video/222/eea93fcc-6a3c-4783-8f70-0234c791a001.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.15 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "514",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "8.568345"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "206"
+        }
+      ],
+      "format": {
+        "duration": "8.583333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 17,
+      "distinctFrames": 17,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 856680
+  },
+  {
+    "wgerId": 222,
+    "video": "assets/media/wger-222.mp4",
+    "poster": "assets/media/wger-222.jpg",
+    "original": "https://wger.de/media/exercise-video/222/245a824b-cd39-45f2-b251-2c0b7efead0d.MOV",
+    "sha256Original": "7a336d6b99e52f1f74850945958a72a9082b735e02cafb3e29bb6183c11f5422",
+    "sha256Video": "e96c7a874a3094df610243e4a1ca415e2e8844e4423be7ea336dc1c7e6a01580",
+    "checked": "2026-10-07T00:33:32.517007+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/222/view/",
+      "original": "https://wger.de/media/exercise-video/222/245a824b-cd39-45f2-b251-2c0b7efead0d.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.18 s. GIF de 6.00 s desde 2.18 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "522",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "8.703333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "209"
+        }
+      ],
+      "format": {
+        "duration": "8.708333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 17,
+      "distinctFrames": 17,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 800470,
+    "gif": "assets/media/wger-222.gif",
+    "gifStartSeconds": 2.18
   },
   {
     "wgerId": 245,
     "video": "assets/media/wger-245.mp4",
-    "gif": "assets/media/wger-245.gif",
     "poster": "assets/media/wger-245.jpg",
     "original": "https://wger.de/media/exercise-video/245/c253303e-9160-4f1f-b4fe-daf1e6c8661d.MOV",
     "sha256Original": "ea90aab3561008a60ae462277b49332be8d76567713fc90abe2ee4a047753f09",
-    "checked": "2026-10-06T01:16:17.414537+00:00",
+    "sha256Video": "2080632df879532bd14844d6792d922942a655fe5b2f90888bc002c236bcc10e",
+    "checked": "2026-10-07T00:33:42.233673+00:00",
     "attribution": {
       "kind": "MP4, GIF y miniatura derivados",
       "author": "Goulart",
@@ -74,19 +1515,166 @@
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://wger.de/en/exercise/245/view/",
       "original": "https://wger.de/media/exercise-video/245/c253303e-9160-4f1f-b4fe-daf1e6c8661d.MOV",
-      "changes": "MP4 H.264 sin audio y resolución reducida. GIF de 6 segundos desde el segundo 4; miniatura del fragmento seleccionado."
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
     },
-    "gifStartSeconds": 4,
-    "visualReview": "2026-10-06"
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "560"
+        }
+      ],
+      "format": {
+        "duration": "18.715283"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "448"
+        }
+      ],
+      "format": {
+        "duration": "18.666667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 37,
+      "distinctFrames": 37,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1531576,
+    "gif": "assets/media/wger-245.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 246,
+    "video": "assets/media/wger-246-v2.mp4",
+    "poster": "assets/media/wger-246-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/246/40ca562f-b46b-45c8-81fa-1ea8d544b1b8.MOV",
+    "sha256Original": "9783b75fef0b1f30c5332c9ff9aa217901d8c8456299629331943936284850d3",
+    "sha256Video": "5d1f00706aeb4ec92b794c7ceb24d84665e10a1242b15bb69e647abe45c4f7af",
+    "checked": "2026-10-07T00:33:53.579997+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/246/view/",
+      "original": "https://wger.de/media/exercise-video/246/40ca562f-b46b-45c8-81fa-1ea8d544b1b8.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "542"
+        }
+      ],
+      "format": {
+        "duration": "18.134785"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "434"
+        }
+      ],
+      "format": {
+        "duration": "18.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 36,
+      "distinctFrames": 36,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1799182
+  },
+  {
+    "wgerId": 246,
+    "video": "assets/media/wger-246-v3.mp4",
+    "poster": "assets/media/wger-246-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/246/2a194d11-ff5d-4bdf-849e-1c441cf7b0b1.MOV",
+    "sha256Original": "9afeeb3281e3eded5e7bcad08f38c31b151d0a42d4bc5638346b8f05cbaa5177",
+    "sha256Video": "1f87a3490ebead2810e4eed6e31f4dd1708905ccac2b066071d5d660fb04f096",
+    "checked": "2026-10-07T00:33:51.313519+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/246/view/",
+      "original": "https://wger.de/media/exercise-video/246/2a194d11-ff5d-4bdf-849e-1c441cf7b0b1.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.72 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "326"
+        }
+      ],
+      "format": {
+        "duration": "10.913379"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "261"
+        }
+      ],
+      "format": {
+        "duration": "10.875000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 22,
+      "distinctFrames": 22,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 817370
   },
   {
     "wgerId": 246,
     "video": "assets/media/wger-246.mp4",
-    "gif": "assets/media/wger-246.gif",
     "poster": "assets/media/wger-246.jpg",
     "original": "https://wger.de/media/exercise-video/246/75eb8c88-922e-45c5-8be3-ac073f62b63f.MP4",
     "sha256Original": "ad1e5d0d18ff50dd25271423fa6ec0d72178ad67879c8c298ecf8a11c22f59db",
-    "checked": "2026-10-06T01:16:16.462824+00:00",
+    "sha256Video": "92ed4d67ac3336dbdf0d055ca19013b12a38f49da3f7a7498a3562d5d1da9093",
+    "checked": "2026-10-07T00:33:41.089679+00:00",
     "attribution": {
       "kind": "MP4, GIF y miniatura derivados",
       "author": "Goulart",
@@ -94,19 +1682,1832 @@
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://wger.de/en/exercise/246/view/",
       "original": "https://wger.de/media/exercise-video/246/75eb8c88-922e-45c5-8be3-ac073f62b63f.MP4",
-      "changes": "MP4 H.264 sin audio y resolución reducida. GIF de 6 segundos desde el segundo 3.79; miniatura del fragmento seleccionado."
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.79 s. GIF de 6.00 s desde 3.79 s."
     },
-    "gifStartSeconds": 3.79,
-    "visualReview": "2026-10-06"
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "455"
+        }
+      ],
+      "format": {
+        "duration": "15.232290"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "364"
+        }
+      ],
+      "format": {
+        "duration": "15.166667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 30,
+      "distinctFrames": 30,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1121316,
+    "gif": "assets/media/wger-246.gif",
+    "gifStartSeconds": 3.79
+  },
+  {
+    "wgerId": 257,
+    "video": "assets/media/wger-257-v2.mp4",
+    "poster": "assets/media/wger-257-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/257/f8f01bf8-0908-4915-a8f5-cc7bcfefff8c.MOV",
+    "sha256Original": "b078b863d2ff1e4a72780e172eb49d06c3c633989c26cb7267357dd56fb8b1b0",
+    "sha256Video": "d8b1ef9c60a79880580d560d1660ba285a8e5a37e4a3a521696d836d686729f5",
+    "checked": "2026-10-07T00:34:02.650291+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/257/view/",
+      "original": "https://wger.de/media/exercise-video/257/f8f01bf8-0908-4915-a8f5-cc7bcfefff8c.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1022",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "17.041678"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "409"
+        }
+      ],
+      "format": {
+        "duration": "17.041667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 34,
+      "distinctFrames": 34,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2149044
+  },
+  {
+    "wgerId": 257,
+    "video": "assets/media/wger-257-v3.mp4",
+    "poster": "assets/media/wger-257-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/257/93145935-29db-4e52-9d2d-174b1c30c098.MOV",
+    "sha256Original": "0b3224e065a0be689366b0f4416ed49a4a89f36e4aaf68d238d705a5bf165a8b",
+    "sha256Video": "3fbe2b452685684cd91de2cfd82d12036a181456ff221b973a9f1d3d6bb0166c",
+    "checked": "2026-10-07T00:34:09.333101+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/257/view/",
+      "original": "https://wger.de/media/exercise-video/257/93145935-29db-4e52-9d2d-174b1c30c098.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.06 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "495",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "8.251667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "198"
+        }
+      ],
+      "format": {
+        "duration": "8.250000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 17,
+      "distinctFrames": 17,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 582956
+  },
+  {
+    "wgerId": 257,
+    "video": "assets/media/wger-257-v4.mp4",
+    "poster": "assets/media/wger-257-v4.jpg",
+    "original": "https://wger.de/media/exercise-video/257/520b98d4-c767-47dd-83e6-850189217925.MOV",
+    "sha256Original": "707a68ef0e38fc371dfae5c27c8005fbe7c541955794eab545d00b00256841d2",
+    "sha256Video": "4f8e8e13d07cd54ac85acab974e57c9d1bdea6b8b0819d8c97f9f160540bea4a",
+    "checked": "2026-10-07T00:34:15.599160+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/257/view/",
+      "original": "https://wger.de/media/exercise-video/257/520b98d4-c767-47dd-83e6-850189217925.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "965",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "16.093333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "386"
+        }
+      ],
+      "format": {
+        "duration": "16.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 32,
+      "distinctFrames": 32,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1292748
+  },
+  {
+    "wgerId": 257,
+    "video": "assets/media/wger-257.mp4",
+    "poster": "assets/media/wger-257.jpg",
+    "original": "https://wger.de/media/exercise-video/257/ad8ac7d9-b04d-415f-ae0e-837942ce2840.MOV",
+    "sha256Original": "b3fcf6cf8a4797e3d90f3743d53d2865285adaecd7bef7516f1047d5777890e7",
+    "sha256Video": "55e8243432a27d11627a8a61bf1e765b160a3a2eae9fa454e2c3860a6323a496",
+    "checked": "2026-10-07T00:34:05.369329+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/257/view/",
+      "original": "https://wger.de/media/exercise-video/257/ad8ac7d9-b04d-415f-ae0e-837942ce2840.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1161",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "19.356667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "465"
+        }
+      ],
+      "format": {
+        "duration": "19.375000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 39,
+      "distinctFrames": 39,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2031168,
+    "gif": "assets/media/wger-257.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 272,
+    "video": "assets/media/wger-272.mp4",
+    "poster": "assets/media/wger-272.jpg",
+    "original": "https://wger.de/media/exercise-video/272/df069052-2173-4f24-855f-a0eebe729f24.MOV",
+    "sha256Original": "1bb9997de44f2c7b1ff182001c988ae1245006458a3a6e1bc85db52dcb1a4e38",
+    "sha256Video": "e601ecc83d21b6a1b4fbaa7a31f50b7d3e345abaf22aa7f8ad53b4cee8be8a29",
+    "checked": "2026-10-07T00:34:22.257990+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/272/view/",
+      "original": "https://wger.de/media/exercise-video/272/df069052-2173-4f24-855f-a0eebe729f24.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.59 s. GIF de 6.00 s desde 2.59 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "622",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "10.370000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "249"
+        }
+      ],
+      "format": {
+        "duration": "10.375000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 21,
+      "distinctFrames": 21,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 636263,
+    "gif": "assets/media/wger-272.gif",
+    "gifStartSeconds": 2.59
+  },
+  {
+    "wgerId": 275,
+    "video": "assets/media/wger-275.mp4",
+    "poster": "assets/media/wger-275.jpg",
+    "original": "https://wger.de/media/exercise-video/275/af1fff93-eb58-4ba7-97a4-b38ee67853b4.MOV",
+    "sha256Original": "3306077ea6ba80601490e4de5e37c31eafdb0af7457be1f7e2b877d481130dd8",
+    "sha256Video": "452a0bc17c9f0528600476a4b0194254b90fe47452d2f4bc187bc7b53dbb541e",
+    "checked": "2026-10-07T00:34:24.411440+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/275/view/",
+      "original": "https://wger.de/media/exercise-video/275/af1fff93-eb58-4ba7-97a4-b38ee67853b4.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.97 s. GIF de 6.00 s desde 2.97 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "711",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "11.853333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "285"
+        }
+      ],
+      "format": {
+        "duration": "11.875000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 24,
+      "distinctFrames": 24,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1107323,
+    "gif": "assets/media/wger-275.gif",
+    "gifStartSeconds": 2.97
+  },
+  {
+    "wgerId": 294,
+    "video": "assets/media/wger-294-v2.mp4",
+    "poster": "assets/media/wger-294-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/294/7d6862eb-8848-4f5d-a288-764b0d113108.MOV",
+    "sha256Original": "845a7bee03eec6d588c7bb24592c4860d25320631361e468a0267867fcc3a697",
+    "sha256Video": "3ce46862e1d37d26a98266fdf4f5b5d653b7e119824e75e0e5a1f1a9f6005758",
+    "checked": "2026-10-07T00:35:06.067504+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/294/view/",
+      "original": "https://wger.de/media/exercise-video/294/7d6862eb-8848-4f5d-a288-764b0d113108.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "784",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "26.131667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "627"
+        }
+      ],
+      "format": {
+        "duration": "26.125000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 52,
+      "distinctFrames": 52,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2064791
+  },
+  {
+    "wgerId": 294,
+    "video": "assets/media/wger-294.mp4",
+    "poster": "assets/media/wger-294.jpg",
+    "original": "https://wger.de/media/exercise-video/294/45bacf4b-1bb6-4d47-8bd1-9f00eddd4019.MOV",
+    "sha256Original": "2d9af3456d9bf47f6f52ee31c8da2af883b58acdd02b161e32d23d90ab87a26b",
+    "sha256Video": "a4ad9e1e5b6d070aab571ae148e54bce9f2153805ce68b469fcd216edf98f479",
+    "checked": "2026-10-07T00:34:39.034027+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/294/view/",
+      "original": "https://wger.de/media/exercise-video/294/45bacf4b-1bb6-4d47-8bd1-9f00eddd4019.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1811",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "30.193333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "725"
+        }
+      ],
+      "format": {
+        "duration": "30.208333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 60,
+      "distinctFrames": 60,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2103228,
+    "gif": "assets/media/wger-294.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 341,
+    "video": "assets/media/wger-341.mp4",
+    "poster": "assets/media/wger-341.jpg",
+    "original": "https://wger.de/media/exercise-video/341/0cbfeace-dda9-4166-8424-f51358e88a4f.MOV",
+    "sha256Original": "41bc3318429e26325e3ece262250dd82d1de80345714ae20929db78d20607180",
+    "sha256Video": "af184c3f45a55dd4c81c7bc51847a80932017363ec931dc4d7cb6fd8f01ea190",
+    "checked": "2026-10-07T00:34:43.757216+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/341/view/",
+      "original": "https://wger.de/media/exercise-video/341/0cbfeace-dda9-4166-8424-f51358e88a4f.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.99 s. GIF de 6.00 s desde 2.99 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "717",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "11.955000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "287"
+        }
+      ],
+      "format": {
+        "duration": "11.958333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 24,
+      "distinctFrames": 24,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 950322,
+    "gif": "assets/media/wger-341.gif",
+    "gifStartSeconds": 2.99
+  },
+  {
+    "wgerId": 348,
+    "video": "assets/media/wger-348.mp4",
+    "poster": "assets/media/wger-348.jpg",
+    "original": "https://wger.de/media/exercise-video/348/de69928a-8a35-4096-821c-1f46de5e0e03.MOV",
+    "sha256Original": "41c47c5efd245d0dfbcd25e4c1e6a4f46f2093281871df3503278ea9e5444d7f",
+    "sha256Video": "98794ab57fa841f0cc4fb46b037f27564e262f50617c5c881c786b0aa1586a93",
+    "checked": "2026-10-07T00:34:49.102514+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/348/view/",
+      "original": "https://wger.de/media/exercise-video/348/de69928a-8a35-4096-821c-1f46de5e0e03.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1095",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "18.255011"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "438"
+        }
+      ],
+      "format": {
+        "duration": "18.250000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 37,
+      "distinctFrames": 37,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2270680,
+    "gif": "assets/media/wger-348.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 349,
+    "video": "assets/media/wger-349.mp4",
+    "poster": "assets/media/wger-349.jpg",
+    "original": "https://wger.de/media/exercise-video/349/9896d82e-d8b6-48af-bdd5-b8545dc523e9.MOV",
+    "sha256Original": "14b3c3fc75f882edd98b0af2f685441753349f239aeb5f4cb09c54a4809a7f58",
+    "sha256Video": "ff33a093f34df65823beedca9123cf35fd61d4544c01d95c52a998dff7fec71c",
+    "checked": "2026-10-07T00:35:00.062010+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/349/view/",
+      "original": "https://wger.de/media/exercise-video/349/9896d82e-d8b6-48af-bdd5-b8545dc523e9.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.30 s. GIF de 6.00 s desde 3.30 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "793",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "13.221667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "317"
+        }
+      ],
+      "format": {
+        "duration": "13.208333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 26,
+      "distinctFrames": 26,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1380532,
+    "gif": "assets/media/wger-349.gif",
+    "gifStartSeconds": 3.3
+  },
+  {
+    "wgerId": 365,
+    "video": "assets/media/wger-365-v2.mp4",
+    "poster": "assets/media/wger-365-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/365/1106bd7a-72cd-45b5-853f-5c9912b936ef.MOV",
+    "sha256Original": "234727a5017c9151c3129d6be3b2c8f3fb1bb8fd1eb1c99d23b24ebfe50b7f49",
+    "sha256Video": "510d2cf444faac1a4ec6db44dfd257d708caf5bc6c8073002ee24ca0205de703",
+    "checked": "2026-10-07T00:35:19.354289+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/365/view/",
+      "original": "https://wger.de/media/exercise-video/365/1106bd7a-72cd-45b5-853f-5c9912b936ef.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1411",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "23.530000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "565"
+        }
+      ],
+      "format": {
+        "duration": "23.541667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 47,
+      "distinctFrames": 47,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2572312
+  },
+  {
+    "wgerId": 365,
+    "video": "assets/media/wger-365.mp4",
+    "poster": "assets/media/wger-365.jpg",
+    "original": "https://wger.de/media/exercise-video/365/becaf013-5044-40d0-bae9-7ed60c973737.MOV",
+    "sha256Original": "77d70320a6d87af02532379039874eaf805d569462cc540060b04da915fcecb3",
+    "sha256Video": "1caa7e11bae225e55ec44a78fad7f08c54f7abd6346d1acb6d3253f154d9c23e",
+    "checked": "2026-10-07T00:35:01.553848+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/365/view/",
+      "original": "https://wger.de/media/exercise-video/365/becaf013-5044-40d0-bae9-7ed60c973737.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.76 s. GIF de 6.00 s desde 3.76 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "903",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "15.058333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "361"
+        }
+      ],
+      "format": {
+        "duration": "15.041667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 30,
+      "distinctFrames": 30,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1396029,
+    "gif": "assets/media/wger-365.gif",
+    "gifStartSeconds": 3.76
+  },
+  {
+    "wgerId": 366,
+    "video": "assets/media/wger-366.mp4",
+    "poster": "assets/media/wger-366.jpg",
+    "original": "https://wger.de/media/exercise-video/366/43df4b79-d4c3-4fbf-bcb5-e0d825b84120.MOV",
+    "sha256Original": "87d8c5fb1787d11942b20182fd08c0324288f9ab7a6665d949de8afa5048d244",
+    "sha256Video": "1716428c5d64feb16feb32d49441a982473e4c6c6c2b4024f64273853453ecea",
+    "checked": "2026-10-07T00:35:32.377363+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/366/view/",
+      "original": "https://wger.de/media/exercise-video/366/43df4b79-d4c3-4fbf-bcb5-e0d825b84120.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1493",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "24.891678"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "597"
+        }
+      ],
+      "format": {
+        "duration": "24.875000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 50,
+      "distinctFrames": 50,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2292472,
+    "gif": "assets/media/wger-366.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 367,
+    "video": "assets/media/wger-367-v2.mp4",
+    "poster": "assets/media/wger-367-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/367/e8113ae4-a0b4-42a2-8eaa-3263de64622e.MOV",
+    "sha256Original": "8c9b3984d48599289589e7e7ce9209e395ae8f1a93b5bb0d7511153f5ca8d7d8",
+    "sha256Video": "64bfe0315ec48d48b1e7f106c159923fb685676287f5752ff197ab82256ab4ba",
+    "checked": "2026-10-07T00:35:23.465253+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/367/view/",
+      "original": "https://wger.de/media/exercise-video/367/e8113ae4-a0b4-42a2-8eaa-3263de64622e.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.72 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "869",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "14.891678"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "357"
+        }
+      ],
+      "format": {
+        "duration": "14.875000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 30,
+      "distinctFrames": 30,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1747615
+  },
+  {
+    "wgerId": 367,
+    "video": "assets/media/wger-367.mp4",
+    "poster": "assets/media/wger-367.jpg",
+    "original": "https://wger.de/media/exercise-video/367/6c24960c-20ab-4ef9-90f8-cf53e630ccec.MOV",
+    "sha256Original": "93ae766250d33e008db1ac30c9048a969e5c2a9c9f8dd6d69598ba4dab972e14",
+    "sha256Video": "f56951ec2f0273328d41d592a40bc99d984e2e1be1992c01a7c86e991e596db1",
+    "checked": "2026-10-07T00:35:29.466675+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/367/view/",
+      "original": "https://wger.de/media/exercise-video/367/6c24960c-20ab-4ef9-90f8-cf53e630ccec.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1213",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "20.228333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "485"
+        }
+      ],
+      "format": {
+        "duration": "20.208333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 40,
+      "distinctFrames": 40,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2257808,
+    "gif": "assets/media/wger-367.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 371,
+    "video": "assets/media/wger-371-v2.mp4",
+    "poster": "assets/media/wger-371-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/371/32601896-b84a-49bf-ae8a-b27a8f57ab21.MOV",
+    "sha256Original": "f7f387a1ea2296a6b06248ebe74a65c0960ae0e79766ec195effba5d3ef1b8b3",
+    "sha256Video": "960f0e1852f47be0ea793f13d00755e609516db5b4dcdaea751711ce0599c723",
+    "checked": "2026-10-07T00:37:03.817633+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/371/view/",
+      "original": "https://wger.de/media/exercise-video/371/32601896-b84a-49bf-ae8a-b27a8f57ab21.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1582",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "26.363333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "633"
+        }
+      ],
+      "format": {
+        "duration": "26.375000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 53,
+      "distinctFrames": 53,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2821984
+  },
+  {
+    "wgerId": 371,
+    "video": "assets/media/wger-371-v3.mp4",
+    "poster": "assets/media/wger-371-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/371/db382bd9-f633-47cd-8b02-c52db835e41d.MOV",
+    "sha256Original": "62e58a97010f3810380ae96bbfdb686abb62f8e41fc86af82c880cf708f7765c",
+    "sha256Video": "a9f56277e9ec0b57c911697110863983c950278f1891fac1d74918575c547641",
+    "checked": "2026-10-07T00:36:21.276058+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/371/view/",
+      "original": "https://wger.de/media/exercise-video/371/db382bd9-f633-47cd-8b02-c52db835e41d.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1058",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "17.635000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "423"
+        }
+      ],
+      "format": {
+        "duration": "17.625000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 35,
+      "distinctFrames": 35,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1137864
+  },
+  {
+    "wgerId": 371,
+    "video": "assets/media/wger-371.mp4",
+    "poster": "assets/media/wger-371.jpg",
+    "original": "https://wger.de/media/exercise-video/371/6aae16b4-01b9-4eb4-935c-3250f84d2c59.MOV",
+    "sha256Original": "a92f5677ce005b10385668c88e5cce77c57658b63f8808b8684be0a5abeaa2ef",
+    "sha256Video": "a2afea5e52dab591536521399d62a997f18ce885e783b132bf15005a48ac3ad8",
+    "checked": "2026-10-07T00:36:01.619767+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/371/view/",
+      "original": "https://wger.de/media/exercise-video/371/6aae16b4-01b9-4eb4-935c-3250f84d2c59.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "2080",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "34.686667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "833"
+        }
+      ],
+      "format": {
+        "duration": "34.708333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 69,
+      "distinctFrames": 69,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 3468459,
+    "gif": "assets/media/wger-371.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 374,
+    "video": "assets/media/wger-374.mp4",
+    "poster": "assets/media/wger-374.jpg",
+    "original": "https://wger.de/media/exercise-video/374/5336822a-7803-45b3-a880-f2bbf37a28f2.MOV",
+    "sha256Original": "631218201fd7ec1b30312be5d06ff196c904c3be8d6cd8f837fbfe53fc6ca13a",
+    "sha256Video": "facf234fc70a6651e4a0853c35b07a53fbb15bef1b2a983cab2e7b798a407e76",
+    "checked": "2026-10-07T00:36:01.014484+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/374/view/",
+      "original": "https://wger.de/media/exercise-video/374/5336822a-7803-45b3-a880-f2bbf37a28f2.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1290",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "21.511678"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "516"
+        }
+      ],
+      "format": {
+        "duration": "21.500000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 43,
+      "distinctFrames": 43,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2126033,
+    "gif": "assets/media/wger-374.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 375,
+    "video": "assets/media/wger-375-v2.mp4",
+    "poster": "assets/media/wger-375-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/375/d08a943d-c765-42b5-9ece-b80d90f2aefe.MOV",
+    "sha256Original": "c10ea4de9765fe17f387f5a4271429711eaa6b5c6faf7f6e5ea452d1da148554",
+    "sha256Video": "b9e1dd68ac930db4568af0e0832279600dd1824cf455415b5fa97d09235e0ff7",
+    "checked": "2026-10-07T00:38:01.010107+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/375/view/",
+      "original": "https://wger.de/media/exercise-video/375/d08a943d-c765-42b5-9ece-b80d90f2aefe.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1919",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "32.413333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "778"
+        }
+      ],
+      "format": {
+        "duration": "32.416667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 65,
+      "distinctFrames": 65,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2893596
+  },
+  {
+    "wgerId": 375,
+    "video": "assets/media/wger-375.mp4",
+    "poster": "assets/media/wger-375.jpg",
+    "original": "https://wger.de/media/exercise-video/375/effa7a81-dbdd-4014-83ee-ddf0fd835301.MOV",
+    "sha256Original": "0b59e2f24a6ba1892ab1f136a1ef0b41aa8f5ded0f62a6fe38488d757095bfa1",
+    "sha256Video": "fbbf6aaa016199a10fa73f3f50489f7f1284beba9e69e771052d437562db6f9f",
+    "checked": "2026-10-07T00:36:42.900162+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/375/view/",
+      "original": "https://wger.de/media/exercise-video/375/effa7a81-dbdd-4014-83ee-ddf0fd835301.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1525",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "32.111667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "770"
+        }
+      ],
+      "format": {
+        "duration": "32.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 64,
+      "distinctFrames": 64,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 3087825,
+    "gif": "assets/media/wger-375.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 465,
+    "video": "assets/media/wger-465-v2.mp4",
+    "poster": "assets/media/wger-465-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/465/5d2339a4-815f-46ba-aa19-8a763cfdeba0.MOV",
+    "sha256Original": "7d02193438479b9322c92b6aa63db92424d3724abecd923212d3ceb5ce428948",
+    "sha256Video": "8e206637e38b17ceda667ea6b5a001cabef7cd750263020409e46a51b3545280",
+    "checked": "2026-10-07T00:37:07.252236+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/465/view/",
+      "original": "https://wger.de/media/exercise-video/465/5d2339a4-815f-46ba-aa19-8a763cfdeba0.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.58 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "859",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "14.320000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "344"
+        }
+      ],
+      "format": {
+        "duration": "14.333333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 29,
+      "distinctFrames": 29,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1194272
+  },
+  {
+    "wgerId": 465,
+    "video": "assets/media/wger-465.mp4",
+    "poster": "assets/media/wger-465.jpg",
+    "original": "https://wger.de/media/exercise-video/465/b64ca95b-c677-4f3b-bb50-f75edc81aa74.MOV",
+    "sha256Original": "df89e3ab4d408b413a0cdf4028891665e1f01ae1b5b0bcbaa42887982be5f5fa",
+    "sha256Video": "9ce98811ec90764f408a1b71a99e4b3a69b05621e2a8189715686c6cafd855b6",
+    "checked": "2026-10-07T00:36:58.543987+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/465/view/",
+      "original": "https://wger.de/media/exercise-video/465/b64ca95b-c677-4f3b-bb50-f75edc81aa74.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1546",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "25.776667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "619"
+        }
+      ],
+      "format": {
+        "duration": "25.791667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 52,
+      "distinctFrames": 52,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 3282648,
+    "gif": "assets/media/wger-465.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 475,
+    "video": "assets/media/wger-475.mp4",
+    "poster": "assets/media/wger-475.jpg",
+    "original": "https://wger.de/media/exercise-video/475/83067ffe-ccb9-4e22-8507-5131b211ce74.MOV",
+    "sha256Original": "4c459f322f506eb7bd0b51e7efd81aaf6bd1e10fc0569e182a4815dee325f1b8",
+    "sha256Video": "d97715e6116609fbe3014c3112b01f652b413efca72bfc2710dc915aec3561ce",
+    "checked": "2026-10-07T00:37:27.695515+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/475/view/",
+      "original": "https://wger.de/media/exercise-video/475/83067ffe-ccb9-4e22-8507-5131b211ce74.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1126",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "18.773333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "451"
+        }
+      ],
+      "format": {
+        "duration": "18.791667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 38,
+      "distinctFrames": 38,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1327916,
+    "gif": "assets/media/wger-475.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 477,
+    "video": "assets/media/wger-477.mp4",
+    "poster": "assets/media/wger-477.jpg",
+    "original": "https://wger.de/media/exercise-video/477/2e23bb52-2782-40c8-bf88-fa2d2e2a9a0d.MOV",
+    "sha256Original": "4c459f322f506eb7bd0b51e7efd81aaf6bd1e10fc0569e182a4815dee325f1b8",
+    "sha256Video": "d97715e6116609fbe3014c3112b01f652b413efca72bfc2710dc915aec3561ce",
+    "checked": "2026-10-07T00:37:28.126503+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/477/view/",
+      "original": "https://wger.de/media/exercise-video/477/2e23bb52-2782-40c8-bf88-fa2d2e2a9a0d.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1126",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "18.773333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "451"
+        }
+      ],
+      "format": {
+        "duration": "18.791667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 38,
+      "distinctFrames": 38,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1327916,
+    "gif": "assets/media/wger-477.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 507,
+    "video": "assets/media/wger-507-v2.mp4",
+    "poster": "assets/media/wger-507-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/507/6b6054b5-9236-4a63-8392-6ea7a9010ca6.MOV",
+    "sha256Original": "0edbb2d71e5cb05e93a3438212c11844acb878dc4de1be89f49b3fcdbf8b1c7d",
+    "sha256Video": "98040bb14e923fe2cbc4e74c8430b9f06c718b018dfffa00e67b117be36e9e92",
+    "checked": "2026-10-07T00:37:51.538662+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/507/view/",
+      "original": "https://wger.de/media/exercise-video/507/6b6054b5-9236-4a63-8392-6ea7a9010ca6.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1049",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "17.688345"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "425"
+        }
+      ],
+      "format": {
+        "duration": "17.708333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 35,
+      "distinctFrames": 35,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1188778
+  },
+  {
+    "wgerId": 507,
+    "video": "assets/media/wger-507-v3.mp4",
+    "poster": "assets/media/wger-507-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/507/e96295da-58b8-4b6f-921e-4cb1af3c6cfc.MOV",
+    "sha256Original": "71d71de5d007b9339d9f8a3afcde54bf6f61642df950aefecb2abe2b98edb44e",
+    "sha256Video": "f3f490d7d4d85077bae7c4490ee5d68426a883d06713f50d55490d77368ef2d1",
+    "checked": "2026-10-07T00:39:07.956124+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/507/view/",
+      "original": "https://wger.de/media/exercise-video/507/e96295da-58b8-4b6f-921e-4cb1af3c6cfc.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 3840,
+          "height": 2160,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1770",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "29.496667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "708"
+        }
+      ],
+      "format": {
+        "duration": "29.500000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 59,
+      "distinctFrames": 59,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2200397
+  },
+  {
+    "wgerId": 507,
+    "video": "assets/media/wger-507.mp4",
+    "poster": "assets/media/wger-507.jpg",
+    "original": "https://wger.de/media/exercise-video/507/307e7276-a14d-4ea0-b579-f5b0dbc6f5af.MOV",
+    "sha256Original": "0526207ce774dd9e15c5be5198c3bd5233e2d434fcabe3db67f1060af51c5d84",
+    "sha256Video": "430cebbac3edf8a22d3b75d3cea56116eefb30859465c60a50c9d01b9623e861",
+    "checked": "2026-10-07T00:37:29.947332+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/507/view/",
+      "original": "https://wger.de/media/exercise-video/507/307e7276-a14d-4ea0-b579-f5b0dbc6f5af.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.25 s. GIF de 6.00 s desde 3.25 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "780",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "13.003333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "312"
+        }
+      ],
+      "format": {
+        "duration": "13.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 26,
+      "distinctFrames": 26,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 906503,
+    "gif": "assets/media/wger-507.gif",
+    "gifStartSeconds": 3.25
+  },
+  {
+    "wgerId": 512,
+    "video": "assets/media/wger-512.mp4",
+    "poster": "assets/media/wger-512.jpg",
+    "original": "https://wger.de/media/exercise-video/512/fff4c294-93f0-4926-b3a2-bf59ad4afaa5.MOV",
+    "sha256Original": "623708fc1e5b1fb1be2b1647a0fa044d0208b2ebea2a5ed6bf1a77e9c1e21b90",
+    "sha256Video": "2c5db5e6f35a69132f94d4374161ca360349ac8e7c136a58245ddba9c479704c",
+    "checked": "2026-10-07T00:37:48.645315+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/512/view/",
+      "original": "https://wger.de/media/exercise-video/512/fff4c294-93f0-4926-b3a2-bf59ad4afaa5.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.62 s. GIF de 6.00 s desde 2.62 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "629",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "10.486667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "252"
+        }
+      ],
+      "format": {
+        "duration": "10.500000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 21,
+      "distinctFrames": 21,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 853988,
+    "gif": "assets/media/wger-512.gif",
+    "gifStartSeconds": 2.62
   },
   {
     "wgerId": 537,
     "video": "assets/media/wger-537.mp4",
-    "gif": "assets/media/wger-537.gif",
     "poster": "assets/media/wger-537.jpg",
     "original": "https://wger.de/media/exercise-video/537/b9c937e9-daeb-42a9-be8e-7a77e368478c.MOV",
     "sha256Original": "4861d89988c8e8886435e62064aedd68c04484f0c4646270d182307025c3a162",
-    "checked": "2026-10-06T01:16:20.266633+00:00",
+    "sha256Video": "8e2aaffe42c781a68537554cd483221cb59709090dbb6d2eaffd59770c3f0886",
+    "checked": "2026-10-07T00:38:08.957514+00:00",
     "attribution": {
       "kind": "MP4, GIF y miniatura derivados",
       "author": "Goulart",
@@ -114,9 +3515,1032 @@
       "url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "source": "https://wger.de/en/exercise/537/view/",
       "original": "https://wger.de/media/exercise-video/537/b9c937e9-daeb-42a9-be8e-7a77e368478c.MOV",
-      "changes": "MP4 H.264 sin audio y resolución reducida. GIF de 6 segundos desde el segundo 4; miniatura del fragmento seleccionado."
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
     },
-    "gifStartSeconds": 4,
-    "visualReview": "2026-10-06"
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "821"
+        }
+      ],
+      "format": {
+        "duration": "27.492426"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "658"
+        }
+      ],
+      "format": {
+        "duration": "27.416667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 55,
+      "distinctFrames": 55,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2876920,
+    "gif": "assets/media/wger-537.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 538,
+    "video": "assets/media/wger-538.mp4",
+    "poster": "assets/media/wger-538.jpg",
+    "original": "https://wger.de/media/exercise-video/538/4349a6f6-4cee-4c09-828b-c5e7fc2c1ff1.MOV",
+    "sha256Original": "d7510c0a6a2bb7bd88bc89c0f5e1a7bbd1297794217c08e841140bcd75bb65fa",
+    "sha256Video": "eddb62ffaf5eae78a42a447f9a30b316ec5ad081225217bf2d353797e1f7e539",
+    "checked": "2026-10-07T00:38:05.949891+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/538/view/",
+      "original": "https://wger.de/media/exercise-video/538/4349a6f6-4cee-4c09-828b-c5e7fc2c1ff1.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "594"
+        }
+      ],
+      "format": {
+        "duration": "19.922721"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "477"
+        }
+      ],
+      "format": {
+        "duration": "19.875000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 40,
+      "distinctFrames": 40,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1529245,
+    "gif": "assets/media/wger-538.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 543,
+    "video": "assets/media/wger-543.mp4",
+    "poster": "assets/media/wger-543.jpg",
+    "original": "https://wger.de/media/exercise-video/543/dbfd396b-1aab-4a64-a50b-2c31ff0a2cf7.MOV",
+    "sha256Original": "1b3f5619a871ea77871a17b777c606e793f1d728a8253bad45c13f3877e999d6",
+    "sha256Video": "49b9e6cbcf2978a540a230a9ca0b5dd74c855212ca7ac0187d2bc823168267a0",
+    "checked": "2026-10-07T00:38:19.598131+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/543/view/",
+      "original": "https://wger.de/media/exercise-video/543/dbfd396b-1aab-4a64-a50b-2c31ff0a2cf7.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.07 s. GIF de 6.00 s desde 3.07 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "736",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "12.270000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "295"
+        }
+      ],
+      "format": {
+        "duration": "12.291667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 25,
+      "distinctFrames": 25,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 999956,
+    "gif": "assets/media/wger-543.gif",
+    "gifStartSeconds": 3.07
+  },
+  {
+    "wgerId": 567,
+    "video": "assets/media/wger-567.mp4",
+    "poster": "assets/media/wger-567.jpg",
+    "original": "https://wger.de/media/exercise-video/567/64f33c19-1d96-4b7c-af17-6c6a4941c614.MOV",
+    "sha256Original": "0151a7cd43894d60c1fe1ffb34f4f4b709fc17aa6a5913c7edea4a14c9113985",
+    "sha256Video": "982d4db4d77c89947d1b7a662871490f210678483f29eb25895dccea2ae9d631",
+    "checked": "2026-10-07T00:38:31.151053+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/567/view/",
+      "original": "https://wger.de/media/exercise-video/567/64f33c19-1d96-4b7c-af17-6c6a4941c614.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1387",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "23.125011"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "555"
+        }
+      ],
+      "format": {
+        "duration": "23.125000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 46,
+      "distinctFrames": 46,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2600808,
+    "gif": "assets/media/wger-567.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 570,
+    "video": "assets/media/wger-570.mp4",
+    "poster": "assets/media/wger-570.jpg",
+    "original": "https://wger.de/media/exercise-video/570/bd1f14a3-9d2b-4ec0-b6b9-e82d739f7e60.MOV",
+    "sha256Original": "572115679d3f255ac7343fdff31837dbb2368a1222b97a857dcd2945209c5d41",
+    "sha256Video": "ad6135a3b03025bd7f2752c16424f6becb88f9df79f8a8ea9d2cd0ce138afd5c",
+    "checked": "2026-10-07T00:38:28.742418+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/570/view/",
+      "original": "https://wger.de/media/exercise-video/570/bd1f14a3-9d2b-4ec0-b6b9-e82d739f7e60.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.69 s. GIF de 6.00 s desde 2.69 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "644",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "10.740000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "258"
+        }
+      ],
+      "format": {
+        "duration": "10.750000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 22,
+      "distinctFrames": 22,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 971386,
+    "gif": "assets/media/wger-570.gif",
+    "gifStartSeconds": 2.69
+  },
+  {
+    "wgerId": 575,
+    "video": "assets/media/wger-575.mp4",
+    "poster": "assets/media/wger-575.jpg",
+    "original": "https://wger.de/media/exercise-video/575/a7d99f2b-86fc-433a-8ab1-83144c802296.MOV",
+    "sha256Original": "0b5358cfd02191cd1bd28fc6cccddc463262b24ea2d5833a556254de7e2cba25",
+    "sha256Video": "b66e0a9e608b13f4495bba4cd2579de46fc4685ada9d2eb3254796d674c424a0",
+    "checked": "2026-10-07T00:38:43.181275+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/575/view/",
+      "original": "https://wger.de/media/exercise-video/575/a7d99f2b-86fc-433a-8ab1-83144c802296.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.75 s. GIF de 6.00 s desde 2.75 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "646",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "11.005000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "264"
+        }
+      ],
+      "format": {
+        "duration": "11.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 22,
+      "distinctFrames": 22,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 941415,
+    "gif": "assets/media/wger-575.gif",
+    "gifStartSeconds": 2.75
+  },
+  {
+    "wgerId": 584,
+    "video": "assets/media/wger-584.mp4",
+    "poster": "assets/media/wger-584.jpg",
+    "original": "https://wger.de/media/exercise-video/584/109e8d5d-62a4-40ad-8813-2ccef5bc751f.MOV",
+    "sha256Original": "b7f875efa49f4adc26331f9da7fce4b6db10bc8d346712256cdc5714ae89d3c4",
+    "sha256Video": "edd5de01bdbe4ac2bdc95b87df59f283294ce411af69ebafc54fcfdb262a75e7",
+    "checked": "2026-10-07T00:38:44.392595+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/584/view/",
+      "original": "https://wger.de/media/exercise-video/584/109e8d5d-62a4-40ad-8813-2ccef5bc751f.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.26 s. GIF de 6.00 s desde 3.26 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "781",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "13.021667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "313"
+        }
+      ],
+      "format": {
+        "duration": "13.041667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 26,
+      "distinctFrames": 26,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1307312,
+    "gif": "assets/media/wger-584.gif",
+    "gifStartSeconds": 3.26
+  },
+  {
+    "wgerId": 590,
+    "video": "assets/media/wger-590.mp4",
+    "poster": "assets/media/wger-590.jpg",
+    "original": "https://wger.de/media/exercise-video/590/a325ae2e-686b-4a1f-aff2-ba37fa3fa157.MOV",
+    "sha256Original": "81156e03df81f84c2ceef9f15ba5d4f55042600f6966365916cf5a3a20e7b65b",
+    "sha256Video": "75e50c595966e51f1ee05ddce985a5d2b0b5cb283828dee7e790f66a0da9bd97",
+    "checked": "2026-10-07T00:38:51.176897+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/590/view/",
+      "original": "https://wger.de/media/exercise-video/590/a325ae2e-686b-4a1f-aff2-ba37fa3fa157.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "621",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "20.708333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "497"
+        }
+      ],
+      "format": {
+        "duration": "20.708333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 41,
+      "distinctFrames": 41,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1497248,
+    "gif": "assets/media/wger-590.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 622,
+    "video": "assets/media/wger-622-v2.mp4",
+    "poster": "assets/media/wger-622-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/622/461171e5-2b16-407d-bf27-27aeef43f105.MOV",
+    "sha256Original": "fe75fcc7d54693a0637624e048b32d64623d134358f1e5985ae9740ee3a68e49",
+    "sha256Video": "ae750dfa96b36fe6bc9cb81576bd1120e1f19f71329c20987f174b4e1fc9f247",
+    "checked": "2026-10-07T00:39:04.899044+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/622/view/",
+      "original": "https://wger.de/media/exercise-video/622/461171e5-2b16-407d-bf27-27aeef43f105.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "985",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "16.426667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "394"
+        }
+      ],
+      "format": {
+        "duration": "16.416667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 33,
+      "distinctFrames": 33,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1125092
+  },
+  {
+    "wgerId": 622,
+    "video": "assets/media/wger-622.mp4",
+    "poster": "assets/media/wger-622.jpg",
+    "original": "https://wger.de/media/exercise-video/622/35b7b625-77fd-4c09-8c57-3ad0f2f23175.MOV",
+    "sha256Original": "6ae09d7ed44a6643dd408daed13d87815ab6d75dcf004abf58ffabbcd9e7bea0",
+    "sha256Video": "87ee4661c4fde8be1d00cd61b423a8e0253c6a09200d7ef83eb17fe6d20a80f0",
+    "checked": "2026-10-07T00:39:06.270743+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/622/view/",
+      "original": "https://wger.de/media/exercise-video/622/35b7b625-77fd-4c09-8c57-3ad0f2f23175.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s. GIF de 6.00 s desde 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "1007",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "16.793333"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "403"
+        }
+      ],
+      "format": {
+        "duration": "16.791667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 34,
+      "distinctFrames": 34,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 996619,
+    "gif": "assets/media/wger-622.gif",
+    "gifStartSeconds": 4
+  },
+  {
+    "wgerId": 655,
+    "video": "assets/media/wger-655-v2.mp4",
+    "poster": "assets/media/wger-655-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/655/2d88a05b-bde3-4026-bfbf-524c11068dc5.MOV",
+    "sha256Original": "049c503eaaa174a957baade1b3b9a66fd63b414f00728a11c069742f1bd74ad3",
+    "sha256Video": "8060e3681f45bf41e8a23838c75e3078525d2605248316bac8685cf71805a2a8",
+    "checked": "2026-10-07T00:39:18.744384+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/655/view/",
+      "original": "https://wger.de/media/exercise-video/655/2d88a05b-bde3-4026-bfbf-524c11068dc5.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.55 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "306"
+        }
+      ],
+      "format": {
+        "duration": "10.263220"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "245"
+        }
+      ],
+      "format": {
+        "duration": "10.208333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 20,
+      "distinctFrames": 20,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 901370
+  },
+  {
+    "wgerId": 655,
+    "video": "assets/media/wger-655-v3.mp4",
+    "poster": "assets/media/wger-655-v3.jpg",
+    "original": "https://wger.de/media/exercise-video/655/f1354a78-539c-4f22-a78f-b1f43f920740.MOV",
+    "sha256Original": "b5fdde50598bb3ec02e2d497a6725ff4e1acc40836a25ab3e3f9705ceb65fd0d",
+    "sha256Video": "13da51036af5723ff6030608da60fef57384707f8512f1135717c6f2d5193b76",
+    "checked": "2026-10-07T00:39:19.568771+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/655/view/",
+      "original": "https://wger.de/media/exercise-video/655/f1354a78-539c-4f22-a78f-b1f43f920740.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.27 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "393"
+        }
+      ],
+      "format": {
+        "duration": "13.188934"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "314"
+        }
+      ],
+      "format": {
+        "duration": "13.083333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 26,
+      "distinctFrames": 26,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1098869
+  },
+  {
+    "wgerId": 655,
+    "video": "assets/media/wger-655.mp4",
+    "poster": "assets/media/wger-655.jpg",
+    "original": "https://wger.de/media/exercise-video/655/69e8c1e5-55b2-4da6-8166-092c24b16735.MOV",
+    "sha256Original": "b6bffd6e53e6e2ade4d9f9af6188fad11082e99d63932956ff92e0b274299f58",
+    "sha256Video": "fd548ee6ea8608a244465656ee71ad49fd5a440ea791cf44b7d0897dc89f3c38",
+    "checked": "2026-10-07T00:39:06.617051+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/655/view/",
+      "original": "https://wger.de/media/exercise-video/655/69e8c1e5-55b2-4da6-8166-092c24b16735.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.03 s. GIF de 6.00 s desde 3.03 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "364"
+        }
+      ],
+      "format": {
+        "duration": "12.190476"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "291"
+        }
+      ],
+      "format": {
+        "duration": "12.125000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 24,
+      "distinctFrames": 24,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1201275,
+    "gif": "assets/media/wger-655.gif",
+    "gifStartSeconds": 3.03
+  },
+  {
+    "wgerId": 659,
+    "video": "assets/media/wger-659-v2.mp4",
+    "poster": "assets/media/wger-659-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/659/be0b1bec-7d82-4a1d-85d6-84efa633ef3c.MOV",
+    "sha256Original": "a8ec5684243fe9d0509686bf553ae820f7c34991766b3d311103012371381625",
+    "sha256Video": "7b621b9f00f43fbd75c5da924dc22c81cfe9b585eb850c94867ba4babdc93b37",
+    "checked": "2026-10-07T00:39:20.832218+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/659/view/",
+      "original": "https://wger.de/media/exercise-video/659/be0b1bec-7d82-4a1d-85d6-84efa633ef3c.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 4.00 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "519"
+        }
+      ],
+      "format": {
+        "duration": "17.368526"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "415"
+        }
+      ],
+      "format": {
+        "duration": "17.291667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 35,
+      "distinctFrames": 35,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2263536
+  },
+  {
+    "wgerId": 659,
+    "video": "assets/media/wger-659.mp4",
+    "poster": "assets/media/wger-659.jpg",
+    "original": "https://wger.de/media/exercise-video/659/1f2eb3b6-3185-429f-8330-26dc88f39aff.MOV",
+    "sha256Original": "2b1cb2e47da66abd03bba3ef51ff83f5aebb84e3ac31cbad2435db91417fdf0e",
+    "sha256Video": "e3f36ccae728e228359de0d410b237884cda4969d9798d8b70fb8f7d42b7bedb",
+    "checked": "2026-10-07T00:39:21.898529+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/659/view/",
+      "original": "https://wger.de/media/exercise-video/659/1f2eb3b6-3185-429f-8330-26dc88f39aff.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.76 s. GIF de 6.00 s desde 3.76 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "451"
+        }
+      ],
+      "format": {
+        "duration": "15.092971"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "361"
+        }
+      ],
+      "format": {
+        "duration": "15.041667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 30,
+      "distinctFrames": 30,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 2018592,
+    "gif": "assets/media/wger-659.gif",
+    "gifStartSeconds": 3.76
+  },
+  {
+    "wgerId": 802,
+    "video": "assets/media/wger-802.mp4",
+    "poster": "assets/media/wger-802.jpg",
+    "original": "https://wger.de/media/exercise-video/802/85d1d7f8-c3c5-47e8-9b26-56896919e6e7.MOV",
+    "sha256Original": "cc6cbe62cba5d51921ffea9601d56c32a8f3ecc0ec06d8dade67554fe82cf87b",
+    "sha256Video": "3711427603cfd909e5f25948fb9d4f025383ce1dcc1701989898c1253d1c8739",
+    "checked": "2026-10-07T00:39:38.926814+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/802/view/",
+      "original": "https://wger.de/media/exercise-video/802/85d1d7f8-c3c5-47e8-9b26-56896919e6e7.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.18 s. GIF de 6.00 s desde 3.18 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "hevc",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p10le",
+          "nb_frames": "763",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "format": {
+        "duration": "12.721678"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "305"
+        }
+      ],
+      "format": {
+        "duration": "12.708333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 25,
+      "distinctFrames": 25,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 877535,
+    "gif": "assets/media/wger-802.gif",
+    "gifStartSeconds": 3.18
+  },
+  {
+    "wgerId": 803,
+    "video": "assets/media/wger-803-v2.mp4",
+    "poster": "assets/media/wger-803-v2.jpg",
+    "original": "https://wger.de/media/exercise-video/803/589d24e5-aaee-455d-93fd-f0f01da5d9c6.MOV",
+    "sha256Original": "b3ebf056c652e6a66056d53f9b9b3b84520fa94594829e2d3b1ba787d011f472",
+    "sha256Video": "e18bbad4d38debae5c116370560f16063da995e87f1c9b653d0f04739b7b24b2",
+    "checked": "2026-10-07T00:39:33.611450+00:00",
+    "attribution": {
+      "kind": "MP4 y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/803/view/",
+      "original": "https://wger.de/media/exercise-video/803/589d24e5-aaee-455d-93fd-f0f01da5d9c6.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 3.05 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "366"
+        }
+      ],
+      "format": {
+        "duration": "12.283356"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "293"
+        }
+      ],
+      "format": {
+        "duration": "12.208333"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 24,
+      "distinctFrames": 24,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1223572
+  },
+  {
+    "wgerId": 803,
+    "video": "assets/media/wger-803.mp4",
+    "poster": "assets/media/wger-803.jpg",
+    "original": "https://wger.de/media/exercise-video/803/99e0001f-217a-4b11-823c-014d24a5415e.MOV",
+    "sha256Original": "0fcf6f0bbab8987256d6799e6e4c665a9b4122f4497f41a38d0007452b45aea5",
+    "sha256Video": "f3a50e3bfeb656fde8b53c873e1a12c8bd7c07e76f3721d04ed2d7e60ea6698a",
+    "checked": "2026-10-07T00:39:34.171791+00:00",
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Goulart",
+      "name": "CC BY-SA 4.0",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": "https://wger.de/en/exercise/803/view/",
+      "original": "https://wger.de/media/exercise-video/803/99e0001f-217a-4b11-823c-014d24a5415e.MOV",
+      "changes": "MP4 H.264 yuv420p, 24 fps, máximo 720 px, faststart, sin audio. Miniatura en 2.32 s. GIF de 6.00 s desde 2.32 s."
+    },
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "278"
+        }
+      ],
+      "format": {
+        "duration": "9.357642"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "223"
+        }
+      ],
+      "format": {
+        "duration": "9.291667"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 19,
+      "distinctFrames": 19,
+      "width": 64,
+      "height": 64
+    },
+    "bytes": 1148956,
+    "gif": "assets/media/wger-803.gif",
+    "gifStartSeconds": 2.32
   }
 ]

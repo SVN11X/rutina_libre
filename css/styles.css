@@ -363,7 +363,7 @@ img.is-broken { visibility: hidden; }
 /* Control segmentado con radios nativos */
 .seg { border: 0; padding: 0; margin: 0 0 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .seg legend { width: 100%; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.9375rem; }
-.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events:none; }
 .seg label { min-height: 40px; display: inline-flex; align-items: center; padding: 0.35rem 0.85rem; border: 2px solid var(--line); border-radius: 999px; font-weight: 620; cursor: pointer; background: var(--surface); }
 .seg label:hover { border-color: var(--ink-2); }
 .seg input:checked + label { background: var(--ink); color: var(--surface); border-color: var(--ink); }

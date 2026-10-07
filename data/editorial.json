@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewed": "2026-10-06",
+  "reviewed": "2026-10-07",
   "notes": "Contenido educativo: las dosis son ejemplos conservadores y requieren adaptación. Referencias de contexto no equivalen a validación clínica de cada ficha.",
   "exercises": [
     {
@@ -40,6 +40,11 @@
         {
           "title": "NHS · caminar para la salud",
           "url": "https://www.nhs.uk/live-well/exercise/walking-for-health/",
+          "kind": "contexto"
+        },
+        {
+          "title": "Denise Austin: Walking for Fitness · AARP · recurso pendiente de revisar",
+          "url": "https://www.aarp.org/videos/health/fitness/5604206801001/",
           "kind": "contexto"
         }
       ],
@@ -193,7 +198,7 @@
         {
           "title": "NHS South Tees · uso de caminadora",
           "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
-          "kind": "contexto"
+          "kind": "tecnica"
         }
       ],
       "prescription": {
@@ -206,7 +211,19 @@
       "safety": "Lee el manual de la máquina y usa su parada de emergencia. No saltes sobre una cinta en movimiento.",
       "featured": true,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "demonstrations": [
+        {
+          "title": "Treadmill · South Tees Hospitals NHS",
+          "author": "South Tees Hospitals NHS Foundation Trust",
+          "url": "https://www.youtube.com/watch?v=KALCW06tO5A",
+          "embed": "https://www.youtube-nocookie.com/embed/KALCW06tO5A",
+          "source": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "note": "Video enlazado por NHS South Tees: primero caminata cómoda, después progresión de inclinación y trote. Sigue el segmento de tu ficha; no copies las progresiones ni la dosis automáticamente.",
+          "verified": "2026-10-07",
+          "verification": "Enlace y descripción comprobados en la página del proveedor; reproducción externa pendiente de comprobación."
+        }
+      ]
     },
     {
       "id": "rl-caminadora-inclinada",
@@ -243,7 +260,7 @@
         {
           "title": "NHS South Tees · orientación de caminadora",
           "url": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
-          "kind": "contexto"
+          "kind": "tecnica"
         }
       ],
       "prescription": {
@@ -256,7 +273,19 @@
       "safety": "La pendiente y velocidad deben adaptarse a tu capacidad; usa el clip de seguridad.",
       "featured": false,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "demonstrations": [
+        {
+          "title": "Treadmill · South Tees Hospitals NHS",
+          "author": "South Tees Hospitals NHS Foundation Trust",
+          "url": "https://www.youtube.com/watch?v=KALCW06tO5A",
+          "embed": "https://www.youtube-nocookie.com/embed/KALCW06tO5A",
+          "source": "https://www.southtees.nhs.uk/resources/combined-cardiovascular/",
+          "note": "Video enlazado por NHS South Tees: primero caminata cómoda, después progresión de inclinación y trote. Sigue el segmento de tu ficha; no copies las progresiones ni la dosis automáticamente.",
+          "verified": "2026-10-07",
+          "verification": "Enlace y descripción comprobados en la página del proveedor; reproducción externa pendiente de comprobación."
+        }
+      ]
     },
     {
       "id": "rl-caminadora-trote",
@@ -366,7 +395,18 @@
       "safety": "El tramo vivo debe seguir siendo caminata, no un sprint.",
       "featured": false,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "timing": {
+        "workSeconds": [
+          180,
+          180
+        ],
+        "restSeconds": [
+          0,
+          0
+        ],
+        "estimated": false
+      }
     },
     {
       "id": "rl-trote",
@@ -469,7 +509,18 @@
       "safety": "Ejemplo abreviado para empezar. Consulta el plan original para su progresión completa.",
       "featured": true,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "timing": {
+        "workSeconds": [
+          150,
+          150
+        ],
+        "restSeconds": [
+          0,
+          0
+        ],
+        "estimated": false
+      }
     },
     {
       "id": "rl-aceleraciones",
@@ -522,7 +573,23 @@
       "safety": "Para personas adaptadas a correr. Necesitas espacio para frenar y recuperar; no hagas aceleraciones con dolor.",
       "featured": true,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "demonstrations": [
+        {
+          "title": "Sprinting Technique · Standing Starts (2 Point Starts)",
+          "author": "Outperform; entrenador Brent Salazar; demostrador Reshard Langford",
+          "url": "https://www.youtube.com/watch?v=13K8CIuUlXY",
+          "embed": "https://www.youtube-nocookie.com/embed/13K8CIuUlXY",
+          "note": "Salida de pie y primeros pasos de aceleración. El video incluye ejercicios auxiliares: no reemplazan esta ficha ni determinan su distancia o dosis. En esta revisión se confirmó el título y el autor, pero este navegador no recibió fotogramas del proveedor. Si no muestra imagen, abre la fuente.",
+          "verification": {
+            "sourceChecked": "2026-10-07",
+            "playback": "not-validated",
+            "observedWidth": 0,
+            "observedHeight": 0,
+            "observedTime": 0
+          }
+        }
+      ]
     },
     {
       "id": "rl-sprint",
@@ -575,7 +642,20 @@
       "safety": "Ejemplo de volumen, no plan para principiantes. Aprende la técnica con supervisión y separa las sesiones intensas con recuperación.",
       "featured": true,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "demonstrations": [
+        {
+          "title": "Sprinting Technique · Sprint Faster with a Proper Foot Strike",
+          "author": "Outperform",
+          "url": "https://www.youtube.com/watch?v=-Ot-dP1xST4",
+          "embed": "https://www.youtube-nocookie.com/embed/-Ot-dP1xST4",
+          "note": "Recurso específico del apoyo del pie en carrera de velocidad; incluye demostraciones y ejercicios auxiliares. La dosis y distancia de la app son independientes. Se confirmó el enlace publicado por el canal; su reproducción e incrustación están pendientes de validar.",
+          "verification": {
+            "sourceChecked": "2026-10-07",
+            "playback": "not-validated"
+          }
+        }
+      ]
     },
     {
       "id": "rl-strides",
@@ -626,7 +706,20 @@
       "safety": "No conviertas las progresiones en sprints máximos si todavía no estás adaptado.",
       "featured": false,
       "editorial": true,
-      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente."
+      "instructionCredit": "Síntesis en español de Rutina Libre. Las referencias aportan técnica o contexto; las dosis son ejemplos orientativos, no prescripciones de la fuente.",
+      "demonstrations": [
+        {
+          "title": "Strides en una sesión de pista · The Running Channel",
+          "author": "Andy Baddeley / The Running Channel",
+          "url": "https://therunningchannel.com/videos/track-running-workout-for-beginners-coached-by-an-olympian/",
+          "embed": "https://www.youtube-nocookie.com/embed/r8ljh2JuDLc",
+          "note": "La sesión de la fuente incluye strides de 80 m, más largos que el ejemplo de esta ficha. Consulta ese segmento; no adoptes la sesión completa como dosis de la app. Reproducción externa pendiente de comprobación.",
+          "verification": {
+            "sourceChecked": "2026-10-07",
+            "playback": "not-validated"
+          }
+        }
+      ]
     },
     {
       "id": "rl-skipping-alto",

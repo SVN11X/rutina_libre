@@ -1,102 +1,92 @@
-# Rutina Libre · edición mejorada
+# Rutina Libre 3.0.0
 
-Catálogo estático para GitHub Pages con ejercicios de fuerza, cardio, caminata, caminadora, velocidad, agilidad, equilibrio y movilidad. El visitante usa la página directamente: no instala programas, no crea una cuenta y no necesita claves de API.
+Catálogo estático para GitHub Pages. Búsqueda, identificación por texto/dibujo, guardados, rutinas y PDF se ejecutan en el navegador. El visitante no instala herramientas, no crea cuentas ni entrega tarjetas o claves. Las herramientas de conversión y pruebas son exclusivamente de mantenimiento.
 
-## Cambios incluidos
+## Entrega y alcance
 
-- **1.747 fichas**, con enlaces a su registro original. **680** incluyen pasos en español. El catálogo original se conserva.
-- **46 fichas con enlaces de video**; **seis** tienen MP4 H.264, GIF y miniatura dentro del repositorio. Estos seis recursos se revisaron visualmente para comprobar que muestran el ejercicio asociado. Los demás videos conservan el enlace de su proveedor. El formato HEVC se ofrece como enlace externo para evitar reproductores que fallen.
-- **28 fichas nuevas en español**: caminata cómoda y rápida, pendientes, caminadora con distintas modalidades, trote, alternancia caminar/correr, sprint, aceleraciones, progresiones, skipping, ankling, desplazamientos laterales, equilibrio, bicicleta estática, elíptica, remo, movilidad, calentamiento y vuelta a la calma.
-- **15 fichas habituales mejoradas** con explicaciones en español: sentadilla, flexiones, plancha, puente de glúteos, zancadas, curls, press, dominadas, peso muerto, remo, cuerda y otras.
-- **Detector por descripción y dibujo**, procesado en el navegador. No llama a un servicio de IA ni consume una cuota.
-- Interfaz adaptable a móvil, filtros rápidos por actividad, filtro específico de caminadora, recuperación de la búsqueda, guardados, avisos útiles ante errores y fuentes visibles.
-- Rutinas nuevas de **resistencia aeróbica** y **velocidad**, además de los objetivos anteriores. Se distingue tiempo, distancia, repeticiones y recuperación. Una caminata no se transforma en HIIT al elegir un objetivo de grasa.
-- PDF con jsPDF incluido; el generador no necesita un CDN para funcionar.
+Se conservan los **1.748 IDs** de la web revisada, sus fuentes y atribuciones. El repositorio de partida tenía 1.747: se recuperó del sitio la ficha `wger-2677` (Single leg press). No se eliminan guardados ni rutinas locales.
 
-## Publicar los archivos
+- **50 fichas con MP4 incluidos**, frente a seis. **49 fichas con GIF derivados reales**, frente a seis. Se distribuyen 82 MP4 H.264/yuv420p/faststart: 79 asociados a fichas y tres conservados con licencia pero excluidos por mostrar otra variante.
+- Los 78 originales de wger se convirtieron, incluidas las variantes del respaldo. Dominadas/Pullups entrega imagen real; duración, HTTP 200 y avance del reloj ya no bastan para dar una reproducción por válida.
+- Sentadilla corporal, flexiones, plancha de antebrazos y caminata tienen demostraciones locales de fuentes identificadas. Caminadora, sprint, aceleraciones y progresiones conservan enlaces concretos de proveedores; **su reproducción externa no quedó validada**.
+- Video, GIF, Fotos y Esquema son tipos distintos. Los GIF parten de un poster y se activan manualmente. Las fotografías se seleccionan sin simular una película. Los esquemas de las 28 fichas editoriales quedan como apoyo secundario.
+- Requisitos completos de equipo; búsqueda corta con restricciones y negaciones; ranking local por equipo, postura y movimiento; conteos coherentes; dosis y duración compartidas por ficha, rutina, alternativas y PDF.
+- Guardados con actualización inmediata y Deshacer; salto al contenido sin modificar el hash; foco y controles accesibles; actualización de caché que conserva almacenamiento local.
 
-1. Extrae el ZIP y abre la carpeta `rutina_libre`.
-2. Sube **su contenido**, reemplazando los archivos existentes en la rama `main` de `SVN11X/rutina_libre`. Evita subir la carpeta como un nivel adicional.
-3. Conserva `.github/workflows/publicar.yml`, `.nojekyll` y las carpetas `assets`, `css`, `data`, `js`, `scripts` y `tests`.
-4. Con **Settings → Pages → Source → GitHub Actions**, el flujo de publicación ejecuta las comprobaciones y publica el sitio. Si usas **Deploy from a branch**, los datos y medios ya incluidos permiten publicar directamente desde `main` y la raíz.
-5. La dirección habitual del repositorio es `https://svn11x.github.io/rutina_libre/`.
+**El catálogo no está completamente revisado ni traducido.** Hay 683 fichas con pasos en español; quedan 1.065 sin esos pasos, 1.055 sin nombre español, 844 sin nivel, 151 sin músculo principal, 133 sin equipo confirmado y diez sin instrucciones. No se rellenaron esos campos inventando valores. Las rutinas automáticas excluyen nivel desconocido y equipo sin confirmar. Consulta [INFORME_FINAL.md](INFORME_FINAL.md), [el inventario](docs/catalog-audit.json) y [la lista de pendientes](docs/catalog-pending.csv).
 
-No necesitas configurar Hugging Face, RapidAPI, claves, facturación, un backend ni una base de datos. La entrega contiene el proyecto para subir; no modifica automáticamente tu repositorio remoto.
+## Publicación
 
-## Identificar ejercicios
+1. Extrae `rutina-libre-v3.0.0.zip`. Copia **el contenido** de su carpeta `rutina_libre` a la raíz del repositorio; evita un nivel de carpeta adicional.
+2. Reemplaza código, `data`, `assets`, `sw.js`, documentación y flujos `.github`. Conserva `.nojekyll`. No subas `.git`, `node_modules` ni los originales temporales de mantenimiento.
+3. En **Settings → Pages → Source**, selecciona **GitHub Actions**. El flujo `publicar.yml` reconstruye únicamente las fuentes incluidas, comprueba medios, ejecuta pruebas y publica. No actualiza el catálogo remoto ni programa conversiones semanales sin revisión.
+4. Alternativamente, **Deploy from a branch → main → /(root)** publica los archivos ya preparados. En ese modo las comprobaciones del flujo no bloquean una publicación incorrecta.
+5. La URL prevista sigue siendo `https://svn11x.github.io/rutina_libre/`. La aplicación utiliza rutas de hash y archivos relativos. Esta entrega no se ha subido al repositorio ni probado después de su publicación.
+6. Tras publicar, espera el aviso de actualización y recarga. Si una pestaña antigua sigue mostrando la versión anterior, ciérrala y vuelve a abrirla. **No borres los datos del sitio** para actualizar: perderías los guardados y la rutina.
 
-Abre **Identificar** y describe la postura, el movimiento y el equipo. Por ejemplo: “estoy boca arriba, con las rodillas dobladas, y levanto la cadera”. La búsqueda pondera nombres, sinónimos, descripciones e instrucciones mediante BM25 y pistas del movimiento. Presenta fichas reales del catálogo, no inventa una explicación para una coincidencia desconocida.
+El despliegue de Actions necesita acceso a npm, los paquetes gratuitos de Ubuntu y los binarios de Playwright. Se incluyen todas las demostraciones locales; el visitante nunca descarga ni ejecuta ffmpeg. GitHub Pages, Actions y las fuentes tienen políticas, disponibilidad y límites propios; no se promete una cuota ilimitada del proveedor.
 
-También puedes dibujar una figura de palitos con ratón o pantalla táctil. El clasificador compara nubes de puntos normalizadas mediante vecinos más cercanos con **15 familias de posturas**. Tolera diferencias de tamaño, posición y reflejo horizontal. Es un modelo sencillo basado en prototipos esquemáticos locales, no un modelo de visión entrenado con millones de fotografías.
+## Prueba y mantenimiento
 
-**Límites del detector:** la postura estática puede corresponder a varios ejercicios. No distingue todas las variantes, no mide velocidad, no cuenta repeticiones y no evalúa técnica ni condiciones de salud. Combina descripción y dibujo para reducir la ambigüedad y confirma la coincidencia leyendo las fichas. El dibujo funciona mejor con cabeza, tronco y extremidades en varios trazos; no es un reconocedor general de fotografías.
-
-## Fuentes y calidad del contenido
-
-| Fuente | Uso |
-|---|---|
-| [Free Exercise DB](https://github.com/yuhonas/free-exercise-db) | Base original, instrucciones, clasificación y fotos enlazadas. Unlicense declarada por el proyecto. |
-| [wger](https://wger.de) y [documentación de API](https://wger.readthedocs.io/en/latest/api/api.html) | Textos comunitarios en español, imágenes y videos. Se conserva la licencia y autoría de cada recurso, también cuando se une con una ficha de otra fuente. |
-| [NHS: caminar](https://www.nhs.uk/live-well/exercise/walking-for-health/) y [Couch to 5K](https://www.nhs.uk/better-health/get-active/get-running-with-couch-to-5k/couch-to-5k-running-plan/) | Referencias para actividad aeróbica y progresión de carrera. |
-| [NHS: equilibrio](https://www.nhs.uk/live-well/exercise/balance-exercises/) y [flexibilidad](https://www.nhs.uk/live-well/exercise/flexibility-exercises/) | Referencias de postura, control y movilidad. |
-| [NHS South Tees](https://www.southtees.nhs.uk/resources/combined-cardiovascular/) | Contexto de caminadora, bicicleta y remo. |
-| [World Athletics](https://worldathletics.org/personal-best/performance/jereem-richards-games-drills-develop-speed) | Técnica de carrera, coordinación y velocidad. |
-| [Mayo Clinic](https://www.mayoclinic.org/health/strength-training/MY00033) y [ACE](https://www.acefitness.org/resources/everyone/exercise-library/) | Guías y demostraciones de fuerza enlazadas. |
-
-Los recursos comunitarios no tienen una validación clínica individual. Las fichas nuevas son síntesis educativas originales en español. Se distingue entre **registro original** y **guía de técnica o contexto**: una referencia general no implica que su autor haya prescrito exactamente la dosis mostrada.
-
-Las dosis son ejemplos orientativos de la app y requieren adaptación. Las fichas de sprint indican calentamiento, espacio para frenar y recuperación amplia; el generador no prescribe sprints máximos a principiantes. Los esquemas son referencias de postura, no demostraciones biomecánicas. Las fotos alternadas se etiquetan como referencias; no se presentan como un video del movimiento completo.
-
-Los MP4/GIF y sus miniaturas derivados de wger mantienen **CC BY-SA 4.0**, autor **Goulart**, enlace de origen y descripción de los cambios. El registro completo está en `data/media.json` y la atribución también se muestra en la ficha. Los seis GIF usan fragmentos seleccionados para mostrar el ejercicio y evitar los segundos iniciales de preparación de la cámara.
-
-La antigua integración con `oss.exercisedb.dev` se retiró: devolvía HTTP 403 en esta revisión y no alimentaba el catálogo. El sitio no depende de esa API para obtener animaciones.
-
-## Gratuidad y privacidad
-
-La búsqueda, el detector, los guardados, las rutinas y el PDF no tienen cuotas de uso de la app. Se ejecutan en el navegador. GitHub Pages y los proveedores externos mantienen sus propias políticas, disponibilidad y límites; no se promete disponibilidad ilimitada de un tercero.
-
-El texto y los trazos del detector no se envían a servidores. La rutina, preferencias y guardados se almacenan localmente. Las imágenes externas y los enlaces que abras generan peticiones normales a sus proveedores. No se usa analítica ni se requieren cuentas.
-
-## Actualización de datos
-
-El proyecto ya incluye los datos enriquecidos y los medios. La actualización es opcional para el visitante. Para mantener el catálogo, usa Node.js 22 o superior:
+Requiere Node.js 22+, Python 3 y ffmpeg/ffprobe en el equipo de mantenimiento. Playwright y axe-core son dependencias de desarrollo, no de los visitantes.
 
 ```bash
-node scripts/build-data.mjs
-node --test tests/app.test.mjs
+npm ci
+npx playwright install --with-deps chromium
+npm run build:offline
+npm run audit:data
+npm test
+npm run check:media
+npm run stamp:release
+npm run test:browser
+npm run serve
 ```
 
-El script combina Free Exercise DB, wger y `data/editorial.json`. Solo une coincidencias exactas o equivalencias explícitas para evitar asociar videos de variantes diferentes. Ante un fallo remoto, conserva la base y el respaldo `data/source-wger.json`, los MP4/GIF incluidos, la autoría y los enlaces. Desactivar la actualización de wger no elimina su respaldo:
+Abre `http://localhost:4173/`. El servidor local admite rangos de video. No abras `index.html` con doble clic: la carga de JSON necesita HTTP. En Windows se puede ejecutar la reconstrucción incluida con `OFFLINE=1` adaptado a la sintaxis de variables del terminal, o usar GitHub Actions.
+
+`npm test` contiene 25 pruebas, incluidas regresiones de URL/licencia, equipo completo, búsqueda, facetas, dosis, duración y rangos HTTP. `test:browser` comprueba fotogramas y cambios de píxeles en cada MP4, navegación, errores, accesibilidad, actualización, uso sin conexión y descarga PDF. Los resultados se escriben en `docs/browser-validation.json`; la decodificación completa en `docs/media-decode.json`.
+
+`npm run build:offline` reconstruye el catálogo sin consultar APIs remotas. Incluye el respaldo wger corregido, el catálogo anterior, `editorial.json`, `corrections.json` y los manifiestos multimedia. Conserva registros antiguos que no aparecen en una actualización. `npm run build:data` sí consulta las fuentes y **exige revisión antes de publicar**. También se aceptan `FEDB_INPUT_FILE`, `WGER_INPUT_FILE`, `FEDB_URL`, `WGER_BASE` y `USE_WGER=0` para mantenimiento controlado.
 
 ```bash
-USE_WGER=0 node scripts/build-data.mjs
+python scripts/prepare-media.py --all-variants --workers 3
+python scripts/prepare-extra-media.py
+npm run build:offline
+npm run audit:data
+npm test
+npm run check:media
+npm run stamp:release
+npm run test:browser
 ```
 
-`FEDB_URL`, `WGER_BASE`, `FEDB_INPUT_FILE` y `WGER_INPUT_FILE` son opciones de mantenimiento y prueba. Las dos últimas aceptan archivos fuente locales. Las opciones antiguas de ExerciseDB ya no se utilizan.
+La conversión comprueba licencia redistribuible, guarda hashes del original y derivado, verifica fotogramas distintos y registra modificaciones. Produce MP4 sin audio, GIF de seis segundos y miniatura. No modifica ni traduce técnica por IA. `data/media-review.json` conserva decisiones humanas sobre variantes: los videos de Smith no se presentan como barra libre. `mantenimiento-medios.yml` entrega un artefacto para revisión, sin commit ni despliegue automático. Una inspección de fotogramas no certifica adecuación clínica.
 
-Los esquemas originales se regeneran con `node scripts/build-illustrations.mjs`. `scripts/prepare-media.py` permite al mantenedor convertir más videos de wger a MP4 y GIF; necesita Python y ffmpeg en ese equipo. **Los visitantes no necesitan ninguno de esos programas.** Revisa visualmente cada recurso generado y su licencia antes de publicarlo.
+## Equipo, dosis y duración
 
-## Comprobaciones realizadas
+`equipment` conserva compatibilidad con la estructura antigua. `requiredEquipment` contiene todos los implementos obligatorios; `equipmentAlternatives` permite montajes completos alternativos. Una opción se habilita solamente cuando están disponibles **todos** sus elementos. Mancuernas no implican disponer de banca, rack o barra fija. El equipo desconocido se muestra como no confirmado.
 
-- Nueve pruebas automáticas de contenido, búsqueda, tolerancia a errores, equipo, reconocimiento de una postura diferente a los prototipos, entradas desconocidas, dosis, rutinas y conservación de autoría.
-- Veinte comprobaciones en Chromium: catálogo, filtros, fuentes, guardados, reproducción de MP4, GIF, descripción, dibujo, PDF y uso sin red.
-- Interfaz móvil a 390 px sin desbordamiento horizontal; filtros utilizables con teclado.
-- Cero incidencias detectadas por axe en las cuatro vistas de escritorio revisadas (WCAG A/AA): catálogo, detector, caminadora y fuentes. Esto es una comprobación automática, no una certificación de accesibilidad.
+Las dosis se etiquetan como orientaciones de la app, diferenciadas de los textos de las fuentes. Escaladores usa segundos, Superman usa repeticiones bilaterales y movilidad distingue movimientos dinámicos de estiramientos sostenidos. El trote suave conserva 5–10 minutos también en rutina, reemplazos y PDF. Los principiantes no reciben sprints máximos.
 
-El informe de entrega resume las condiciones de prueba y las limitaciones. Algunos medios remotos pueden fallar; la ficha ofrece enlaces y alternativas, y no oculta el problema.
+La duración elegida es un **máximo disponible**. Cada día muestra un rango efectivo estimado que suma trabajo, descansos entre series, preparación, recuperación y transiciones. No se incrementa el esfuerzo para llenar 60 minutos. Las repeticiones y distancias usan estimaciones orientativas de tiempo, no mediciones de tu ejecución. Las ediciones de texto libre se marcan como duración pendiente en lugar de presentar un total falso.
 
-## Prueba local y uso sin conexión
+## Identificación local
 
-Para revisar el sitio en un equipo de desarrollo:
+Describe equipo, postura y movimiento: “Estoy sentado y tiro de un mango hacia el abdomen usando una polea”. Se combinan BM25, sinónimos, coincidencias aproximadas y evidencia específica. “Sentadilla sin equipo” funciona como consulta corta. Las negaciones y restricciones excluyen candidatos incompatibles.
 
-```bash
-python3 -m http.server 8000
-```
+El dibujo compara trazos normalizados con ejemplos esquemáticos variados de 15 familias. Puede no encontrar coincidencias. No se ha medido precisión en una población representativa; no es un modelo de visión para fotografías, no cuenta repeticiones, no evalúa técnica y no garantiza una variante. Confirma los candidatos con sus instrucciones y equipo.
 
-Abre `http://localhost:8000`. No abras `index.html` con doble clic: la carga de JSON requiere un servidor HTTP. El visitante de GitHub Pages accede directamente sin instalar nada.
+Texto y trazos permanecen en el navegador. Las imágenes externas, el traductor externo y los videos que abras generan solicitudes a sus proveedores. La traducción integrada del navegador depende de su disponibilidad y no se verificó en esta entrega. Los pasos ingleses originales permanecen disponibles.
 
-En HTTPS, el service worker conserva la interfaz, catálogo, detector y esquemas tras la primera visita. Las fotos y GIF consultados pueden quedar guardados. Los videos no siempre se conservan completos, especialmente cuando el navegador solicita fragmentos; pueden necesitar conexión. Cambia `VERSION` en `sw.js` cuando publiques una nueva edición.
+## Caché y uso sin conexión
 
-## Licencias
+El service worker clásico permite actualizar instalaciones v2. `stamp:release` genera una versión con hash de código, datos y lógica del worker; no edites el sitio sin ejecutar ese paso. La interfaz y el catálogo se instalan juntos. Una actualización elimina solo cachés antiguas con prefijo `rutina-libre-`; no toca las claves `rl:*` de `localStorage`.
 
-El código y los esquemas originales conservan MIT. Los datos y recursos externos mantienen las licencias de sus fuentes. Las licencias de los medios incluidos y jsPDF se detallan en `THIRD_PARTY.md` y en sus registros de atribución.
+Después de completar la primera instalación en HTTPS o localhost, el catálogo, detector, esquemas, guardados, rutinas y PDF pueden funcionar sin red. El PDF con texto usa jsPDF incluido. Las fotos externas pueden faltar, y los reproductores externos necesitan conexión. Una instalación incompleta no habilita funcionamiento sin red.
+
+Los videos usan peticiones de rango. **Guardar video sin conexión** solicita el archivo completo y confirma que está en caché; desde esa copia se responden rangos 206. No se guardan como completos los fragmentos 206 recibidos de red. El caché multimedia se limita a 180 entradas y aproximadamente 160 MiB según tamaños declarados; puede expulsar archivos antiguos. El navegador también puede liberar espacio. La actualización de versión elimina el caché multimedia anterior, conservando guardados y rutinas; vuelve a guardar los videos que necesites. No se descarga el catálogo entero de videos automáticamente.
+
+## Fuentes y licencias
+
+Fuentes por ficha: registro original, guía específica, demostración o contexto. Una búsqueda de YouTube o una página general no valida técnica ni dosis. Los videos incluidos proceden de wger, DVIDS y Wikimedia Commons. Los enlaces de NHS South Tees, Outperform y The Running Channel conservan su proveedor y sus condiciones. Más información en [THIRD_PARTY.md](THIRD_PARTY.md) y `data/media.json`, `data/extra-media.json`, `data/source-wger.json` y `licenses/`.
+
+Código y esquemas propios: MIT. Recursos externos: su licencia individual. No se cambia su licencia a MIT. No hay analítica, API de pago, claves privadas ni requisitos de instalación para visitantes.

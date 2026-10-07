@@ -1,0 +1,15 @@
+{
+  "url": "https://svn11x.github.io/rutina_libre/data/exercises.json",
+  "checked": "2026-10-07",
+  "coverage": {
+    "exercises": 1748,
+    "spanish": 680,
+    "videos": 46,
+    "gifs": 6,
+    "localVideo": 6,
+    "noVisual": 622,
+    "noLevel": 844,
+    "noPrimary": 151,
+    "noInstructions": 10
+  }
+}

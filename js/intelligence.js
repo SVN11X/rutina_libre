@@ -3,6 +3,8 @@
 // Todo se ejecuta localmente. Los resultados son sugerencias, no diagnósticos.
 import { SYNONYMS, PHRASES, EQUIPMENT, CATEGORIES, MUSCLES } from "./i18n.js";
 import { POSES, poseStrokes } from "./motions.js";
+import { equipmentText } from './equipment.js';
+import { queryEvidence, matchesEvidence, movementEvidence } from './query.js';
 const norm = (s) =>
   String(s || "")
     .toLowerCase()
@@ -40,7 +42,7 @@ function index(items) {
       [ex.summary, 2],
       [(ex.stepsEs || []).join(" "), 0.8],
       [(ex.steps || []).join(" "), 0.4],
-      [EQUIPMENT[ex.equipment], 2],
+      [equipmentText(ex,EQUIPMENT), 5],
       [CATEGORIES[ex.category], 1],
       [(ex.primary || []).map((m) => MUSCLES[m]).join(" "), 1],
     ];
@@ -97,7 +99,8 @@ function conceptFamilies(q) {
   );
 }
 export function rankDescription(items, query, limit = 6) {
-  const q = norm(query).slice(0, 800),
+  const evidence = queryEvidence(query);
+  const q = norm(evidence.text).slice(0, 800),
     terms = tokenize(q),
     families = conceptFamilies(q);
   if (!terms.length) return [];
@@ -109,15 +112,23 @@ export function rankDescription(items, query, limit = 6) {
   for (const [k, values] of Object.entries(PHRASES))
     if (q.includes(norm(k)))
       for (const v of values) for (const t of tokenize(v)) expanded.set(t, 0.8);
-  const noEquipment = /\bsin (equipo|pesas|mancuernas|barra)\b/.test(q);
   const results = [];
   for (const ex of items) {
-    if (noEquipment && ex.equipment !== "body only") continue;
+    if (!matchesEvidence(ex,evidence)) continue;
     const doc = idx.docs.get(ex.id);
     let score = 0;
     const found = [];
     for (const [t, weight] of expanded) {
-      const tf = doc.tf.get(t) || 0;
+      let tf = doc.tf.get(t) || 0;
+      // Small edit-distance tolerance for long tokens, with a reduced weight.
+      if (!tf && t.length >= 6) for (const [candidate,value] of doc.tf) {
+        if (Math.abs(candidate.length-t.length)>1) continue;
+        let a=0,b=0,errors=0;
+        while (a<t.length && b<candidate.length && errors<2) {
+          if (t[a]===candidate[b]) { a++;b++; } else { errors++; if (t.length>=candidate.length) a++; if(candidate.length>=t.length)b++; }
+        }
+        if (errors+(a<t.length || b<candidate.length?1:0)<=1) { tf=value*.5; break; }
+      }
       if (!tf) continue;
       const idf = Math.log(
         1 +
@@ -129,8 +140,12 @@ export function rankDescription(items, query, limit = 6) {
         (tf + 1.2 * (0.25 + (0.75 * doc.len) / idx.average));
       if (terms.includes(t)) found.push(t);
     }
-    const family = ex.family;
-    if (families.has(family)) score += 28;
+    const family = ex.family || (movementEvidence(ex)==='horizontal-pull'?'row':null);
+    if (families.has(family)) score += 18;
+    if (evidence.movement && movementEvidence(ex)===evidence.movement) score += 24;
+    if (evidence.movement && ex.posture===evidence.posture) score += 8;
+    if (evidence.mentioned.size) score += evidence.mentioned.size*16;
+    if (evidence.posture === 'seated' && /seated|sitting|sentad/.test(norm([ex.name,ex.nameEs,...(ex.stepsEs||[])].join(' ')))) score += 14;
     if (!score || (!found.length && !families.has(family))) continue;
     if (ex.editorial) score += 1.5;
     // Un solo término común entre muchos no es identificación suficiente.
@@ -138,9 +153,9 @@ export function rankDescription(items, query, limit = 6) {
     results.push({
       ex,
       score,
-      reasons: families.has(family)
+      reasons: [...(evidence.mentioned.size ? ['El equipo descrito coincide con los requisitos de la ficha'] : []),...(families.has(family)
         ? ["La postura o acción descrita coincide con este movimiento"]
-        : found.slice(0, 3).map((t) => `Coincidencia: ${t}`),
+        : found.slice(0, 3).map((t) => `Coincidencia: ${t}`))],
     });
   }
   results.sort((a, b) => b.score - a.score);
@@ -196,6 +211,8 @@ function distance(a, b) {
 }
 let training = null;
 export function classifySketch(strokes, limit = 4) {
+  const directions=strokes.flatMap(stroke=>stroke.slice(1).map((p,i)=>{const dx=p[0]-stroke[i][0],dy=p[1]-stroke[i][1],n=Math.hypot(dx,dy);return n>2?[dx/n,dy/n]:null;})).filter(Boolean);
+  if(!directions.some((a,i)=>directions.slice(i+1).some(b=>Math.abs(a[0]*b[0]+a[1]*b[1])<.95)))return [];
   const query = sample(strokes);
   if (query.length < 64 || strokes.length < 3) return [];
   // Una postura no permite separar caminadora de caminata, ni press de dominada siempre.
@@ -207,11 +224,11 @@ export function classifySketch(strokes, limit = 4) {
     training = [];
     for (const family of families)
       for (let frame = 0; frame < POSES[family].length; frame++)
-        for (let variant = 0; variant < 3; variant++) {
+        for (let variant = 0; variant < 9; variant++) {
           const strokes = poseStrokes(family, frame).map((s) =>
             s.map(([x, y], i) => [
-              x + (variant ? Math.sin(i * 1.7 + variant) * 3 : 0),
-              y + (variant ? Math.cos(i + variant) * 3 : 0),
+              x * (1 + (variant%3-1)*.12) + (variant ? Math.sin(i * 1.7 + variant) * 5 : 0),
+              y * (1 + (Math.floor(variant/3)-1)*.12) + (variant ? Math.cos(i + variant) * 5 : 0),
             ]),
           );
           training.push({ family, points: sample(strokes) });

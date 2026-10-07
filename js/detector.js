@@ -3,6 +3,7 @@ import { rankDescription, classifySketch } from "./intelligence.js";
 import { POSES, poseStrokes, FAMILY_LABELS, EXAMPLE_IDS } from "./motions.js";
 import { card, wireCardHover, wireSaveButtons } from "./catalog.js";
 import { esc, icon, setTitle, $, $$ } from "./ui.js";
+import { queryEvidence,matchesEvidence } from './query.js';
 
 export async function renderDetector(main) {
   const data = await loadData();
@@ -137,7 +138,7 @@ export async function renderDetector(main) {
         const candidates = new Map(described.map((r) => [r.ex.id, { ...r }]));
         for (const match of drawn) {
           const ex = data.byId.get(EXAMPLE_IDS[match.family]);
-          if (!ex) continue;
+          if (!ex || !matchesEvidence(ex,queryEvidence(query))) continue;
           const item = candidates.get(ex.id) || { ex, score: 0, reasons: [] };
           item.score += match.similarity * (query ? 12 : 40);
           item.reasons.push(
@@ -153,7 +154,7 @@ export async function renderDetector(main) {
               r.score >= described[0].score * 0.65,
           );
         result = result.slice(0, 6);
-        grid.innerHTML = result.map((r) => card(r.ex)).join("");
+        grid.innerHTML = result.map((r) => card(r.ex).replace('</li>',`<p class="match-reason">${esc(r.reasons.slice(0,2).join('. '))}</p></li>`)).join("");
         $(".match-families", main).innerHTML = drawn.length
           ? `<p><strong>Posturas parecidas:</strong> ${drawn.map((m) => esc(FAMILY_LABELS[m.family])).join(" · ")}. Una postura no basta para confirmar el ejercicio.</p>`
           : "";

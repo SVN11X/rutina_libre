@@ -1,5 +1,7 @@
 import { prescribe, repsText, GOALS } from "./reps.js";
 import { LEVELS, ZONES } from "./i18n.js";
+import { canUseEquipment } from './equipment.js';
+import { dayDuration } from './duration.js';
 
 // Número aleatorio repetible a partir de una semilla, para que "Crear otra versión" cambie la selección.
 function rng(seed) {
@@ -170,7 +172,7 @@ export const EQUIPMENT_PRESETS = {
   casa: { label: "En casa sin equipo", equipment: ["body only"] },
   casaPesas: {
     label: "En casa con mancuernas",
-    equipment: ["body only", "dumbbell", "bands", "other"],
+    equipment: ["body only", "dumbbell"],
   },
   gimnasio: {
     label: "Gimnasio completo",
@@ -196,6 +198,7 @@ export const EQUIPMENT_PRESETS = {
       "exercise ball",
       "foam roll",
       "other",
+      'rack','fixed bar','smith machine','parallel bars',
     ],
   },
   cardio: {
@@ -219,7 +222,7 @@ function allowedLevels(level) {
 }
 
 function allowedCategories(goal, level) {
-  if (goal === "movilidad") return new Set(["stretching"]);
+  if (goal === "movilidad") return new Set(["stretching",'mobility']);
   const c = new Set(["strength"]);
   if (level !== "beginner" && (goal === "fuerza" || goal === "musculo"))
     c.add("powerlifting");
@@ -234,10 +237,10 @@ const OLYMPIC = /\b(clean|snatch|jerk)\b/i;
 export function poolFilter(prefs) {
   const eq = new Set(["body only", ...(prefs.equipment ?? [])]);
   const lv = allowedLevels(prefs.level);
-  const hasBar = eq.has("pullup bar") || eq.has("other") || eq.has("machine");
+  const hasBar = eq.has('pullup bar') || eq.has('parallel bars');
   const olympicOk = prefs.level === "expert" && prefs.goal === "fuerza";
   return (ex) =>
-    eq.has(ex.equipment ?? "body only") &&
+    canUseEquipment(ex,[...eq]) &&
     lv.has(ex.level ?? null) &&
     ex.level != null &&
     (hasBar || ex.equipment !== "body only" || !NEEDS_BAR.test(ex.name)) &&
@@ -283,6 +286,8 @@ export function makeItem(ex, prefs) {
     seriesLabel: p.seriesLabel,
     reps: repsText(p),
     rest: p.rest,
+    timing:p.timing,
+    doseOrigin:p.origin,
   };
 }
 
@@ -300,7 +305,7 @@ export function summary(prefs) {
     GOALS[prefs.goal]?.label,
     LEVELS[prefs.level]?.toLowerCase(),
     `${prefs.days} ${prefs.days === 1 ? "día" : "días"} por semana`,
-    `${prefs.minutes} minutos por sesión`,
+    `máximo ${prefs.minutes} minutos disponibles por sesión`,
   ];
   return parts.filter(Boolean).join(", ");
 }
@@ -313,7 +318,7 @@ export function generateRoutine(items, prefs, seed = Date.now() % 100000) {
   const cats = allowedCategories(prefs.goal, prefs.level);
   const pool = base.filter((ex) => cats.has(ex.category) && ex.primary.length);
   const stretches = base.filter(
-    (ex) => ex.category === "stretching" && ex.primary.length,
+    (ex) => ['stretching','mobility'].includes(ex.category) && ex.primary.length,
   );
   const finishers = base.filter(
     (ex) => ex.category === "cardio" && ex.source === "editorial",
@@ -419,7 +424,20 @@ export function generateRoutine(items, prefs, seed = Date.now() % 100000) {
         if (st && !cooldown.includes(st.id)) cooldown.push(st.id);
       }
     }
-    days.push({ title: `Día ${d + 1}: ${title}`, items: dayItems, cooldown });
+    if(prefs.goal==='movilidad') {
+      // Include reviewed dynamic mobility, instead of only sustained stretching.
+      const dynamic=stretches.filter(ex=>ex.category==='mobility');
+      for(const ex of dynamic)if(!dayItems.some(it=>it.exId===ex.id))dayItems.unshift(makeItem(ex,prefs));
+      cooldown=[];
+    }
+    const warm=base.find(ex=>ex.id==='rl-calentamiento-marcha');
+    if(warm)dayItems.unshift(makeItem(warm,prefs));
+    const cooldownItems=cooldown.map(id=>makeItem(items.find(ex=>ex.id===id),prefs));
+    const day={title:`Día ${d+1}: ${title}`,items:dayItems,cooldown,cooldownItems,transitionSeconds:30};
+    // Respect the available upper bound; never add intensity to fill spare time.
+    while(day.items.length>2 && dayDuration(day).known && dayDuration(day).seconds[1]>prefs.minutes*60)day.items.pop();
+    day.duration=dayDuration(day);
+    days.push(day);
   }
 
   return {
@@ -429,7 +447,7 @@ export function generateRoutine(items, prefs, seed = Date.now() % 100000) {
     prefs: { ...prefs },
     seed,
     days,
-    notes: "",
+    notes: 'Las dosis son orientaciones de la app. La duración disponible es un máximo; no se completa aumentando el esfuerzo. Progresa de forma gradual y deja recuperación entre sesiones exigentes.',
   };
 }
 
@@ -493,18 +511,18 @@ function generateMovementRoutine(items, prefs, seed) {
         (index + (seed % 11)) % (candidates.length || cardio.length)
       ];
       const it = makeItem(ex, prefs);
-      if (!/intervalos|alternancia/i.test(ex.nameEs || "")) {
-        it.series = 1;
-        it.reps = `${Math.min(prefs.level === "beginner" ? 15 : 30, Math.max(5, prefs.minutes - 10))} minutos a ritmo cómodo`;
-      }
+      // Keep exactly the dose from the exercise; no silent 5–10 -> 30 min change.
       exercises.push(it);
     }
     if (cool) exercises.push(makeItem(cool, prefs));
-    return {
+    const day = {
       title: `Día ${index + 1}: ${speedDay ? "Técnica y velocidad" : prefs.goal === "velocidad" ? "Movimiento suave y recuperación" : "Resistencia aeróbica"}`,
       items: exercises,
       cooldown: [],
+      transitionSeconds:30,
     };
+    day.duration=dayDuration(day);
+    return day;
   });
   return {
     version: 1,

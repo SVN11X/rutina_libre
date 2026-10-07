@@ -36,12 +36,19 @@ const emit = (what) => listeners.forEach((fn) => fn(what));
 export const saved = {
   all: () => read(K.fav, []),
   has: (id) => read(K.fav, []).includes(id),
+  set(id,value) {
+    const list=read(K.fav,[]).filter(x=>x!==id);
+    if(value)list.unshift(id);
+    if(!write(K.fav,list))return false;
+    emit('saved');
+    return true;
+  },
   toggle(id) {
     const list = read(K.fav, []);
     const i = list.indexOf(id);
     if (i >= 0) list.splice(i, 1);
     else list.unshift(id);
-    write(K.fav, list);
+    if(!write(K.fav, list))throw new Error('No se pudo guardar en este navegador. Puede estar lleno o bloquear el almacenamiento.');
     emit('saved');
     return i < 0;
   },

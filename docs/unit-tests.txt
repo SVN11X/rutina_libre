@@ -1,0 +1,37 @@
+
+> rutina-libre@3.0.0 test
+> node --test tests/*.test.mjs
+
+✔ el catálogo conserva la base original, IDs únicos y recursos locales existentes (15.820283ms)
+✔ caminata y velocidad priorizan los movimientos solicitados (17.436159ms)
+✔ el filtro de caminadora no confunde equipo ni pierde fichas con videos (5.042693ms)
+✔ descripciones naturales identifican movimientos y rechazan texto ajeno (205.310912ms)
+✔ boceto lateral nuevo y reflejado reconoce una familia; entrada vacía no inventa (246.048344ms)
+✔ caminata no cambia a HIIT por un objetivo de grasa y sprint exige adaptación (1.39279ms)
+✔ rutinas nuevas respetan equipo, nivel y recuperación entre días intensos (6.802997ms)
+✔ la unión conserva autoría de textos y videos; no une variantes solo por prefijo (1.202193ms)
+✔ GIF y MP4 incluidos contienen medios reales con licencia por recurso (61.603808ms)
+✔ URL del video y URL de licencia son campos diferentes, también en el respaldo v2 (8.847971ms)
+✔ un archivo HEVC conocido nunca se ofrece como alternativa compatible (0.228374ms)
+✔ 78 originales convertidos: se conservan origen y asignación de variantes revisadas (2.71311ms)
+✔ equipo desconocido permanece desconocido; no equivale a peso corporal (0.427725ms)
+✔ mancuernas solas no habilitan banca, remo invertido ni plataforma (13.917805ms)
+✔ generador y reemplazos exigen todo el equipo y nivel conocido en 90 planes (127.4084ms)
+✔ consultas cortas interpretan sinónimos y restricciones (126.147319ms)
+✔ equipo, postura y tirón hacia abdomen vencen a familias incompatibles (22.615488ms)
+✔ resultados, facetas y orden usan el mismo conjunto de búsqueda (25.603624ms)
+✔ escaladores y Superman usan unidades y lateralidad coherentes (0.461185ms)
+✔ 60 minutos es un máximo y se informa el tiempo efectivo, sin rellenar esfuerzo (1.503397ms)
+✔ duración suma trabajo, descansos entre series y transiciones; edición libre se declara pendiente (0.221314ms)
+✔ movilidad incluye movimientos dinámicos y estiramientos; principiantes no reciben sprint máximo (2.567791ms)
+✔ rangos multimedia respetan límites, sufijos y errores 416 (3.453607ms)
+✔ bocetos de trazos mínimos o líneas sin estructura permiten no encontrar coincidencia (0.327173ms)
+✔ reconstruir el respaldo dos veces conserva IDs, medios y créditos sin acumular metadatos (477.331911ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 964.494916

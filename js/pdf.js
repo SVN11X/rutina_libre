@@ -1,5 +1,7 @@
 import { summary } from "./generator.js";
 import { muscleList, EQUIPMENT, label } from "./i18n.js";
+import { equipmentText } from './equipment.js';
+import { dayDuration } from './duration.js';
 
 // jsPDF se carga solo cuando el usuario pide el PDF, así la página inicial pesa menos.
 const JSPDF_URLS = [
@@ -143,7 +145,7 @@ export function buildRoutinePdf(JsPDF, routine, getEx, images, opts = {}) {
 
   setText(10, "normal", INK);
   const how =
-    "Antes de empezar calienta 5 a 10 minutos con movimiento suave, como caminar rápido, bicicleta o movilidad de articulaciones. Marca una casilla cada semana que completes el ejercicio.";
+    "Sigue los bloques de calentamiento y recuperación de tu rutina. Si la rutina anterior no los tiene, añade movimiento suave adecuado. Las dosis son orientaciones de la app. Marca el avance semanal.";
   for (const l of lines(how, CW)) {
     doc.text(l, M, y);
     y += lh(10) + 1;
@@ -157,6 +159,9 @@ export function buildRoutinePdf(JsPDF, routine, getEx, images, opts = {}) {
     setText(12, "bold", [255, 255, 255]);
     doc.text(safe(day.title), M + 3, y + 6.2);
     y += 13;
+    setText(9,"normal",MUTED);
+    for(const l of lines(dayDuration(day).label,CW)){doc.text(l,M,y);y+=5;}
+    y+=3;
 
     if (!day.items.length) {
       setText(10, "italic", MUTED);
@@ -176,7 +181,7 @@ export function buildRoutinePdf(JsPDF, routine, getEx, images, opts = {}) {
       setText(12, "bold");
       const nameL = lines(`${idx + 1}. ${ex.title}`, tw);
       setText(9, "normal", MUTED);
-      const meta = [muscleList(ex.primary), label(EQUIPMENT, ex.equipment, "")]
+      const meta = [muscleList(ex.primary), equipmentText(ex,EQUIPMENT)]
         .filter(Boolean)
         .join(". ");
       const metaL = lines(meta, tw);
@@ -263,8 +268,7 @@ export function buildRoutinePdf(JsPDF, routine, getEx, images, opts = {}) {
       doc.text("Para terminar, estira:", M, y + 2);
       setText(10, "normal");
       const cl = lines(
-        cool.map((c) => c.title).join(", ") +
-          ". Mantén cada estiramiento 20 a 30 segundos.",
+        cool.map((c,i) => c.title+": "+(day.cooldownItems?.[i]?.reps || "consulta la dosis en la ficha")).join("; "),
         CW - 40,
       );
       cl.forEach((l, i) => doc.text(l, M + 40, y + 2 + i * (lh(10) + 1)));

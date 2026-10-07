@@ -6,6 +6,7 @@ import { rankDescription, classifySketch } from "../js/intelligence.js";
 import { generateRoutine } from "../js/generator.js";
 import { prescribe } from "../js/reps.js";
 import { normalizeWger, mergeWger } from "../scripts/build-data.mjs";
+import {canUseEquipment}from '../js/equipment.js';
 const root = new URL("../", import.meta.url),
   payload = JSON.parse(readFileSync(new URL("data/exercises.json", root)));
 const items = payload.exercises.map(prepare),
@@ -44,7 +45,8 @@ test("caminata y velocidad priorizan los movimientos solicitados", () => {
 test("el filtro de caminadora no confunde equipo ni pierde fichas con videos", () => {
   const treadmill = search(items, filters({ equipo: ["treadmill"] }));
   assert.ok(treadmill.length >= 6);
-  assert.ok(treadmill.every((ex) => ex.equipment === "treadmill"));
+  assert.ok(treadmill.some(ex=>ex.requiredEquipment.includes('treadmill')));
+  assert.ok(treadmill.every(ex=>canUseEquipment(ex,['treadmill'])));
   const media = search(items, filters({ media: true }));
   assert.ok(media.length >= 6);
   assert.ok(media.some((ex) => ex.gif?.startsWith("assets/media/")));
@@ -232,11 +234,14 @@ test("GIF y MP4 incluidos contienen medios reales con licencia por recurso", () 
   const media = JSON.parse(readFileSync(new URL("data/media.json", root)));
   assert.ok(media.length >= 6);
   for (const entry of media) {
-    const gif = readFileSync(new URL(entry.gif, root));
-    assert.match(gif.subarray(0, 6).toString(), /^GIF8[79]a$/);
+    if(entry.gif){const gif = readFileSync(new URL(entry.gif, root));
+    assert.match(gif.subarray(0, 6).toString(), /^GIF8[79]a$/);}
     const mp4 = readFileSync(new URL(entry.video, root));
     assert.ok(mp4.includes(Buffer.from("ftyp")));
     assert.equal(entry.attribution.name, "CC BY-SA 4.0");
     assert.ok(entry.attribution.author && entry.attribution.changes);
+    assert.equal(entry.probe.streams[0].codec_name,'h264');
+    assert.equal(entry.probe.streams[0].pix_fmt,'yuv420p');
+    assert.ok(entry.frameCheck.distinctFrames>1);
   }
 });

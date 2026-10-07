@@ -1,0 +1,37 @@
+name: Preparar actualización de medios para revisión
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  medios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Instalar herramientas gratuitas de mantenimiento
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+      - name: Convertir los originales redistribuibles del respaldo incluido
+        run: |
+          python scripts/prepare-media.py --all-variants --workers 3
+          python scripts/prepare-extra-media.py
+          npm run build:offline
+          npm test
+          npm run check:media
+          npm run stamp:release
+      - name: Entregar medios y datos para revisión humana
+        uses: actions/upload-artifact@v4
+        with:
+          name: medios-para-revision
+          path: |
+            assets/media
+            data
+            docs/media-maintenance.json
+            docs/media-decode.json
+            sw.js
+          retention-days: 14
+# No commit ni publicación automáticos: revisar variante, licencia, pasos y fotogramas.

@@ -1,15 +1,25 @@
 {
   "name": "rutina-libre",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "description": "Catálogo estático de ejercicios con identificación local por texto y dibujo",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "build:data": "node scripts/build-data.mjs",
-    "build:illustrations": "node scripts/build-illustrations.mjs"
+    "build:illustrations": "node scripts/build-illustrations.mjs",
+    "serve": "node scripts/serve.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "check:media": "python scripts/check-media.py",
+    "stamp:release": "node scripts/stamp-release.mjs",
+    "build:offline": "OFFLINE=1 node scripts/build-data.mjs",
+    "audit:data": "node scripts/audit-data.mjs"
   },
   "engines": {
     "node": ">=22"
+  },
+  "devDependencies": {
+    "axe-core": "^4.11.0",
+    "playwright": "1.62.1"
   }
 }

@@ -1,12 +1,9 @@
-# Actualiza los datos de ejercicios y publica el sitio en GitHub Pages.
-# Se ejecuta al subir cambios a main, cada lunes y cuando lo lanzas a mano desde la pestaña Actions.
+# Publica el catálogo y los medios revisados incluidos. Las fuentes no cambian sin revisión.
 name: Publicar sitio
 
 on:
   push:
     branches: [main]
-  schedule:
-    - cron: '0 9 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -30,16 +27,37 @@ jobs:
         with:
           node-version: 22
 
-      - name: Actualizar datos de ejercicios
-        # Si alguna fuente falla, se publica con los datos que ya están en el repositorio.
-        continue-on-error: true
-        run: node scripts/build-data.mjs
+      - name: Instalar herramientas de pruebas
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Reconstruir el catálogo revisado sin actualizar fuentes
+        run: |
+          npm run build:offline
+          npm run audit:data
 
       - name: Regenerar esquemas originales
         run: node scripts/build-illustrations.mjs
 
       - name: Verificar catálogo, detector y rutinas
-        run: node --test tests/app.test.mjs
+        run: npm test
+
+      - name: Verificar medios y generar versión de caché
+        run: |
+          npm run check:media
+          npm run stamp:release
+
+      - name: Comprobar fotogramas, navegación, persistencia, PDF y uso sin conexión
+        run: npm run test:browser
+
+      - name: Preparar solo archivos del sitio
+        run: |
+          mkdir -p _site
+          cp index.html manifest.webmanifest sw.js LICENSE README.md THIRD_PARTY.md _site/
+          cp -R css js assets data licenses _site/
 
       - name: Configurar Pages
         uses: actions/configure-pages@v5
@@ -47,7 +65,7 @@ jobs:
       - name: Subir el sitio
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
   publicar:
     needs: construir

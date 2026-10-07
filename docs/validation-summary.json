@@ -1,0 +1,27 @@
+{
+  "version": "3.0.0",
+  "unitTests": {
+    "total": 25,
+    "passed": 25
+  },
+  "browserChecks": {
+    "total": 16,
+    "passed": 16
+  },
+  "browser": "138.0.7204.0",
+  "platform": "linux",
+  "mediaFilesWithFramesAndPixelChange": 82,
+  "accessibilityScans": 12,
+  "automaticAccessibilityViolations": 0,
+  "accessibilityManualReview": [
+    "aria-required-children",
+    "color-contrast",
+    "video-caption"
+  ],
+  "offlineRebuildIdempotent": true,
+  "all1748PublishedIDsAndAuthorLicenseCreditsPreserved": true,
+  "notTested": [
+    "External provider playback is not certified by these local tests",
+    "No Safari, Firefox, physical iOS/Android or screen reader validation"
+  ]
+}

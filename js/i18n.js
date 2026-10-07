@@ -51,6 +51,11 @@ export const ZONES = [
 ];
 
 export const EQUIPMENT = {
+  unknown: 'Equipo no confirmado',
+  rack: 'Rack / soporte de barra',
+  'fixed bar': 'Barra horizontal fijada',
+  'smith machine': 'Máquina Smith',
+  'parallel bars': 'Barras paralelas',
   "body only": "Peso corporal",
   treadmill: "Caminadora / cinta",
   "stationary bike": "Bicicleta estática",
@@ -60,6 +65,7 @@ export const EQUIPMENT = {
   bench: "Banca",
   step: "Escalón / cajón bajo",
   chair: "Silla estable",
+  wall: "Pared de apoyo",
   "jump rope": "Cuerda de saltar",
   dumbbell: "Mancuernas",
   barbell: "Barra",
@@ -75,7 +81,7 @@ export const EQUIPMENT = {
 };
 
 export const EQUIPMENT_HINT = {
-  other: "banca, cajón, barra de dominadas y similares",
+  other: "Implementos no especificados; requiere revisión",
   cable: "máquina con cable y polea",
 };
 

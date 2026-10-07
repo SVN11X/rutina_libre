@@ -26,12 +26,15 @@ import {
   debounce,
   setTitle,
   toast,
+  reducedMotion,
   $,
   $$,
 } from "./ui.js";
 import { saved } from "./store.js";
 import { motionSVG } from "./motions.js";
 import { rankDescription } from "./intelligence.js";
+import { equipmentText } from './equipment.js';
+import { playableVideos } from './media.js';
 
 const PAGE = 24;
 const MEM_KEY = "rl:catalogo";
@@ -64,11 +67,13 @@ export function card(ex) {
     : placeholder(ex);
   const badge = ex.gif
     ? '<span class="card__badge">Video + GIF</span>'
-    : ex.videos?.length
-      ? '<span class="card__badge">Video de la fuente</span>'
+    : playableVideos(ex).length
+      ? '<span class="card__badge">Video</span>'
+      : ex.demonstrations?.length
+        ? '<span class="card__badge">Video externo</span>'
       : ex.illustration
         ? '<span class="card__badge">Esquema</span>'
-        : "";
+        : ex.images.length ? '<span class="card__badge">Fotos</span>' : "";
   return `<li class="card">
     <div class="card__media">${media}${badge}</div>
     <div class="card__body">
@@ -77,7 +82,8 @@ export function card(ex) {
       <p class="card__category">${esc(label(CATEGORIES, ex.category))}</p>
       ${ex.summary ? `<p class="card__description">${esc(ex.summary)}</p>` : ""}
       <p class="card__meta">${esc(muscleList(ex.primary) || label(CATEGORIES, ex.category))}</p>
-      <p class="card__meta card__meta--soft">${esc(label(EQUIPMENT, ex.equipment, "Sin equipo"))}</p>
+      <p class="card__meta card__meta--soft">${esc(equipmentText(ex,EQUIPMENT))}</p>
+      ${playableVideos(ex).length || ex.demonstrations?.length ? `<a class="btn btn--small card__play" href="#/ejercicio/${encodeURIComponent(ex.id)}?reproducir=1" aria-label="Ver demostración de ${esc(ex.title)}">${icon('play')}Ver video</a>` : ''}
     </div>
     <button type="button" class="save" data-save="${esc(ex.id)}" aria-pressed="${isSaved}" aria-label="${isSaved ? "Quitar de guardados" : "Guardar"}: ${esc(ex.title)}">${icon("bookmark")}</button>
   </li>`;
@@ -102,7 +108,8 @@ export function wireSaveButtons(root, onToggle) {
     const b = e.target.closest("[data-save]");
     if (!b) return;
     const id = b.dataset.save;
-    const now = saved.toggle(id);
+    let now;
+    try{now=saved.toggle(id);}catch(err){toast(err.message);return;}
     const name = b.getAttribute("aria-label").split(": ").slice(1).join(": ");
     b.setAttribute("aria-pressed", String(now));
     b.setAttribute(
@@ -112,7 +119,7 @@ export function wireSaveButtons(root, onToggle) {
     toast(now ? "Guardado en tu lista" : "Quitado de guardados", {
       action: "Deshacer",
       onAction: () => {
-        saved.toggle(id);
+        if(!saved.set(id,!now)){toast('No se pudo deshacer: el navegador bloqueó el almacenamiento.');return;}
         b.setAttribute("aria-pressed", String(!now));
         b.setAttribute(
           "aria-label",
@@ -154,6 +161,7 @@ function filtersPanel(f, hasNoLevel) {
       </fieldset>
       <fieldset class="fgroup">
         <legend>Equipo</legend>
+        <p class="filter-help">Marca todos los implementos que tienes. Se exigen todos los necesarios; el peso corporal está incluido.</p>
         <ul class="opts">${optionList("equipo", Object.keys(EQUIPMENT), EQUIPMENT, f.equipo, { hints: EQUIPMENT_HINT })}</ul>
       </fieldset>
       <fieldset class="fgroup">
@@ -168,7 +176,7 @@ function filtersPanel(f, hasNoLevel) {
         <legend>Demostración</legend>
         <ul class="opts"><li class="opt">
           <input type="checkbox" id="f-media" name="media" value="1" ${f.media ? "checked" : ""}>
-          <label for="f-media"><span class="opt__text">Solo con animación o video</span><span class="opt__count" data-count="media:1"></span></label>
+          <label for="f-media"><span class="opt__text">Solo con video o GIF real</span><span class="opt__count" data-count="media:1"></span></label>
         </li></ul>
       </fieldset>
     </form>
@@ -290,7 +298,7 @@ export async function renderCatalog(main, params) {
     f.equipo.forEach((v) => add("equipo", v, EQUIPMENT[v] ?? v));
     f.musculo.forEach((v) => add("musculo", v, MUSCLES[v] ?? v));
     f.tipo.forEach((v) => add("tipo", v, CATEGORIES[v] ?? v));
-    if (f.media) add("media", "1", "Con animación o video");
+    if (f.media) add("media", "1", "Con video o GIF real");
     $(".pills", main).innerHTML =
       pills.join("") +
       (pills.length > 1
@@ -316,15 +324,9 @@ export async function renderCatalog(main, params) {
     results = search(data.items, f);
     const hint = $(".search-hint", main);
     hint.hidden = true;
-    if (f.q.split(/\s+/).length >= 5) {
-      const eligible = search(data.items, { ...f, q: "" });
-      const smart = rankDescription(eligible, f.q, 60).map((r) => r.ex);
-      if (smart.length) {
-        results = smart;
-        hint.textContent =
-          "Búsqueda por descripción: compara las fichas para confirmar el movimiento.";
-        hint.hidden = false;
-      }
+    if (/\b(estoy|tiro|levanto|usando)\b/i.test(f.q)) {
+      hint.textContent='Coincidencias posibles: compara equipo, postura y movimiento.';
+      hint.hidden=false;
     }
     if (!keepShown) shown = PAGE;
     const n = results.length;
@@ -428,7 +430,7 @@ export async function renderCatalog(main, params) {
     update();
     q.blur();
     $("#res-count", main).scrollIntoView({
-      behavior: "smooth",
+      behavior: reducedMotion() ? "instant" : "smooth",
       block: "start",
     });
   });
@@ -491,7 +493,7 @@ export async function renderCatalog(main, params) {
       );
       if (box) box.checked = false;
       update();
-    } else if (t.matches(".card__link")) {
+    } else if (t.matches(".card__link, .card__play")) {
       sessionStorage.setItem(
         MEM_KEY,
         JSON.stringify({ hash: location.hash, y: window.scrollY, shown }),

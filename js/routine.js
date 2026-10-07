@@ -2,6 +2,8 @@ import { loadData, search, EMPTY_FILTERS } from './data.js';
 import { ZONES, EQUIPMENT, EQUIPMENT_HINT, LEVELS, LEVEL_ORDER, muscleList, label } from './i18n.js';
 import { GOALS, GOAL_ORDER } from './reps.js';
 import { generateRoutine, emptyRoutine, makeItem, alternatives, summary, poolFilter, EQUIPMENT_PRESETS, EXERCISES_PER_MINUTES } from './generator.js';
+import { equipmentText, canUseEquipment } from './equipment.js';
+import { dayDuration } from './duration.js';
 import { esc, icon, img, thumbOf, placeholder, setTitle, toast, debounce, go, $, $$ } from './ui.js';
 import { routineStore, prefs as prefStore } from './store.js';
 import { exportRoutinePdf } from './pdf.js';
@@ -30,7 +32,7 @@ function radios(name, options, current) {
 }
 
 function wizardHtml(p, hasRoutine) {
-  const eqKeys = Object.keys(EQUIPMENT).filter((k) => k !== 'body only');
+  const eqKeys = Object.keys(EQUIPMENT).filter((k) => !['body only','unknown','other'].includes(k));
   return `
   <div class="wrap page routine-wizard">
     <header class="page__head">
@@ -142,7 +144,7 @@ function itemHtml(ex, it, di, ii, total) {
     <a class="item__thumb" href="#/ejercicio/${encodeURIComponent(ex.id)}" tabindex="-1" aria-hidden="true">${t ? img(t, '', { w: 150, h: 100 }) : placeholder(ex)}</a>
     <div class="item__main">
       <h3 class="item__title"><span class="item__n">${ii + 1}</span><a href="#/ejercicio/${encodeURIComponent(ex.id)}">${esc(ex.title)}</a></h3>
-      <p class="item__meta">${esc([muscleList(ex.primary), label(EQUIPMENT, ex.equipment, '')].filter(Boolean).join('. '))}</p>
+      <p class="item__meta">${esc([muscleList(ex.primary), equipmentText(ex,EQUIPMENT)].filter(Boolean).join('. '))}</p>
       <div class="item__dose">
         <label class="field field--n"><span>${esc(it.seriesLabel === 'rondas' ? 'Rondas' : 'Series')}</span><input type="number" inputmode="numeric" min="1" max="20" value="${esc(it.series)}" data-field="series"></label>
         <label class="field field--reps"><span>Repeticiones o tiempo</span><input type="text" value="${esc(it.reps)}" data-field="reps"></label>
@@ -162,18 +164,21 @@ function editorHtml(r, data) {
   const get = (id) => data.byId.get(id);
   const days = r.days
     .map((d, di) => {
-      const items = d.items.filter((it) => get(it.exId));
+      const entries = d.items.map((it,ii)=>({it,ii})).filter(({it})=>get(it.exId));
+      const items = entries.map(({it})=>it);
+      const unresolved=d.items.length-items.length;
+      const incompatible=r.prefs?items.filter(it=>!canUseEquipment(get(it.exId),r.prefs.equipment)).length:0;
       const cool = (d.cooldown || []).map(get).filter(Boolean);
       return `<section class="day" aria-labelledby="day-${di}">
         <header class="day__head">
           <h2 class="day__title" id="day-${di}"><label class="visually-hidden" for="day-name-${di}">Nombre del día</label><input class="day__name" id="day-name-${di}" value="${esc(d.title)}" data-day-name="${di}"></h2>
-          <span class="day__count">${items.length} ${items.length === 1 ? 'ejercicio' : 'ejercicios'}</span>
+          <p class="day__duration" data-day-duration="${di}">${esc(dayDuration(d).label)}</p><span class="day__count">${items.length} ${items.length === 1 ? 'ejercicio' : 'ejercicios'}</span>
           <button type="button" class="btn btn--small btn--ghost btn--danger" data-act="remove-day" data-day="${di}">Quitar día</button>
         </header>
-        ${items.length ? `<ol class="items" role="list">${items.map((it, ii) => itemHtml(get(it.exId), it, di, ii, items.length)).join('')}</ol>` : '<p class="day__empty">Este día está vacío. Agrega ejercicios desde aquí o desde el catálogo.</p>'}
-        <div class="day__foot">
+        ${items.length ? `<ol class="items" role="list">${entries.map(({it,ii}) => itemHtml(get(it.exId), it, di, ii, d.items.length)).join('')}</ol>` : '<p class="day__empty">Este día está vacío. Agrega ejercicios desde aquí o desde el catálogo.</p>'}
+        ${unresolved?`<p class="safety-note">${unresolved} registros de esta rutina no están disponibles; sus IDs se conservan.</p>`:""}${incompatible?`<p class="safety-note">${incompatible} ejercicios requieren equipo adicional. Revisa tus implementos o utiliza Cambiar.</p>`:""}<div class="day__foot">
           <button type="button" class="btn btn--ghost" data-act="add" data-day="${di}">${icon('plus')}Agregar ejercicio</button>
-          ${cool.length ? `<p class="day__cool">Para terminar, estira: ${cool.map((c) => `<a href="#/ejercicio/${encodeURIComponent(c.id)}">${esc(c.title)}</a>`).join(', ')}.</p>` : ''}
+          ${cool.length ? `<p class="day__cool">Para terminar: ${cool.map((c,i) => `<a href="#/ejercicio/${encodeURIComponent(c.id)}">${esc(c.title)}</a>${d.cooldownItems?.[i]?' · '+esc(d.cooldownItems[i].reps):' · consulta la dosis en la ficha'}`).join('; ')}.</p>` : ''}
         </div>
       </section>`;
     })
@@ -201,7 +206,7 @@ function editorHtml(r, data) {
     </header>
 
     <div class="routine__how">
-      <p><strong>Cómo usarla.</strong> Antes de cada día calienta 5 a 10 minutos con movimiento suave. Si es tu primera vez con un ejercicio, abre su ficha para ver las fotos y la técnica. Si un ejercicio no te acomoda, usa Cambiar y te proponemos otro parecido.</p>
+      <p><strong>Cómo usarla.</strong> Sigue los bloques de calentamiento y recuperación incluidos. Si tu rutina anterior no los tiene, añade movimiento suave adecuado antes de entrenar. Consulta la ficha para ver la técnica y sus fuentes. Si un ejercicio no te acomoda, usa Cambiar y te proponemos otro parecido.</p>
     </div>
 
     <div class="days">${days}</div>
@@ -225,7 +230,7 @@ function editorHtml(r, data) {
     <div class="picker__search">
       <label for="picker-q" class="visually-hidden">Buscar ejercicio</label>
       <input id="picker-q" type="search" placeholder="Busca por nombre o músculo" autocomplete="off">
-      ${r.prefs ? '<label class="check"><input type="checkbox" id="picker-mine" checked><span>Solo con mi equipo</span></label>' : ''}
+      ${r.prefs ? '<p class="muted">Solo se ofrecen ejercicios con todos tus implementos y nivel confirmado. Para usar otro equipo, cambia tus respuestas.</p>' : ''}
     </div>
     <ul class="picker__list" role="list"></ul>
   </dialog>`;
@@ -239,7 +244,7 @@ function renderEditor(main, data, initial) {
   const get = (id) => data.byId.get(id);
   const itemPrefs = () => ({ goal: r.prefs?.goal ?? prefStore.goal(), level: r.prefs?.level ?? prefStore.level() });
   // Limpia ejercicios que ya no existen en los datos
-  r.days.forEach((d) => { d.items = d.items.filter((it) => get(it.exId)); });
+  // Preserve unknown IDs in user storage. The view reports unavailable entries.
 
   const draw = (focusSel) => {
     main.innerHTML = editorHtml(r, data);
@@ -253,16 +258,15 @@ function renderEditor(main, data, initial) {
   let pickerDay = 0;
   const drawPicker = () => {
     const q = $('#picker-q', main).value.trim();
-    const mine = $('#picker-mine', main)?.checked;
     let list = search(data.items, { ...EMPTY_FILTERS, q });
-    if (mine && r.prefs) list = list.filter(poolFilter(r.prefs));
+    if (r.prefs) list = list.filter(poolFilter(r.prefs));
     const inDay = new Set(r.days[pickerDay].items.map((i) => i.exId));
     $('.picker__list', main).innerHTML = list.slice(0, 40).map((ex) => {
       const t = thumbOf(ex);
       const has = inDay.has(ex.id);
       return `<li class="pick">
         <span class="pick__thumb">${t ? img(t, '', { w: 96, h: 64 }) : placeholder(ex)}</span>
-        <span class="pick__text"><strong>${esc(ex.title)}</strong><small>${esc([muscleList(ex.primary), label(EQUIPMENT, ex.equipment, '')].filter(Boolean).join('. '))}</small></span>
+        <span class="pick__text"><strong>${esc(ex.title)}</strong><small>${esc([muscleList(ex.primary), equipmentText(ex,EQUIPMENT)].filter(Boolean).join('. '))}</small></span>
         <button type="button" class="btn btn--small ${has ? '' : 'btn--primary'}" data-pick="${esc(ex.id)}" ${has ? 'disabled' : ''}>${has ? 'Agregado' : 'Agregar'}</button>
       </li>`;
     }).join('') || '<li class="pick pick--empty">No hay resultados. Prueba con otra palabra.</li>';
@@ -271,7 +275,6 @@ function renderEditor(main, data, initial) {
   function wire() {
     const picker = $('#picker', main);
     $('#picker-q', main).addEventListener('input', debounce(drawPicker, 150));
-    $('#picker-mine', main)?.addEventListener('change', drawPicker);
     picker.addEventListener('click', (e) => {
       if (e.target === picker || e.target.closest('[data-close-picker]')) picker.close();
       const b = e.target.closest('[data-pick]');
@@ -296,6 +299,9 @@ function renderEditor(main, data, initial) {
     if (li && t.dataset.field) {
       const it = r.days[Number(li.dataset.day)].items[Number(li.dataset.i)];
       it[t.dataset.field] = t.dataset.field === 'series' ? Math.max(1, Number(t.value) || 1) : t.value;
+      if(['reps','rest'].includes(t.dataset.field))it.timingEdited=true;
+      const dayIndex=Number(li.dataset.day);
+      $(`[data-day-duration="${dayIndex}"]`,main).textContent=dayDuration(r.days[dayIndex]).label;
       saveSoon();
     }
   }

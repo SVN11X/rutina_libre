@@ -1,0 +1,62 @@
+[
+  {
+    "exerciseId": "Bodyweight_Squat",
+    "slug": "bodyweight-squat",
+    "title": "Body Weight Squat · U.S. Marine Corps",
+    "source": "https://www.dvidshub.net/video/517502/body-weight-squat",
+    "original": "https://d34w7g4gy10iej.cloudfront.net/video/1704/DOD_104245094/DOD_104245094-1024x576-1769k.mp4",
+    "author": "Cpl. Amber Jennings / U.S. Marine Corps; registro: MAJ Joshua Pena",
+    "startSeconds": 0,
+    "durationSeconds": 32,
+    "localOriginal": "squat-original.mp4",
+    "license": "Dominio público · DVIDS",
+    "licenseUrl": "https://www.dvidshub.net/about/copyright",
+    "notice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.",
+    "visualReview": "2026-10-07: variante inspeccionada en fotogramas de la demostración original. Sin certificación clínica ni recomendación de la dosis militar."
+  },
+  {
+    "exerciseId": "Pushups",
+    "slug": "pushups",
+    "title": "Pushups · U.S. Marine Corps",
+    "source": "https://www.dvidshub.net/video/638236/pushups",
+    "original": "https://d34w7g4gy10iej.cloudfront.net/video/1811/DOD_106191274/DOD_106191274-1024x576-1769k.mp4",
+    "author": "CPT Matthew Holfinger / U.S. Marine Corps; demostración: Gunnery Sgt. Gates",
+    "startSeconds": 0,
+    "durationSeconds": 18,
+    "localOriginal": "pushup-original.mp4",
+    "license": "Dominio público · DVIDS",
+    "licenseUrl": "https://www.dvidshub.net/about/copyright",
+    "notice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.",
+    "visualReview": "2026-10-07: variante inspeccionada en fotogramas de la demostración original. Sin certificación clínica ni recomendación de la dosis militar."
+  },
+  {
+    "exerciseId": "Plank",
+    "slug": "forearm-plank",
+    "title": "Plank Instructional Video · U.S. Marine Corps",
+    "source": "https://www.dvidshub.net/video/871026/plank-instructional-video",
+    "original": "https://d34w7g4gy10iej.cloudfront.net/video/2301/DOD_109412801/DOD_109412801.mp4",
+    "author": "Cpl. Caden Phillips / U.S. Marine Corps; explicación: Gunnery Sgt. Travis Titopace",
+    "startSeconds": 24,
+    "durationSeconds": 30,
+    "localOriginal": "plank-original.mp4",
+    "license": "Dominio público · DVIDS",
+    "licenseUrl": "https://www.dvidshub.net/about/copyright",
+    "notice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.",
+    "visualReview": "2026-10-07: variante inspeccionada en fotogramas de la demostración original. Sin certificación clínica ni recomendación de la dosis militar."
+  },
+  {
+    "exerciseId": "rl-caminata",
+    "slug": "walking",
+    "title": "Fit walking · fragmento de caminata en terreno plano",
+    "source": "https://commons.wikimedia.org/wiki/File:Fit_walking.webmhd.webm",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fit_walking.webmhd.webm?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+    "author": "Msrmesa",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "startSeconds": 32,
+    "durationSeconds": 16,
+    "localOriginal": "fitwalking-original.webm",
+    "notice": "Fragmento de una caminata real en terreno plano. El ritmo y la duración de la grabación no prescriben la dosis de la app. Se excluyeron las escaleras y el tramo de tierra del original.",
+    "visualReview": "2026-10-07: inspección de fotogramas del original; persona caminando en terreno plano, sin escaleras en el fragmento seleccionado."
+  }
+]

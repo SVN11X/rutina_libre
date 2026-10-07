@@ -1,218 +1,62 @@
-// Permite usar la página sin conexión después de la primera visita.
-// Archivos propios: primero la red y, si no hay conexión, la copia guardada.
-// Imágenes y animaciones: primero la copia guardada, para ahorrar datos.
-const VERSION = "v2";
-const PREFIX = "rutina-libre-";
-const SHELL = `${PREFIX}shell-${VERSION}`;
-const MEDIA = `${PREFIX}media-${VERSION}`;
-const MEDIA_MAX = 400;
-
-const FILES = [
-  "./",
-  "index.html",
-  "css/styles.css",
-  "css/enhancements.css",
-  "js/app.js",
-  "js/catalog.js",
-  "js/data.js",
-  "js/detail.js",
-  "js/detector.js",
-  "js/intelligence.js",
-  "js/motions.js",
-  "js/generator.js",
-  "js/i18n.js",
-  "js/pdf.js",
-  "js/reps.js",
-  "js/routine.js",
-  "js/store.js",
-  "js/translate.js",
-  "js/ui.js",
-  "data/exercises.json",
-  "manifest.webmanifest",
-  "assets/icon.svg",
-  "assets/vendor/jspdf.umd.min.js",
-  ...[
-    "squat",
-    "pushup",
-    "plank",
-    "lunge",
-    "curl",
-    "press",
-    "pullup",
-    "bridge",
-    "deadlift",
-    "row",
-    "walk",
-    "run",
-    "balance",
-    "treadmill",
-    "cycle",
-    "mobility",
-    "mountain",
-    "jump",
-  ].map((f) => `assets/illustrations/${f}.svg`),
-];
-
-const MEDIA_HOSTS = [
-  "raw.githubusercontent.com",
-  "cdn.jsdelivr.net",
-  "wger.de",
-  "static.exercisedb.dev",
-  "cdn.exercisedb.dev",
-  "fonts.gstatic.com",
-  "fonts.googleapis.com",
-  "cdnjs.cloudflare.com",
-];
-
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches
-      .open(SHELL)
-      .then((c) => c.addAll(FILES))
-      .then(() => self.skipWaiting()),
-  );
-});
-
-self.addEventListener("activate", (e) => {
-  e.waitUntil(
-    caches
-      .keys()
-      .then((keys) =>
-        Promise.all(
-          keys
-            .filter((k) => k.startsWith(PREFIX) && k !== SHELL && k !== MEDIA)
-            .map((k) => caches.delete(k)),
-        ),
-      )
-      .then(() => self.clients.claim()),
-  );
-});
-
-async function trim(cacheName, max) {
-  const c = await caches.open(cacheName);
-  const keys = await c.keys();
-  for (let i = 0; i < keys.length - max; i++) await c.delete(keys[i]);
+// SHARED RANGE START
+function parseRange(header,length) {
+  const m=/^bytes=(\d*)-(\d*)$/.exec(header || '');
+  if(!m || (!m[1]&&!m[2]) || length<=0)return null;
+  const start=m[1]?Number(m[1]):Math.max(0,length-Number(m[2]));
+  const end=m[1]?(m[2]?Math.min(Number(m[2]),length-1):length-1):length-1;
+  if(!Number.isSafeInteger(start)||!Number.isSafeInteger(end)||start<0||start>=length||end<start)return null;
+  return {start,end};
+}
+async function rangeResponse(response,header) {
+  if(!header)return response;
+  const bytes=await response.arrayBuffer(),part=parseRange(header,bytes.byteLength);
+  if(!part)return new Response(null,{status:416,headers:{'Content-Range':`bytes */${bytes.byteLength}`,'Accept-Ranges':'bytes'}});
+  return new Response(bytes.slice(part.start,part.end+1),{status:206,headers:{'Content-Type':response.headers.get('Content-Type')||'video/mp4','Content-Range':`bytes ${part.start}-${part.end}/${bytes.byteLength}`,'Content-Length':String(part.end-part.start+1),'Accept-Ranges':'bytes'}});
 }
 
-self.addEventListener("fetch", (e) => {
-  const req = e.request;
-  if (req.method !== "GET") return;
-  const url = new URL(req.url);
-
-  if (url.origin === location.origin) {
-    if (/\/assets\/media\//.test(url.pathname)) {
-      e.respondWith(
-        caches
-          .open(MEDIA)
-          .then(async (c) => {
-            const hit = await c.match(req.url);
-            if (hit) {
-              const range = req.headers.get("range");
-              if (range) {
-                const bytes = await hit.arrayBuffer(),
-                  m = /bytes=(\d+)-(\d*)/.exec(range);
-                if (m) {
-                  const start = Number(m[1]),
-                    end = Math.min(
-                      m[2] ? Number(m[2]) : bytes.byteLength - 1,
-                      bytes.byteLength - 1,
-                    );
-                  if (start > end)
-                    return new Response(null, {
-                      status: 416,
-                      headers: {
-                        "Content-Range": `bytes */${bytes.byteLength}`,
-                      },
-                    });
-                  return new Response(bytes.slice(start, end + 1), {
-                    status: 206,
-                    headers: {
-                      "Content-Type":
-                        hit.headers.get("Content-Type") || "video/mp4",
-                      "Content-Range": `bytes ${start}-${end}/${bytes.byteLength}`,
-                      "Content-Length": String(end - start + 1),
-                      "Accept-Ranges": "bytes",
-                    },
-                  });
-                }
-              }
-              return hit;
-            }
-            const res = await fetch(req);
-            if (res.status === 200) {
-              e.waitUntil(
-                c
-                  .put(req.url, res.clone())
-                  .then(() => trim(MEDIA, MEDIA_MAX))
-                  .catch(() => {}),
-              );
-            }
-            return res;
-          })
-          .catch(
-            () =>
-              new Response("Recurso no disponible sin conexión", {
-                status: 503,
-              }),
-          ),
-      );
-      return;
-    }
-    e.respondWith(
-      fetch(req, { signal: AbortSignal.timeout(6000) })
-        .then((res) => {
-          if (res.ok && res.status === 200) {
-            const copy = res.clone();
-            e.waitUntil(
-              caches
-                .open(SHELL)
-                .then((c) => c.put(req, copy))
-                .catch(() => {}),
-            );
-          }
-          return res;
-        })
-        .catch(() =>
-          caches
-            .match(req)
-            .then(
-              async (r) =>
-                r ||
-                (req.mode === "navigate"
-                  ? await caches.match("index.html")
-                  : new Response("Archivo no disponible sin conexión", {
-                      status: 503,
-                    })),
-            ),
-        ),
-    );
-    return;
-  }
-
-  const isMedia =
-    MEDIA_HOSTS.includes(url.hostname) &&
-    (req.destination === "image" ||
-      req.destination === "font" ||
-      req.destination === "style" ||
-      /\.(jpe?g|png|gif|webp|svg|woff2?)$/i.test(url.pathname) ||
-      url.hostname === "cdnjs.cloudflare.com");
-  if (isMedia) {
-    e.respondWith(
-      caches.open(MEDIA).then(async (c) => {
-        const hit = await c.match(req);
-        if (hit) return hit;
-        const res = await fetch(req);
-        // Solo se guardan respuestas legibles. Las opacas ocupan mucho espacio en el navegador.
-        if (res.ok) {
-          e.waitUntil(
-            c
-              .put(req, res.clone())
-              .then(() => trim(MEDIA, MEDIA_MAX))
-              .catch(() => {}),
-          );
+// SHARED RANGE END
+// A versioned, atomic shell prevents mixing old code with new data.
+const VERSION = 'v3.0.0-70e67f05af6e';
+const PREFIX='rutina-libre-',SHELL=`${PREFIX}shell-${VERSION}`,MEDIA=`${PREFIX}media-${VERSION}`;
+const MEDIA_MAX=180,MEDIA_BYTES=160*1024*1024;
+const FILES=['./','index.html','css/styles.css','css/enhancements.css','js/app.js','js/catalog.js','js/data.js','js/detail.js','js/detector.js','js/intelligence.js','js/motions.js','js/equipment.js','js/query.js','js/media.js','js/duration.js','js/range.js','js/generator.js','js/i18n.js','js/pdf.js','js/reps.js','js/routine.js','js/store.js','js/translate.js','js/ui.js','data/exercises.json','manifest.webmanifest','assets/icon.svg','assets/vendor/jspdf.umd.min.js',...['squat','pushup','plank','lunge','curl','press','pullup','bridge','deadlift','row','walk','run','balance','treadmill','cycle','mobility','mountain','jump'].map(f=>`assets/illustrations/${f}.svg`)];
+self.addEventListener('install',event=>event.waitUntil((async()=>{
+  const cache=await caches.open(SHELL);
+  await cache.addAll(FILES.map(url=>new Request(new URL(url,self.location),{cache:'reload'})));
+  await self.skipWaiting();
+})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{
+  for(const key of await caches.keys())if(key.startsWith(PREFIX)&&![SHELL,MEDIA].includes(key))await caches.delete(key);
+  await self.clients.claim();
+  for(const client of await self.clients.matchAll({type:'window'}))client.postMessage({type:'RELEASE_READY',version:VERSION});
+})()));
+async function trim(cache){
+  const keys=await cache.keys();let bytes=0;
+  for(let i=keys.length-1;i>=0;i--){const response=await cache.match(keys[i]);bytes+=Number(response?.headers.get('Content-Length'))||0;if(keys.length-i>MEDIA_MAX||bytes>MEDIA_BYTES)await cache.delete(keys[i]);}
+}
+self.addEventListener('fetch',event=>{
+  const req=event.request;if(req.method!=='GET')return;
+  const url=new URL(req.url);
+  if(url.origin!==self.location.origin)return; // External availability is never guaranteed offline.
+  if(/\/assets\/media\//.test(url.pathname)){
+    event.respondWith((async()=>{
+      const cache=await caches.open(MEDIA),hit=await cache.match(url.href);
+      if(hit)return rangeResponse(hit,req.headers.get('range'));
+      try{
+        const response=await fetch(req,{signal:AbortSignal.timeout(45000)});
+        if(response.status===200){
+          const save=cache.put(url.href,response.clone()).then(()=>trim(cache));
+          if(req.headers.get('X-Rutina-Cache')==='full')await save.catch(()=>{});
+          else event.waitUntil(save.catch(()=>{}));
         }
-        return res;
-      }),
-    );
+        return response;
+      }catch{return new Response('Este medio no está guardado para usarlo sin conexión',{status:503});}
+    })());return;
   }
+  event.respondWith((async()=>{
+    const cache=await caches.open(SHELL),hit=await cache.match(req);
+    if(hit)return hit;
+    if(req.mode==='navigate'){const index=await cache.match(new URL('index.html',self.location).href);if(index)return index;}
+    try{return await fetch(req,{signal:AbortSignal.timeout(12000)});}catch{return new Response('Archivo no disponible sin conexión',{status:503});}
+  })());
 });

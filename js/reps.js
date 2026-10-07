@@ -1,6 +1,6 @@
 // Recomendaciones generales de series, repeticiones y descanso.
-// Se basan en los rangos de uso común en guías de entrenamiento (por ejemplo ACSM y NSCA).
-// No reemplazan la indicación de un profesional.
+// Orientaciones educativas de la app. No se atribuyen estas dosis a una fuente.
+// Los rangos requieren adaptación; la técnica proviene del registro enlazado.
 
 export const GOALS = {
   cardio: {
@@ -49,11 +49,11 @@ export const GOALS = {
     series: [3, 4],
     amount: "12 a 15",
     rest: "30 segundos",
-    tip: "Haz los ejercicios uno tras otro como circuito y descansa al terminar la vuelta.",
+    tip: "Usa descansos entre series y ajusta el esfuerzo a tu capacidad.",
   },
   movilidad: {
     label: "Movilidad",
-    desc: "Moverte mejor y con menos rigidez. Estiramientos.",
+    desc: "Movimientos dinámicos y estiramientos sostenidos.",
     series: [2, 3],
     amount: "20 a 30",
     rest: "15 segundos",
@@ -81,10 +81,13 @@ const pickSeries = ([a, b], level) =>
  * amount y unit: cantidad y unidad por serie
  * rest: descanso entre series
  */
-export function prescribe(ex, goal = "musculo", level = "beginner") {
+function basePrescription(ex, goal = "musculo", level = "beginner") {
   const g = GOALS[goal] ?? GOALS.musculo;
   const lv = level || "intermediate";
   const primary = ex.primary ?? [];
+  if (ex.category==='warmup' && goal==='velocidad')return {series:1,seriesLabel:'vez',amount:'8 a 10',unit:'minutos suaves antes de la técnica de carrera',rest:'',timing:{workSeconds:[480,600],restSeconds:[0,0]},adaptation:'Calentamiento más largo para velocidad; orientación de la app'};
+  if (ex.id === 'Mountain_Climbers') return {series:2,seriesLabel:'series',amount:'20 a 30',unit:'segundos alternando las piernas',rest:'60 segundos'};
+  if (ex.id === 'Superman') return {series:2,seriesLabel:'series',amount:'5 a 8',unit:'repeticiones bilaterales; sostén 2 segundos',rest:'45 a 60 segundos'};
 
   if (ex.category === "speed" && ex.level === "expert" && lv !== "expert")
     return {
@@ -108,7 +111,7 @@ export function prescribe(ex, goal = "musculo", level = "beginner") {
       series: 2,
       seriesLabel: "series",
       amount: "5 a 8",
-      unit: "repeticiones controladas por lado",
+      unit: ex.laterality==='bilateral'?"repeticiones controladas":"repeticiones controladas por lado",
       rest: "15 a 30 segundos",
     };
   if (ex.category === "agility")
@@ -133,7 +136,7 @@ export function prescribe(ex, goal = "musculo", level = "beginner") {
       series: lv === "beginner" ? 2 : 3,
       seriesLabel: "series",
       amount: "20 a 30",
-      unit: "segundos por lado",
+      unit: ex.laterality === 'unilateral' ? "segundos por lado" : "segundos de estiramiento",
       rest: "15 segundos",
     };
   }
@@ -224,6 +227,32 @@ export function prescribe(ex, goal = "musculo", level = "beginner") {
     unit: goal === "movilidad" ? "repeticiones lentas" : "repeticiones",
     rest: g.rest,
   };
+}
+
+const range=(s)=>{
+  const values=String(s || '').match(/\d+(?:\.\d+)?/g)?.map(Number) || [];
+  return values.length ? [values[0], /\ba\b|\bto\b|\b-\b/.test(String(s)) && values.length>1 ? values[1] : values[0]] : null;
+};
+export function prescriptionTiming(ex,p) {
+  if (ex.timing) return {...ex.timing};
+  const amount=range(p.amount),unit=p.unit || '';
+  if(!amount)return null;
+  let work;
+  if (/minutos/.test(unit) && !/minuto.*\+/.test(p.amount))work=amount.map(n=>n*60);
+  else if (/segundos/.test(unit) && !/repeticiones/.test(unit) && !/\+/.test(p.amount))work=amount;
+  else if (/repeticiones|rotaciones|pasos|saltos/.test(unit))work=amount.map(n=>n*4);
+  else if (/metros/.test(unit))work=amount.map(n=>n*.8);
+  if(!work)return null;
+  if(/por lado|por pierna/.test(unit))work=work.map(n=>n*2);
+  let rest=range(p.rest);
+  if(rest)rest=rest.map(n=>n*(/minutos/.test(p.rest)?60:1));
+  else if(/Camina de regreso/i.test(p.rest))rest=[30,60];
+  else rest=[0,0];
+  return {workSeconds:work,restSeconds:rest,estimated:!(/minutos|segundos/.test(unit)) || /metros|repeticiones/.test(unit)};
+}
+export function prescribe(ex,goal='musculo',level='beginner') {
+  const p=basePrescription(ex,goal,level);
+  return {...p,timing:p.timing || prescriptionTiming(ex,p),origin:'Orientación de Rutina Libre; no es una dosis prescrita por la fuente'};
 }
 
 export function repsText(p) {

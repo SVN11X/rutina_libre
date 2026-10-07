@@ -1,0 +1,229 @@
+[
+  {
+    "exerciseId": "Bodyweight_Squat",
+    "title": "Body Weight Squat · U.S. Marine Corps",
+    "video": "assets/media/demo-bodyweight-squat.mp4",
+    "gif": "assets/media/demo-bodyweight-squat.gif",
+    "poster": "assets/media/demo-bodyweight-squat.jpg",
+    "original": "https://d34w7g4gy10iej.cloudfront.net/video/1704/DOD_104245094/DOD_104245094-1024x576-1769k.mp4",
+    "sha256Original": "05b5870da6ebc66abcfd5715a2864e21299d176dc2c87524d3f5904c37450f66",
+    "sha256Video": "0b26c588242b05e74842dab39cbbf840964bc550e506444ab3bf5fbf6f4d4b83",
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1024,
+          "height": 576,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "978"
+        }
+      ],
+      "format": {
+        "duration": "32.682000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "768"
+        }
+      ],
+      "format": {
+        "duration": "32.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 64,
+      "distinctFrames": 64
+    },
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Cpl. Amber Jennings / U.S. Marine Corps; registro: MAJ Joshua Pena",
+      "name": "Dominio público · DVIDS",
+      "url": "https://www.dvidshub.net/about/copyright",
+      "source": "https://www.dvidshub.net/video/517502/body-weight-squat",
+      "original": "https://d34w7g4gy10iej.cloudfront.net/video/1704/DOD_104245094/DOD_104245094-1024x576-1769k.mp4",
+      "changes": "Fragmento desde 0 s, duración máxima 32 s. H.264 yuv420p 720 px, 24 fps, faststart; sin audio. GIF 6 s desde el segundo 2 del fragmento; miniatura en 2 s. La dosis de la app es independiente del video original.",
+      "notice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement."
+    },
+    "checked": "2026-10-07T01:23:52.202838+00:00",
+    "visualReview": "2026-10-07: variante inspeccionada en fotogramas de la demostración original. Sin certificación clínica ni recomendación de la dosis militar.",
+    "bytes": 897049
+  },
+  {
+    "exerciseId": "Pushups",
+    "title": "Pushups · U.S. Marine Corps",
+    "video": "assets/media/demo-pushups.mp4",
+    "gif": "assets/media/demo-pushups.gif",
+    "poster": "assets/media/demo-pushups.jpg",
+    "original": "https://d34w7g4gy10iej.cloudfront.net/video/1811/DOD_106191274/DOD_106191274-1024x576-1769k.mp4",
+    "sha256Original": "a7ea67710ffc300115c22f2c9443c35c317738bb31aa1420ed78c89061e58509",
+    "sha256Video": "8720f24ca917169307f764f888ffff7c4a3c8b18135face55bca9b2c5ee4501a",
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1024,
+          "height": 576,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "559"
+        }
+      ],
+      "format": {
+        "duration": "18.651967"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "432"
+        }
+      ],
+      "format": {
+        "duration": "18.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 36,
+      "distinctFrames": 36
+    },
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "CPT Matthew Holfinger / U.S. Marine Corps; demostración: Gunnery Sgt. Gates",
+      "name": "Dominio público · DVIDS",
+      "url": "https://www.dvidshub.net/about/copyright",
+      "source": "https://www.dvidshub.net/video/638236/pushups",
+      "original": "https://d34w7g4gy10iej.cloudfront.net/video/1811/DOD_106191274/DOD_106191274-1024x576-1769k.mp4",
+      "changes": "Fragmento desde 0 s, duración máxima 18 s. H.264 yuv420p 720 px, 24 fps, faststart; sin audio. GIF 6 s desde el segundo 2 del fragmento; miniatura en 2 s. La dosis de la app es independiente del video original.",
+      "notice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement."
+    },
+    "checked": "2026-10-07T01:23:54.082991+00:00",
+    "visualReview": "2026-10-07: variante inspeccionada en fotogramas de la demostración original. Sin certificación clínica ni recomendación de la dosis militar.",
+    "bytes": 254557
+  },
+  {
+    "exerciseId": "Plank",
+    "title": "Plank Instructional Video · U.S. Marine Corps",
+    "video": "assets/media/demo-forearm-plank.mp4",
+    "gif": "assets/media/demo-forearm-plank.gif",
+    "poster": "assets/media/demo-forearm-plank.jpg",
+    "original": "https://d34w7g4gy10iej.cloudfront.net/video/2301/DOD_109412801/DOD_109412801.mp4",
+    "sha256Original": "5b3576c32db0a84899df5b9166a25583dcf6a08b9ff614e20c6051ff14a68ee3",
+    "sha256Video": "380718b82435086174b282062327252e9fcbaf6ba293460a043fee6057a0b751",
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "3730"
+        }
+      ],
+      "format": {
+        "duration": "124.457667"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 406,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "720"
+        }
+      ],
+      "format": {
+        "duration": "30.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 60,
+      "distinctFrames": 60
+    },
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Cpl. Caden Phillips / U.S. Marine Corps; explicación: Gunnery Sgt. Travis Titopace",
+      "name": "Dominio público · DVIDS",
+      "url": "https://www.dvidshub.net/about/copyright",
+      "source": "https://www.dvidshub.net/video/871026/plank-instructional-video",
+      "original": "https://d34w7g4gy10iej.cloudfront.net/video/2301/DOD_109412801/DOD_109412801.mp4",
+      "changes": "Fragmento desde 24 s, duración máxima 30 s. H.264 yuv420p 720 px, 24 fps, faststart; sin audio. GIF 6 s desde el segundo 2 del fragmento; miniatura en 2 s. La dosis de la app es independiente del video original.",
+      "notice": "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement."
+    },
+    "checked": "2026-10-07T01:24:00.233901+00:00",
+    "visualReview": "2026-10-07: variante inspeccionada en fotogramas de la demostración original. Sin certificación clínica ni recomendación de la dosis militar.",
+    "bytes": 1206024
+  },
+  {
+    "exerciseId": "rl-caminata",
+    "title": "Fit walking · fragmento de caminata en terreno plano",
+    "video": "assets/media/demo-walking.mp4",
+    "gif": "assets/media/demo-walking.gif",
+    "poster": "assets/media/demo-walking.jpg",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fit_walking.webmhd.webm?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+    "sha256Original": "b847e6335e273fbcac93f6781ab6b6f9e62f798aad1637d53e1e75adbe480acf",
+    "sha256Video": "f7f3341b90f73b2910dbda9f6f3bbdf358850bc759be4aefd0817280b49ebc15",
+    "sourceProbe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "vp8",
+          "width": 720,
+          "height": 540,
+          "pix_fmt": "yuv420p"
+        }
+      ],
+      "format": {
+        "duration": "123.058000"
+      }
+    },
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 720,
+          "height": 540,
+          "pix_fmt": "yuv420p",
+          "nb_frames": "384"
+        }
+      ],
+      "format": {
+        "duration": "16.000000"
+      }
+    },
+    "frameCheck": {
+      "sampledFrames": 32,
+      "distinctFrames": 32
+    },
+    "attribution": {
+      "kind": "MP4, GIF y miniatura derivados",
+      "author": "Msrmesa",
+      "name": "CC BY-SA 3.0",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Fit_walking.webmhd.webm",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Fit_walking.webmhd.webm?utm_campaign=index&utm_content=original&utm_source=commons.wikimedia.org",
+      "changes": "Fragmento desde 32 s, duración máxima 16 s. H.264 yuv420p 720 px, 24 fps, faststart; sin audio. GIF 6 s desde el segundo 2 del fragmento; miniatura en 2 s. La dosis de la app es independiente del video original.",
+      "notice": "Fragmento de una caminata real en terreno plano. El ritmo y la duración de la grabación no prescriben la dosis de la app. Se excluyeron las escaleras y el tramo de tierra del original."
+    },
+    "checked": "2026-10-07T01:24:05.086903+00:00",
+    "visualReview": "2026-10-07: inspección de fotogramas del original; persona caminando en terreno plano, sin escaleras en el fragmento seleccionado.",
+    "bytes": 1564022
+  }
+]

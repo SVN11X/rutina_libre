@@ -8,6 +8,10 @@ import {
   PHRASES,
   LEVEL_ORDER,
 } from "./i18n.js";
+import { migrateEquipment, canUseEquipment, equipmentText } from './equipment.js';
+import { queryEvidence, matchesEvidence } from './query.js';
+import { rankDescription } from './intelligence.js';
+import { playableVideos } from './media.js';
 
 // Archivo generado por scripts/build-data.mjs. Si no existe, se usa la fuente original directo desde GitHub.
 const DATA_URL = "data/exercises.json";
@@ -87,7 +91,7 @@ export function fromFedb(x) {
     level: x.level ?? null,
     force: x.force ?? null,
     mechanic: x.mechanic ?? null,
-    equipment: x.equipment ?? "body only",
+    equipment: x.equipment ?? null,
     category: x.category ?? "strength",
     primary: x.primaryMuscles ?? [],
     secondary: x.secondaryMuscles ?? [],
@@ -104,6 +108,7 @@ export function altImage(url) {
 }
 
 function prepare(ex) {
+  migrateEquipment(ex);
   ex.primary ??= [];
   ex.secondary ??= [];
   ex.steps ??= [];
@@ -116,14 +121,14 @@ function prepare(ex) {
       ex.nameEs,
       ...ex.primary.map((m) => MUSCLES[m]),
       ...ex.secondary.map((m) => MUSCLES[m]),
-      EQUIPMENT[ex.equipment],
+      equipmentText(ex,EQUIPMENT),
       CATEGORIES[ex.category],
       LEVELS[ex.level],
       ...(ex.aliases || []),
       ex.summary,
     ].join(" "),
   );
-  ex._motion = Boolean(ex.gif || (ex.videos && ex.videos.length));
+  ex._motion = Boolean(ex.gif || playableVideos(ex).length);
   ex._visual = Boolean(ex.images.length || ex.gif);
   ex._basic = isBasic(ex);
   return ex;
@@ -364,7 +369,7 @@ function matches(ex, f, skip) {
     !ex.primary.some((m) => f.musculo.includes(m))
   )
     return false;
-  if (skip !== "equipo" && f.equipo.length && !f.equipo.includes(ex.equipment))
+  if (skip !== "equipo" && f.equipo.length && !(f.equipo.includes('unknown') && !ex.equipmentKnown) && !canUseEquipment(ex,f.equipo))
     return false;
   if (
     skip !== "nivel" &&
@@ -378,12 +383,26 @@ function matches(ex, f, skip) {
   return true;
 }
 
+function queryScores(items,q) {
+  if (!q) return new Map(items.map(ex=>[ex.id,baseScore(ex)]));
+  const evidence = queryEvidence(q);
+  const groups = buildGroups(evidence.text);
+  const lexical = new Map();
+  for (const ex of items) if (matchesEvidence(ex,evidence)) {
+    const s = groups.length ? textScore(ex,groups) : baseScore(ex);
+    if(s) lexical.set(ex.id,s);
+  }
+  if (evidence.descriptive || !lexical.size) {
+    return new Map(rankDescription(items,q,items.length).map(r=>[r.ex.id,r.score]));
+  }
+  return lexical;
+}
 export function search(items, f) {
-  const groups = f.q ? buildGroups(f.q) : [];
+  const scores = queryScores(items,f.q);
   const out = [];
   for (const ex of items) {
     if (!matches(ex, f)) continue;
-    const s = groups.length ? textScore(ex, groups) : baseScore(ex);
+    const s = scores.get(ex.id);
     if (!s) continue;
     out.push({
       ex,
@@ -401,15 +420,16 @@ export function search(items, f) {
 
 // Conteo por opción respetando los demás filtros, para mostrar cuántos resultados da cada una.
 export function facetCounts(items, f) {
-  const groups = f.q ? buildGroups(f.q) : [];
+  const scores = queryScores(items,f.q);
   const counts = { musculo: {}, equipo: {}, nivel: {}, tipo: {}, media: 0 };
   for (const ex of items) {
-    if (groups.length && !textScore(ex, groups)) continue;
+    if (!scores.has(ex.id)) continue;
     if (matches(ex, f, "musculo"))
       for (const m of ex.primary)
         counts.musculo[m] = (counts.musculo[m] || 0) + 1;
-    if (matches(ex, f, "equipo"))
-      counts.equipo[ex.equipment] = (counts.equipo[ex.equipment] || 0) + 1;
+    if (matches(ex, f, "equipo")) for (const key of Object.keys(EQUIPMENT)) {
+      if (key==='unknown' ? !ex.equipmentKnown : canUseEquipment(ex,[...f.equipo.filter(k=>k!=='unknown'),key])) counts.equipo[key]=(counts.equipo[key]||0)+1;
+    }
     if (matches(ex, f, "nivel")) {
       const k = ex.level ?? "none";
       counts.nivel[k] = (counts.nivel[k] || 0) + 1;

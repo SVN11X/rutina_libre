@@ -1,0 +1,41 @@
+{
+  "reviewed": "2026-10-07",
+  "scope": "Inspección de miniaturas y variantes; no certifica técnica ni aptitud clínica. Decodificación y cambios de imagen se validan por separado.",
+  "overrides": [
+    {
+      "video": "assets/media/wger-73.mp4",
+      "exerciseId": "Smith_Machine_Bench_Press",
+      "note": "La grabación muestra una barra guiada en máquina Smith; no se ofrece como press con barra libre."
+    },
+    {
+      "video": "assets/media/wger-73-v2.mp4",
+      "exerciseId": "Smith_Machine_Bench_Press",
+      "note": "La grabación muestra una barra guiada en máquina Smith; no se ofrece como press con barra libre."
+    },
+    {
+      "video": "assets/media/wger-73-v3.mp4",
+      "exerciseId": "Smith_Machine_Bench_Press",
+      "note": "La grabación muestra una barra guiada en máquina Smith; no se ofrece como press con barra libre."
+    },
+    {
+      "video": "assets/media/wger-538.mp4",
+      "exerciseId": "Smith_Machine_Incline_Bench_Press",
+      "note": "La grabación muestra press inclinado en Smith; no se ofrece como press inclinado con barra libre."
+    },
+    {
+      "video": "assets/media/wger-257.mp4",
+      "exerciseId": null,
+      "note": "Sentadilla frontal realizada en Smith. La ficha describe barra libre: grabación conservada con licencia pero excluida de sus demostraciones. La grabación 4 sí muestra barra libre."
+    },
+    {
+      "video": "assets/media/wger-257-v2.mp4",
+      "exerciseId": null,
+      "note": "Sentadilla frontal realizada en Smith. La ficha describe barra libre: grabación conservada con licencia pero excluida de sus demostraciones. La grabación 4 sí muestra barra libre."
+    },
+    {
+      "video": "assets/media/wger-257-v3.mp4",
+      "exerciseId": null,
+      "note": "Sentadilla frontal realizada en Smith. La ficha describe barra libre: grabación conservada con licencia pero excluida de sus demostraciones. La grabación 4 sí muestra barra libre."
+    }
+  ]
+}
